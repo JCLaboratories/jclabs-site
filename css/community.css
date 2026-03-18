@@ -1,0 +1,403 @@
+/* ============================================================
+   community.css — Community page styles
+   ============================================================ */
+
+.page-header {
+  padding: 120px 48px 60px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.page-header .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--gold-muted);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.page-header h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.page-header h1 span { color: var(--gold); }
+
+.page-header p {
+  color: var(--text-secondary);
+  font-size: 17px;
+  max-width: 600px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 48px;
+}
+
+/* ── Auth bar ──────────────────────────────────────────────── */
+.auth-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 20px 28px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+#auth-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#user-section {
+  display: none;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.auth-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.auth-input {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 10px 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  outline: none;
+  flex: 1;
+  min-width: 160px;
+  transition: border-color 0.2s;
+}
+
+.auth-input:focus { border-color: var(--gold-muted); }
+
+.btn-auth {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--bg);
+  background: var(--gold);
+  border: none;
+  padding: 10px 24px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.btn-auth:hover { background: var(--gold-light); }
+
+.btn-signout {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-signout:hover { color: var(--gold); border-color: var(--gold-muted); }
+
+#auth-error {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--red-light);
+}
+
+/* ── Two column layout ─────────────────────────────────────── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 80px;
+}
+
+/* ── Panel ─────────────────────────────────────────────────── */
+.panel { border: 1px solid var(--border); }
+
+.panel-header {
+  background: var(--surface);
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel-header h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+.panel-header .count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.panel-body {
+  padding: 0;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* ── Directory entries ─────────────────────────────────────── */
+.dir-entry {
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.dir-entry:last-child { border-bottom: none; }
+.dir-entry:hover { background: var(--surface); }
+
+.dir-username {
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.dir-bio {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.dir-key {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  word-break: break-all;
+  background: var(--bg);
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* ── Dead drop entries ─────────────────────────────────────── */
+.drop-entry {
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.drop-entry:last-child { border-bottom: none; }
+.drop-entry:hover { background: var(--surface); }
+
+.drop-header {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.drop-to {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  color: var(--gold);
+}
+
+.drop-from {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.drop-expiry {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+.drop-message {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-secondary);
+  word-break: break-all;
+  background: var(--bg);
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  max-height: 80px;
+  overflow: hidden;
+}
+
+/* ── Copy button ───────────────────────────────────────────── */
+.btn-copy-small {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--gold);
+  background: transparent;
+  border: 1px solid var(--gold-muted);
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-copy-small:hover { background: var(--gold-muted); color: var(--bg); }
+
+/* ── Form panels ───────────────────────────────────────────── */
+.form-panel {
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--gold);
+  margin-bottom: 32px;
+}
+
+.form-panel-header {
+  background: var(--surface);
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.form-panel-header h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  color: var(--gold);
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.form-panel-header p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.form-body { padding: 28px; }
+
+.form-row { margin-bottom: 16px; }
+
+.form-row label {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.form-row input,
+.form-row textarea,
+.form-row select {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 12px 16px;
+  font-family: 'EB Garamond', serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-row input:focus,
+.form-row textarea:focus,
+.form-row select:focus { border-color: var(--gold-muted); }
+
+.form-row textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.form-row select { cursor: pointer; }
+
+.btn-submit {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--bg);
+  background: var(--gold);
+  border: none;
+  padding: 14px 36px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.btn-submit:hover { background: var(--gold-light); }
+
+.form-error {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--red-light);
+  margin-top: 12px;
+}
+
+.form-success {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--green);
+  margin-top: 12px;
+}
+
+/* ── States ────────────────────────────────────────────────── */
+.loading,
+.empty {
+  padding: 32px 28px;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ── Info box ──────────────────────────────────────────────── */
+.info-box {
+  background: var(--surface);
+  border-left: 3px solid var(--gold);
+  padding: 16px 20px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.simple-footer {
+  text-align: center;
+  padding: 32px;
+  color: var(--text-muted);
+  font-size: 13px;
+  border-top: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.simple-footer a { color: var(--gold); text-decoration: none; }
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .page-header { padding: 100px 24px 48px; }
+  .container   { padding: 40px 24px; }
+  .two-col     { grid-template-columns: 1fr; gap: 32px; }
+  #auth-section { flex-direction: column; align-items: stretch; }
+}

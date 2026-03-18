@@ -1,0 +1,390 @@
+/* ============================================================
+   index.css — Homepage styles
+   ============================================================ */
+
+/* ── Hero ──────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 24px 80px;
+  overflow: hidden;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(184,160,88,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184,160,88,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black, transparent);
+}
+
+.hero-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(184,160,88,0.06) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hero-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--gold-muted);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.2s forwards;
+}
+
+.hero-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold-muted);
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.3s forwards;
+  box-shadow: 0 0 40px rgba(184,160,88,0.1);
+}
+
+.hero-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(22px, 4vw, 40px);
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 6px;
+  margin-bottom: 16px;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.5s forwards;
+}
+
+.hero-sub {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 3px;
+  margin-bottom: 48px;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.6s forwards;
+}
+
+.hero-motto {
+  font-style: italic;
+  color: var(--text-secondary);
+  font-size: 18px;
+  margin-bottom: 64px;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.7s forwards;
+}
+
+.hero-motto em {
+  color: var(--gold);
+  font-style: normal;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.9s forwards;
+}
+
+/* ── Section layout ────────────────────────────────────────── */
+.section-wrapper {
+  border-top: 1px solid var(--border);
+}
+
+.section-wrapper.surface {
+  background: var(--surface);
+}
+
+section {
+  position: relative;
+  padding: 100px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--gold-muted);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.section-title span { color: var(--gold); }
+
+.section-body {
+  color: var(--text-secondary);
+  font-size: 18px;
+  max-width: 600px;
+  margin-bottom: 60px;
+}
+
+/* ── Products grid ─────────────────────────────────────────── */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.product-card {
+  background: var(--surface);
+  padding: 48px 40px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: left;
+}
+
+.product-card:hover { background: var(--surface-high); }
+.product-card:hover::before { transform: scaleX(1); }
+
+.product-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.product-icon-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.product-name {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.product-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.product-desc {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.product-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.2s;
+}
+
+.product-link:hover { gap: 14px; text-decoration: none; }
+
+.product-badge {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  border: 1px solid var(--gold-muted);
+  color: var(--gold-muted);
+  margin-bottom: 16px;
+}
+
+.badge-live  { border-color: var(--green-dark); color: var(--green); }
+.badge-soon  { border-color: var(--gold-muted); color: var(--gold-muted); }
+
+/* ── Security grid ─────────────────────────────────────────── */
+.security-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.security-item {
+  padding: 28px;
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+.security-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: var(--gold);
+}
+
+.security-item h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  color: var(--gold);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.security-item p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ── Tiers grid ────────────────────────────────────────────── */
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 48px;
+}
+
+.tier-card {
+  background: var(--surface);
+  padding: 32px 24px;
+}
+
+.tier-card.featured {
+  background: var(--surface-high);
+  border-top: 2px solid var(--gold);
+}
+
+.tier-name {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.tier-price {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 24px;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.tier-price span {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.tier-features { list-style: none; font-size: 13px; color: var(--text-secondary); }
+
+.tier-features li {
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tier-features li:last-child { border-bottom: none; }
+
+.feat-yes { color: var(--green);      font-size: 11px; }
+.feat-no  { color: var(--text-muted); font-size: 11px; }
+
+/* ── CTA section ───────────────────────────────────────────── */
+.cta-section {
+  text-align: center;
+  padding: 120px 48px;
+  position: relative;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  margin: 80px 0 0;
+}
+
+.cta-bg-glyph {
+  position: absolute;
+  font-size: 400px;
+  color: rgba(184,160,88,0.02);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  font-family: 'EB Garamond', serif;
+  user-select: none;
+}
+
+.cta-section h2 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(28px, 5vw, 52px);
+  color: var(--text);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.cta-section p {
+  color: var(--text-secondary);
+  font-size: 18px;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  section { padding: 60px 24px; }
+  .hero   { padding: 100px 24px 60px; }
+  .cta-section { padding: 80px 24px; }
+}

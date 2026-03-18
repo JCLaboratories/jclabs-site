@@ -1,0 +1,152 @@
+/* ============================================================
+   docs.css — Privacy Policy & Terms of Service styles
+   ============================================================ */
+
+/* ── Header ────────────────────────────────────────────────── */
+.doc-header {
+  border-bottom: 1px solid var(--border);
+  padding: 32px 0;
+  text-align: center;
+  background: var(--surface);
+}
+
+.logo-mark {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.logo-mark img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--gold-muted);
+}
+
+.brand-full {
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  display: block;
+  letter-spacing: 2px;
+}
+
+.brand-sub {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  display: block;
+  margin-top: 4px;
+}
+
+.brand-line {
+  width: 120px;
+  height: 2px;
+  background: var(--red);
+  margin: 8px auto 0;
+}
+
+.motto {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-top: 8px;
+  display: block;
+}
+
+/* ── Container ─────────────────────────────────────────────── */
+.doc-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+.doc-title {
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.doc-meta {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 60px;
+  font-style: italic;
+}
+
+.divider {
+  width: 80px;
+  height: 1px;
+  background: var(--gold-muted);
+  margin: 40px auto;
+}
+
+/* ── Typography ────────────────────────────────────────────── */
+h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin: 48px 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+p { margin-bottom: 16px; color: var(--text); }
+
+ul { margin: 0 0 16px 24px; color: var(--text); }
+ul li { margin-bottom: 8px; }
+
+/* ── Product blocks ────────────────────────────────────────── */
+.product-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  margin: 20px 0;
+}
+
+.product-name {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  color: var(--gold);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+/* ── EGAF product block ────────────────────────────────────── */
+.egaf-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.egaf-logo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.egaf-content { flex: 1; }
+
+/* ── Footer ────────────────────────────────────────────────── */
+.doc-footer {
+  text-align: center;
+  padding: 32px;
+  color: var(--text-muted);
+  font-size: 13px;
+  border-top: 1px solid var(--border);
+}
+
+.doc-footer a { color: var(--gold); text-decoration: none; }
+.doc-footer a:hover { text-decoration: underline; }
