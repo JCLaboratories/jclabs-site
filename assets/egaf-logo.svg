@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 800 600"
+     aria-label="Entropy-Gated Framework logo (gold variant)">
+
+  <defs>
+    <style>
+      .frame {
+        stroke: #C9A24D;
+        stroke-width: 20;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .inner {
+        stroke: #C9A24D;
+        stroke-width: 12;
+        fill: none;
+        stroke-linecap: round;
+      }
+      .dot {
+        stroke: #C9A24D;
+        stroke-width: 12;
+        fill: none;
+        stroke-linecap: round;
+        stroke-dasharray: 4 26;
+      }
+      .hinge {
+        fill: #C9A24D;
+      }
+    </style>
+  </defs>
+
+  <!-- Outer frame with strong arch -->
+  <path
+    d="
+      M160 480
+      V170
+      Q400 70 640 170
+      V480
+    "
+    class="frame"
+  />
+
+  <!-- Hinges -->
+  <circle cx="170" cy="260" r="9" class="hinge"/>
+  <circle cx="170" cy="340" r="9" class="hinge"/>
+  <circle cx="630" cy="260" r="9" class="hinge"/>
+  <circle cx="630" cy="340" r="9" class="hinge"/>
+
+  <!-- Four inner gate bars (equal length) -->
+  <line x1="240" y1="210" x2="240" y2="440" class="inner"/>
+  <line x1="320" y1="210" x2="320" y2="440" class="inner"/>
+  <line x1="480" y1="210" x2="480" y2="440" class="inner"/>
+  <line x1="560" y1="210" x2="560" y2="440" class="inner"/>
+
+  <!-- Entropy gate (center dotted line) -->
+  <line x1="400" y1="210" x2="400" y2="440" class="dot"/>
+
+  <!-- Latch cue -->
+  <circle cx="400" cy="360" r="7" class="hinge"/>
+</svg>
