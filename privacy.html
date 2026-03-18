@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — JC Laboratories</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/docs.css">
+</head>
+<body>
+
+<header class="doc-header">
+  <span class="logo-mark">
+    <img src="assets/logo.jpg" alt="JC Labs R&D">
+  </span>
+  <span class="brand-full">JC Laboratories</span>
+  <span class="brand-sub">JC Labs R&amp;D &nbsp;·&nbsp; jclabs.tech</span>
+  <div class="brand-line"></div>
+  <span class="motto">By security professionals, for security professionals. Your privacy in your hands.</span>
+</header>
+
+<div class="doc-container">
+  <div class="doc-title">Privacy Policy</div>
+  <div class="doc-meta">Effective March 17, 2026 &nbsp;·&nbsp; JC Laboratories / jclabs.tech</div>
+
+  <div class="highlight">
+    JC Laboratories is built on a simple principle: your data belongs to you. We collect the absolute minimum required to operate our services — and for most tiers, we cannot access your vault contents under any circumstances.
+  </div>
+
+  <h2>Who We Are</h2>
+  <p>JC Laboratories (jclabs.tech) is an independent technology company founded by Justin Czap. We develop security-focused software tools including Aleph Vault, the EGAF Gaffer AI assistant, and the JC Labs Community — a privacy-first public key directory and encrypted messaging board.</p>
+  <p>Our research and development division, JC Labs R&D, is responsible for the Entropy-Gated AI Framework (EGAF) — a structured AI governance and orchestration framework — and all products built upon it. Our mission is to put real security tools in the hands of real people, without compromise.</p>
+
+  <h2>Our Products</h2>
+
+  <div class="product-block">
+    <div class="product-name">Aleph Vault</div>
+    <p>An offline-first encrypted vault application for Android. Provides secure local storage of notes, passwords, cryptographic key pairs, API keys, and encrypted messaging via the MessageCrypt system. All sensitive data is encrypted on-device using AES-256-GCM. We cannot read your vault.</p>
+    <p>Vault export files are encrypted with a user-chosen export password before leaving the device. JC Laboratories never receives, stores, or has access to exported vault files on standard tiers. Business tier cloud backups are stored as encrypted blobs — we cannot decrypt them.</p>
+  </div>
+
+  <div class="product-block">
+    <div class="egaf-block">
+      <img src="assets/egaf-logo.svg" class="egaf-logo" alt="EGAF" onerror="this.style.display='none'">
+      <div class="egaf-content">
+        <div class="product-name">EGAF — Entropy-Gated AI Framework</div>
+        <p>A structured AI governance protocol developed by JC Labs R&D. EGAF defines a three-part vial composition system (OIL_CONTRACT, INVOKER, E_T) for governed, auditable AI task execution. It operates as a Layer 3 governance protocol above standard AI API mechanics.</p>
+        <p>EGAF is licensed under CC BY-NC 4.0. Commercial implementations require written permission from JC Laboratories.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-block">
+    <div class="egaf-block">
+      <img src="assets/egaf-logo.svg" class="egaf-logo" alt="Gaffer" onerror="this.style.display='none'">
+      <div class="egaf-content">
+        <div class="product-name">Gaffer — EGAF AI Assistant</div>
+        <p>The flagship AI assistant built on the Entropy-Gated AI Framework. Gaffer provides governed AI interactions via web interface (ai.jclabs.tech) and API.</p>
+        <p>Messages sent through Gaffer are processed by third-party AI providers (Anthropic, Groq, OpenAI) subject to their own privacy policies. We do not store conversation logs on our servers. Each session is stateless.</p>
+        <p>Third-party providers: <a href="https://anthropic.com/privacy">Anthropic</a>, <a href="https://groq.com/privacy">Groq</a>, <a href="https://openai.com/privacy">OpenAI</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-block">
+    <div class="product-name">JC Labs Community — Public Key Directory &amp; Dead Drop Board</div>
+    <p><strong>Public Key Directory</strong> — A jclabs.tech account is required to create a directory listing. Accounts may be pseudonymous — no real name required, only an email address. This account requirement exists to protect directory integrity and enable moderation.</p>
+    <p><strong>Dead Drop Board</strong> — An anonymous encrypted message relay. No account required to post. All content must be encrypted ciphertext before posting. JC Laboratories operates as a blind courier — we cannot read posted messages.</p>
+    <p><strong>What we store for community features:</strong></p>
+    <ul>
+      <li>Directory listings: username, public key block, optional bio (account-linked)</li>
+      <li>Dead drop messages: recipient identifier, sender identifier (optional), encrypted ciphertext, expiry timestamp</li>
+      <li>We do not store IP addresses, device identifiers, or any metadata beyond what is listed above</li>
+    </ul>
+  </div>
+
+  <h2>What We Collect — By Product and Tier</h2>
+
+  <div class="product-block">
+    <div class="product-name">Aleph Vault — Data by Tier</div>
+    <table class="tier-table">
+      <tr><th>Tier</th><th>Data Collected</th><th>Backup / Recovery</th></tr>
+      <tr>
+        <td>Free</td>
+        <td>Email address, subscription tier, usage counters</td>
+        <td>None — vault unrecoverable if password lost</td>
+      </tr>
+      <tr>
+        <td>Individual / Family</td>
+        <td>Email, tier, usage counters</td>
+        <td>Self-managed encrypted file export/import only</td>
+      </tr>
+      <tr>
+        <td>Small / Medium Business</td>
+        <td>Email, tier, encrypted cloud backup blob, optional recovery blob</td>
+        <td>Encrypted cloud backup + optional recovery add-on</td>
+      </tr>
+      <tr>
+        <td>Enterprise / VIP</td>
+        <td>Email, tier, encrypted backup blob, recovery blob, identity verification records</td>
+        <td>Cloud backup + recovery included + SLA</td>
+      </tr>
+    </table>
+    <p>For all tiers, we do <strong>not</strong> collect, store, or have access to vault contents, private keys, messages, notes, passwords, or API keys. All vault data is encrypted on your device before any storage or transmission.</p>
+  </div>
+
+  <div class="product-block">
+    <div class="product-name">Gaffer — Data Collected</div>
+    <ul>
+      <li><strong>Conversation content</strong> — processed by third-party AI providers in real time, not stored by JC Laboratories</li>
+      <li><strong>Usage metadata</strong> — session timestamps and request counts for rate limiting only</li>
+    </ul>
+  </div>
+
+  <h2>Enterprise Recovery Program</h2>
+  <div class="warning">
+    <strong>Opt-in only.</strong> Available on Business and Enterprise/VIP tiers. Enrollment requires explicit opt-in and a signed Enterprise Recovery Agreement.
+  </div>
+  <p>When enrolled:</p>
+  <ul>
+    <li>An encrypted recovery blob is generated and stored using Shamir's Secret Sharing across geographically separated secure locations</li>
+    <li>JC Laboratories cannot access your vault without your participation in the verified recovery process</li>
+    <li>Recovery requires identity verification — government-issued ID, video call, or other agreed method</li>
+    <li>Each recovery key is single-use and rotated immediately after use</li>
+    <li>Full audit logs of all recovery events are maintained and available to you on request</li>
+    <li>You may opt out at any time — recovery blob deleted within 30 days of opt-out</li>
+  </ul>
+
+  <h2>Dead Drop Board — Blind Courier Policy</h2>
+  <div class="highlight">
+    JC Laboratories operates the dead drop board as a blind courier. We transport encrypted ciphertext between users and cannot read its contents. We are not responsible for the content of messages posted to the board. All messages auto-delete at expiry.
+  </div>
+  <p>Law enforcement requests for dead drop message content will be complied with to the extent legally required. However, because all messages are end-to-end encrypted, we can only provide the encrypted ciphertext — which is unreadable without the recipient's private key, which never leaves their device.</p>
+
+  <h2>How We Use Your Information</h2>
+  <ul>
+    <li>To create and manage your account</li>
+    <li>To enforce subscription tier features and limits</li>
+    <li>To operate the dead drop board and community directory</li>
+    <li>To provide Enterprise Recovery services where enrolled</li>
+    <li>To communicate service updates (opt-in only)</li>
+    <li>To maintain service security and prevent abuse</li>
+  </ul>
+  <p>We do not sell your data. We do not use your data for advertising. We do not share your data with third parties except as required to operate the services described above or as required by law.</p>
+
+  <h2>Data Storage and Security</h2>
+  <p>Account data is stored in Firebase (Google Cloud) with industry-standard security controls. Dead drop messages are stored in Firebase Firestore with TTL-based auto-deletion. Business tier encrypted cloud backup blobs are stored in Firebase Firestore — encrypted on device before upload. Enterprise recovery blobs use cryptographic key splitting (Shamir's Secret Sharing) across geographically separated storage.</p>
+
+  <h2>Data Retention</h2>
+  <ul>
+    <li>Account data — retained until account deletion</li>
+    <li>Dead drop messages — auto-deleted at sender-chosen expiry (1 hour to 30 days)</li>
+    <li>Community directory listings — retained until user removes them or account deletion</li>
+    <li>Business cloud backup blobs — retained while subscription is active, deleted 30 days after cancellation</li>
+    <li>Enterprise recovery blobs — retained for enrollment duration plus 30 days after opt-out</li>
+  </ul>
+  <p>Request deletion at any time: <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a></p>
+
+  <h2>Your Rights</h2>
+  <ul>
+    <li>Request a copy of data we hold about you</li>
+    <li>Request deletion of your account and associated data</li>
+    <li>Remove your listing from the community directory at any time</li>
+    <li>Opt out of the Enterprise Recovery Program</li>
+    <li>Request a full audit log of any recovery events</li>
+    <li>Opt out of non-essential communications</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>Our services are not directed at children under 13. We do not knowingly collect personal information from children under 13.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>Material changes will be communicated via the app or email. Continued use after changes constitutes acceptance.</p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a> &nbsp;·&nbsp; jclabs.tech</p>
+
+  <div class="divider"></div>
+  <p style="text-align:center;color:var(--text-muted);font-size:14px;">© 2026 Justin Czap / JC Laboratories &nbsp;·&nbsp; Licensed under CC BY-NC 4.0</p>
+</div>
+
+<footer class="doc-footer">
+  <a href="terms.html">Terms of Service</a> &nbsp;·&nbsp;
+  <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+  <a href="index.html">jclabs.tech</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community — JC Laboratories</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/community.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="assets/logo.jpg" class="nav-logo-img" alt="JC Labs R&D">
+    <span class="nav-name">JC Laboratories</span>
+  </a>
+  <a href="index.html" class="nav-back">&larr; Back to Home</a>
+</nav>
+
+<div class="page-header">
+  <span class="label">// jc labs community</span>
+  <h1>Public Key <span>Directory</span><br>&amp; Dead Drop Board</h1>
+  <p>Find Aleph users by public key. Post encrypted messages anonymously. We are a blind courier — we cannot read what we carry.</p>
+</div>
+
+<div class="container">
+
+  <!-- Auth bar -->
+  <div class="auth-bar">
+    <div id="auth-section">
+      <span class="auth-label">Sign in with your Aleph account to add a directory listing:</span>
+      <input type="email" id="auth-email" class="auth-input" placeholder="Email">
+      <input type="password" id="auth-pass" class="auth-input" placeholder="Password">
+      <button class="btn-auth" onclick="signIn()">Sign In</button>
+      <span id="auth-error"></span>
+    </div>
+    <div id="user-section">
+      <span class="auth-label">Signed in as:</span>
+      <span id="user-email" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);"></span>
+      <button class="btn-signout" onclick="signOutUser()">Sign Out</button>
+    </div>
+  </div>
+
+  <!-- Live boards -->
+  <div class="two-col">
+    <div>
+      <div class="panel">
+        <div class="panel-header">
+          <h2>🔑 Public Key Directory</h2>
+          <span class="count">Aleph Users</span>
+        </div>
+        <div class="panel-body" id="directory-list">
+          <div class="loading">Loading...</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <div class="panel-header">
+          <h2>📬 Dead Drop Board</h2>
+          <span class="count">Encrypted Messages</span>
+        </div>
+        <div class="panel-body" id="deadrop-list">
+          <div class="loading">Loading...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Listing Form (shown when signed in) -->
+  <div id="listing-form" style="display:none;">
+    <div class="form-panel">
+      <div class="form-panel-header">
+        <h3>Add Your Directory Listing</h3>
+        <p>Share your public key so others can find you and send encrypted messages.</p>
+      </div>
+      <div class="form-body">
+        <div class="form-row">
+          <label>Username</label>
+          <input type="text" id="listing-username" placeholder="How others will find you">
+        </div>
+        <div class="form-row">
+          <label>Public Key Block</label>
+          <textarea id="listing-key" placeholder="Paste your Aleph public key block here&#10;&#10;Get it from: Aleph Vault → Key Management → tap your key → Copy Public Key"></textarea>
+        </div>
+        <div class="form-row">
+          <label>Bio (optional)</label>
+          <input type="text" id="listing-bio" placeholder="Brief description — e.g. Security researcher, PGP enthusiast">
+        </div>
+        <button class="btn-submit" onclick="submitListing()">Add Listing</button>
+        <div class="form-error" id="listing-error"></div>
+        <div class="form-success" id="listing-success"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dead Drop Post Form (always visible) -->
+  <div class="form-panel">
+    <div class="form-panel-header">
+      <h3>📬 Post to Dead Drop Board</h3>
+      <p>No account required. Paste encrypted ciphertext only — encrypt your message in Aleph Vault first.</p>
+    </div>
+    <div class="form-body">
+
+      <div class="warning-box">
+        <strong>Encrypted ciphertext only.</strong> Do not post plaintext, personal information, or unencrypted content. Encrypt your message in Aleph Vault → MessageCrypt → Encrypt, then paste the result here. JC Laboratories cannot read posted messages.
+      </div>
+
+      <div class="form-row">
+        <label>To (username or key fingerprint)</label>
+        <input type="text" id="drop-to" placeholder="Recipient username or key fingerprint">
+      </div>
+      <div class="form-row">
+        <label>From (optional — leave blank to be anonymous)</label>
+        <input type="text" id="drop-from" placeholder="Your username (optional)">
+      </div>
+      <div class="form-row">
+        <label>Encrypted Ciphertext</label>
+        <textarea id="drop-message" style="min-height:140px;" placeholder="Paste the encrypted message from Aleph Vault here...&#10;&#10;It should look like a block of encoded text, not readable language."></textarea>
+      </div>
+      <div class="form-row">
+        <label>Message Expires In</label>
+        <select id="drop-expiry">
+          <option value="1">1 hour</option>
+          <option value="6">6 hours</option>
+          <option value="24" selected>24 hours</option>
+          <option value="72">3 days</option>
+          <option value="168">7 days</option>
+        </select>
+      </div>
+      <button class="btn-submit" onclick="postDeadDrop()">Post Message</button>
+      <div class="form-error" id="drop-error"></div>
+      <div class="form-success" id="drop-success"></div>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <strong>How this works:</strong> Use Aleph Vault to encrypt a message with your contact's public key. Copy the ciphertext. Post it here addressed to their username. They check the board, copy the ciphertext, and decrypt it in Aleph Vault. You are the only one who can send it. They are the only one who can read it.
+  </div>
+
+</div>
+
+<footer class="simple-footer">
+  <a href="index.html">jclabs.tech</a> &nbsp;·&nbsp;
+  <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+  <a href="terms.html">Terms of Service</a> &nbsp;·&nbsp;
+  <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>
+  <br><br>© 2026 Justin Czap / JC Laboratories · Blind courier — we cannot read what we carry.
+</footer>
+
+<script src="js/nav.js"></script>
+<script type="module" src="js/community.js"></script>
+</body>
+</html>
