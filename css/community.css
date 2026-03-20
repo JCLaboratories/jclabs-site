@@ -58,7 +58,6 @@
   gap: 12px;
   flex-wrap: wrap;
   width: 100%;
-  min-width: 0;
 }
 
 #user-section {
@@ -84,10 +83,9 @@
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
   outline: none;
+  flex: 1;
+  min-width: 160px;
   transition: border-color 0.2s;
-  flex: 1 1 auto;
-  min-width: 0;
-  max-width: 100%;
 }
 
 .auth-input:focus { border-color: var(--gold-muted); }
@@ -104,10 +102,6 @@
   cursor: pointer;
   text-transform: uppercase;
   transition: background 0.2s;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  flex: 0 1 auto;
   white-space: nowrap;
 }
 
@@ -405,13 +399,5 @@
   .page-header { padding: 100px 24px 48px; }
   .container   { padding: 40px 24px; }
   .two-col     { grid-template-columns: 1fr; gap: 32px; }
-
-  #auth-section {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .auth-input {
-    width: 100%;
-  }
+  #auth-section { flex-direction: column; align-items: stretch; }
 }
