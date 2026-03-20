@@ -401,3 +401,41 @@
   .two-col     { grid-template-columns: 1fr; gap: 32px; }
   #auth-section { flex-direction: column; align-items: stretch; }
 }
+
+
+
+
+
+
+/* mcxc */
+
+
+
+
+/* 🔧 MOBILE OVERFLOW FIX (auth bar) */
+@media (max-width: 900px) {
+
+  .auth-bar {
+    padding: 16px;        /* reduce side pressure */
+    overflow: hidden;     /* prevents visual spill */
+  }
+
+  #auth-section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .auth-input {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .btn-auth {
+    width: 100%;
+    min-width: 0;
+  }
+
+}
