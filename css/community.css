@@ -411,13 +411,22 @@
 
 
 
-
-/* 🔧 MOBILE OVERFLOW FIX (auth bar) */
+/* 🔥 HARD OVERFLOW FIX (mobile) */
 @media (max-width: 900px) {
 
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   .auth-bar {
-    padding: 16px;        /* reduce side pressure */
-    overflow: hidden;     /* prevents visual spill */
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
   }
 
   #auth-section {
@@ -425,17 +434,13 @@
     flex-direction: column;
     align-items: stretch;
     width: 100%;
-    min-width: 0;
   }
 
-  .auth-input {
-    width: 100%;
-    min-width: 0;
-  }
-
+  .auth-input,
   .btn-auth {
     width: 100%;
-    min-width: 0;
+    max-width: 100%;
   }
 
 }
+
