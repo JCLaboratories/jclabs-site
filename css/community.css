@@ -84,8 +84,9 @@
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
   outline: none;
+  transition: border-color 0.2s;
   flex: 1 1 auto;
-  min-width: 0;           /* 🔑 THIS is the real fix */
+  min-width: 0;
   max-width: 100%;
 }
 
@@ -103,6 +104,10 @@
   cursor: pointer;
   text-transform: uppercase;
   transition: background 0.2s;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  flex: 0 1 auto;
   white-space: nowrap;
 }
 
