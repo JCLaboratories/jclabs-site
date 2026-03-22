@@ -25,6 +25,16 @@ const app  = initializeApp(firebaseConfig);
 const db   = getFirestore(app);
 const auth = getAuth(app);
 
+// ── Limits ────────────────────────────────────────────────────
+const LIMITS = {
+  username:  30,
+  bio:       160,
+  publicKey: 500,
+  dropTo:    100,
+  dropFrom:  100,
+  dropMsg:   10000,
+};
+
 // ── Auth state ────────────────────────────────────────────────
 let currentUser = null;
 
@@ -36,18 +46,18 @@ onAuthStateChanged(auth, (user) => {
 });
 
 function updateAuthUI() {
-  const authSection  = document.getElementById('auth-section');
-  const userSection  = document.getElementById('user-section');
-  const listingForm  = document.getElementById('listing-form');
+  const authSection = document.getElementById('auth-section');
+  const userSection = document.getElementById('user-section');
+  const listingForm = document.getElementById('listing-form');
 
   if (currentUser) {
-    authSection.style.display  = 'none';
-    userSection.style.display  = 'flex';
+    authSection.style.display = 'none';
+    userSection.style.display = 'flex';
     document.getElementById('user-email').textContent = currentUser.email;
     if (listingForm) listingForm.style.display = 'block';
   } else {
-    authSection.style.display  = 'flex';
-    userSection.style.display  = 'none';
+    authSection.style.display = 'flex';
+    userSection.style.display = 'none';
     if (listingForm) listingForm.style.display = 'none';
   }
 }
@@ -87,13 +97,20 @@ window.loadDirectory = async function () {
     list.innerHTML = '';
     snap.forEach(d => {
       const data = d.data();
-      list.innerHTML += `
-        <div class="dir-entry">
-          <div class="dir-username">${esc(data.username)}</div>
-          ${data.bio ? `<div class="dir-bio">${esc(data.bio)}</div>` : ''}
-          <div class="dir-key">${esc(data.publicKey)}</div>
-          <button class="btn-copy-small" onclick="copyText('${esc(data.publicKey)}', this)">Copy Key</button>
-        </div>`;
+      const id   = d.id;
+      // Store key in a data attribute to avoid inline string escaping issues
+      const entry = document.createElement('div');
+      entry.className = 'dir-entry';
+      entry.innerHTML = `
+        <div class="dir-username">${esc(data.username)}</div>
+        ${data.bio ? `<div class="dir-bio">${esc(data.bio)}</div>` : ''}
+        <div class="dir-key">${esc(data.publicKey)}</div>
+        <button class="btn-copy-small" data-copy-key="${id}">Copy Key</button>`;
+      // Attach click handler directly — avoids all escaping issues
+      entry.querySelector('[data-copy-key]').addEventListener('click', function () {
+        copyText(data.publicKey, this);
+      });
+      list.appendChild(entry);
     });
   } catch (e) {
     list.innerHTML = '<div class="empty">Could not load directory.</div>';
@@ -115,8 +132,20 @@ window.submitListing = async function () {
     err.textContent = 'Username and public key are required.';
     return;
   }
+  if (username.length > LIMITS.username) {
+    err.textContent = `Username must be ${LIMITS.username} characters or less.`;
+    return;
+  }
+  if (bio.length > LIMITS.bio) {
+    err.textContent = `Bio must be ${LIMITS.bio} characters or less.`;
+    return;
+  }
   if (publicKey.length < 50) {
     err.textContent = 'That does not look like a valid public key block.';
+    return;
+  }
+  if (publicKey.length > LIMITS.publicKey) {
+    err.textContent = `Public key is too large (max ${LIMITS.publicKey} characters).`;
     return;
   }
 
@@ -164,18 +193,23 @@ window.loadDeadDrop = async function () {
     snap.forEach(d => {
       const data     = d.data();
       const timeLeft = getTimeLeft(data.expiresAt.toDate());
-      list.innerHTML += `
-        <div class="drop-entry">
-          <div class="drop-header">
-            <span class="drop-to">To: ${esc(data.to)}</span>
-            ${data.from
-              ? `<span class="drop-from">From: ${esc(data.from)}</span>`
-              : '<span class="drop-from">Anonymous</span>'}
-            <span class="drop-expiry">Expires: ${timeLeft}</span>
-          </div>
-          <div class="drop-message">${esc(data.message)}</div>
-          <button class="btn-copy-small" onclick="copyText('${esc(data.message)}', this)">Copy Ciphertext</button>
-        </div>`;
+      const entry    = document.createElement('div');
+      entry.className = 'drop-entry';
+      entry.innerHTML = `
+        <div class="drop-header">
+          <span class="drop-to">To: ${esc(data.to)}</span>
+          ${data.from
+            ? `<span class="drop-from">From: ${esc(data.from)}</span>`
+            : '<span class="drop-from">Anonymous</span>'}
+          <span class="drop-expiry">Expires: ${timeLeft}</span>
+        </div>
+        <div class="drop-message">${esc(data.message)}</div>
+        <button class="btn-copy-small">Copy Ciphertext</button>`;
+      // Attach click handler directly
+      entry.querySelector('.btn-copy-small').addEventListener('click', function () {
+        copyText(data.message, this);
+      });
+      list.appendChild(entry);
     });
   } catch (e) {
     list.innerHTML = '<div class="empty">Could not load messages.</div>';
@@ -196,11 +230,22 @@ window.postDeadDrop = async function () {
     err.textContent = 'Recipient and message are required.';
     return;
   }
+  if (to.length > LIMITS.dropTo) {
+    err.textContent = `Recipient field must be ${LIMITS.dropTo} characters or less.`;
+    return;
+  }
+  if (from.length > LIMITS.dropFrom) {
+    err.textContent = `From field must be ${LIMITS.dropFrom} characters or less.`;
+    return;
+  }
   if (message.length < 20) {
     err.textContent = 'Message too short — paste the full encrypted ciphertext.';
     return;
   }
-  // Basic ciphertext sanity check
+  if (message.length > LIMITS.dropMsg) {
+    err.textContent = `Message too large (max ${LIMITS.dropMsg} characters).`;
+    return;
+  }
   if (!message.includes(':') && !message.includes('=') && !message.includes('{')) {
     err.textContent = 'This does not look like encrypted ciphertext. Encrypt your message in Aleph Vault first.';
     return;
@@ -235,17 +280,30 @@ window.copyText = function (text, btn) {
     const orig = btn.textContent;
     btn.textContent = 'Copied!';
     setTimeout(() => btn.textContent = orig, 2000);
+  }).catch(() => {
+    // Fallback for browsers that block clipboard
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity  = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    const orig = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = orig, 2000);
   });
 };
 
 function esc(str) {
   if (!str) return '';
   return String(str)
-    .replace(/&/g,  '&amp;')
-    .replace(/</g,  '&lt;')
-    .replace(/>/g,  '&gt;')
-    .replace(/"/g,  '&quot;')
-    .replace(/'/g,  '&#039;');
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
 }
 
 function getTimeLeft(date) {
