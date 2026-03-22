@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Policy — JC Laboratories</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/docs.css">
+</head>
+<body>
+
+<header class="doc-header">
+  <span class="logo-mark"><img src="assets/logo.jpg" alt="JC Labs R&D"></span>
+  <span class="brand-full">JC Laboratories</span>
+  <span class="brand-sub">JC Labs R&amp;D &nbsp;·&nbsp; jclabs.tech</span>
+  <div class="brand-line"></div>
+  <span class="motto">By security professionals, for security professionals. Your privacy in your hands.</span>
+</header>
+
+<div class="doc-container">
+  <div class="doc-title">Security Policy</div>
+  <div class="doc-meta">Effective March 2026 &nbsp;·&nbsp; JC Laboratories / jclabs.tech</div>
+
+  <div class="highlight">
+    JC Laboratories is a security-focused company. We take vulnerability reports seriously and commit to working with the security community in good faith.
+  </div>
+
+  <h2>1. Responsible Disclosure</h2>
+  <p>If you discover a security vulnerability in any JC Laboratories product or service — including Aleph Vault, Gaffer, the JC Labs Community, or jclabs.tech — we ask that you report it to us privately before public disclosure. This gives us time to investigate and remediate before the vulnerability is exploited.</p>
+  <p>Please send vulnerability reports to: <a href="mailto:security@jclabs.tech">security@jclabs.tech</a></p>
+  <p>Include in your report:</p>
+  <ul>
+    <li>A description of the vulnerability and its potential impact</li>
+    <li>Steps to reproduce (proof-of-concept code or screenshots if applicable)</li>
+    <li>The affected product, version, or URL</li>
+    <li>Your contact information (optional — anonymous reports accepted)</li>
+  </ul>
+
+  <h2>2. Our Commitments to Researchers</h2>
+  <ul>
+    <li><strong>Acknowledgment:</strong> We will acknowledge receipt of your report within 72 hours</li>
+    <li><strong>Communication:</strong> We will keep you informed of our investigation progress</li>
+    <li><strong>Timeline:</strong> We target remediation within 90 days of confirmation. We will notify you if we need more time and explain why</li>
+    <li><strong>No legal action:</strong> We will not pursue legal action against security researchers who act in good faith and follow this policy</li>
+    <li><strong>Credit:</strong> We will credit you in our disclosure communications if you wish to be identified</li>
+    <li><strong>No bounties:</strong> JC Laboratories does not currently offer monetary bug bounties. We offer acknowledgment and our genuine gratitude</li>
+  </ul>
+
+  <h2>3. Scope</h2>
+  <div class="highlight">
+    <strong>In scope:</strong> Aleph Vault Android app, jclabs.tech website and community features, ai.jclabs.tech (Gaffer), JC Laboratories APIs, and Firebase infrastructure we control.
+  </div>
+  <p><strong>Out of scope:</strong></p>
+  <ul>
+    <li>Third-party services we use (Firebase, Stripe, Cloudflare, Google Cloud, OpenAI, Anthropic, Groq) — report these directly to the respective vendor</li>
+    <li>Denial of service attacks</li>
+    <li>Social engineering of JC Laboratories staff</li>
+    <li>Physical security attacks</li>
+    <li>Automated scanning that degrades service quality</li>
+    <li>Theoretical vulnerabilities without a working proof of concept</li>
+    <li>Previously reported and known issues</li>
+  </ul>
+
+  <h2>4. Rules of Engagement</h2>
+  <p>To qualify for good-faith protection, researchers must:</p>
+  <ul>
+    <li>Not access, modify, delete, or exfiltrate user data beyond what is minimally necessary to demonstrate the vulnerability</li>
+    <li>Not perform actions that could impact service availability for other users</li>
+    <li>Not use the vulnerability for personal gain beyond demonstrating it to us</li>
+    <li>Not disclose the vulnerability publicly until we have had 90 days to remediate, or we have agreed on a disclosure timeline</li>
+    <li>Report only vulnerabilities they have personally discovered</li>
+  </ul>
+
+  <h2>5. Cryptography and Known Limitations</h2>
+  <p>JC Laboratories implements the following cryptographic standards in Aleph Vault:</p>
+  <ul>
+    <li><strong>AES-256-GCM</strong> — symmetric encryption for vault contents</li>
+    <li><strong>X25519</strong> — ECDH key agreement for MessageCrypt</li>
+    <li><strong>Ed25519</strong> — digital signatures for message integrity</li>
+    <li><strong>PBKDF2-SHA256</strong> (310,000 iterations) — password-based key derivation</li>
+    <li><strong>Shamir's Secret Sharing</strong> — Enterprise Recovery key splitting</li>
+  </ul>
+  <p>We implement these using the <a href="https://pub.dev/packages/cryptography" target="_blank" rel="noopener">Dart cryptography package</a>. We make no warranty that our implementations are free from unknown vulnerabilities. If you discover a cryptographic implementation flaw, please report it under this policy.</p>
+
+  <h2>6. DMCA Agent</h2>
+  <p>For copyright infringement notices under 17 U.S.C. &sect; 512, contact our designated agent:</p>
+  <p>
+    <strong>Agent:</strong> Justin Czap<br>
+    <strong>Email:</strong> <a href="mailto:dmca@jclabs.tech">dmca@jclabs.tech</a><br>
+    <strong>Address:</strong> JC Laboratories, Michigan, United States
+  </p>
+
+  <h2>7. PGP Verification</h2>
+  <p>For sensitive security reports, you may request our PGP public key by emailing <a href="mailto:security@jclabs.tech">security@jclabs.tech</a>. We will provide it in our response.</p>
+
+  <h2>8. Contact</h2>
+  <p>
+    Security: <a href="mailto:security@jclabs.tech">security@jclabs.tech</a><br>
+    DMCA: <a href="mailto:dmca@jclabs.tech">dmca@jclabs.tech</a><br>
+    General: <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>
+  </p>
+
+  <div class="divider"></div>
+  <p style="text-align:center;color:var(--text-muted);font-size:14px;">&copy; 2026 JC Laboratories &nbsp;·&nbsp; All rights reserved</p>
+</div>
+
+<footer>
+  <div class="footer-brand">
+    <img src="assets/logo.jpg" class="logo-img" alt="JC Labs R&D">
+    <span class="name">JC Laboratories</span>
+    <p>Independent security tools by JC Laboratories.<br>JC Labs R&amp;D &nbsp;&middot;&nbsp; jclabs.tech</p>
+    <p style="margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);">contact@jclabs.tech</p>
+  </div>
+  <div class="footer-links">
+    <h4>Products</h4>
+    <ul>
+      <li><a href="download.html">Aleph Vault</a></li>
+      <li><a href="https://ai.jclabs.tech">Gaffer (EGAF)</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="https://github.com/JCLaboratories" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </div>
+  <div class="footer-links">
+    <h4>Legal</h4>
+    <ul>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Service</a></li>
+      <li><a href="security.html">Security Policy</a></li>
+      <li><a href="mailto:contact@jclabs.tech">Contact</a></li>
+      <li><a href="mailto:security@jclabs.tech">security@jclabs.tech</a></li>
+      <li><a href="mailto:dmca@jclabs.tech">dmca@jclabs.tech</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 JC Laboratories &nbsp;&middot;&nbsp; CC BY-NC 4.0</span>
+    <span style="font-style:italic;font-family:'EB Garamond',serif;font-size:13px;color:var(--gold-muted);">By security professionals, for security professionals.</span>
+  </div>
+</footer>
+
+</body>
+</html>
