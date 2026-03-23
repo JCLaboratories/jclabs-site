@@ -35,7 +35,7 @@
   <div class="product-block">
     <div class="product-name">Aleph Vault</div>
     <p>An offline-first encrypted vault application for Android. Provides secure local storage of notes, passwords, cryptographic key pairs, API keys, and encrypted messaging via the MessageCrypt system. All sensitive data is encrypted on-device using AES-256-GCM. We cannot read your vault.</p>
-    <p>On Free, Individual, and Family tiers, your vault data never leaves your device. Vault export files are encrypted with a user-chosen export password before leaving the device — JC Laboratories never receives or has access to these files. On Family, Business, and Enterprise tiers, encrypted cloud backup blobs may be stored on our servers — encrypted on your device before upload. We cannot decrypt them.</p>
+    <p>On Free and Individual tiers, your vault data never leaves your device. Vault export files are encrypted with a user-chosen export password before leaving the device — JC Laboratories never receives or has access to these files. On Family, Business, and Enterprise tiers, encrypted cloud backup blobs may be stored on our servers — encrypted on your device before upload. We cannot decrypt them.</p>
   </div>
 
   <div class="product-block">
@@ -80,11 +80,31 @@
     <div class="product-name">Aleph Vault — Data by Tier</div>
     <table class="tier-table">
       <tr><th>Tier</th><th>Data Collected</th><th>Backup / Recovery</th></tr>
-      <tr><td>Free</td><td>Email address, subscription tier, usage counters</td><td>None — vault data stays on device only</td></tr>
-      <tr><td>Individual</td><td>Email, tier, usage counters</td><td>Self-managed encrypted file export/import only — vault data stays on device</td></tr>
-      <tr><td>Family</td><td>Email, tier, usage counters, encrypted cloud backup blob</td><td>Self-managed export/import + encrypted cloud backup</td></tr>
-      <tr><td>Small / Medium Business</td><td>Email, tier, encrypted cloud backup blob, optional recovery blob</td><td>Encrypted cloud backup + optional recovery add-on</td></tr>
-      <tr><td>Enterprise / VIP</td><td>Email, tier, encrypted backup blob, recovery blob, identity verification records</td><td>Cloud backup + recovery included + SLA</td></tr>
+      <tr>
+        <td>Free</td>
+        <td>Email address, subscription tier, key pair counts, reset dates, repo item count, attachment count</td>
+        <td>None — vault data stays on device only</td>
+      </tr>
+      <tr>
+        <td>Individual</td>
+        <td>Email, subscription tier, key pair counts, reset dates, repo item count, attachment count</td>
+        <td>Self-managed encrypted file export/import only — vault data stays on device</td>
+      </tr>
+      <tr>
+        <td>Family</td>
+        <td>Email, subscription tier, key pair counts, reset dates, repo item count, attachment count, encrypted cloud backup blob, backup metadata</td>
+        <td>Self-managed export/import + encrypted cloud backup</td>
+      </tr>
+      <tr>
+        <td>Small / Medium Business</td>
+        <td>Email, subscription tier, key pair counts, reset dates, repo item count, attachment count, encrypted cloud backup blob, backup metadata, optional recovery blob</td>
+        <td>Encrypted cloud backup + optional recovery add-on</td>
+      </tr>
+      <tr>
+        <td>Enterprise / VIP</td>
+        <td>Email, subscription tier, key pair counts, reset dates, repo item count, attachment count, encrypted cloud backup blob, backup metadata, recovery blob, identity verification records</td>
+        <td>Cloud backup + recovery included + SLA</td>
+      </tr>
     </table>
     <p>For all tiers, we do <strong>not</strong> collect, store, or have access to vault contents, private keys, messages, notes, passwords, or API keys. All vault data is encrypted on your device before any storage or transmission. On Family, Business, and Enterprise tiers, encrypted blobs are stored on our servers — we cannot decrypt them.</p>
   </div>
