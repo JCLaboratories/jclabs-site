@@ -162,6 +162,8 @@ section {
   position: relative;
   overflow: hidden;
   transition: background 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-card::before {
@@ -227,6 +229,7 @@ section {
   align-items: center;
   gap: 8px;
   transition: gap 0.2s;
+  margin-top: auto;
 }
 
 .product-link:hover { gap: 14px; text-decoration: none; }
