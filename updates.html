@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Updates &amp; Changelog — JC Laboratories</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<style>
+
+/* ── Page header ─────────────────────────────────────────── */
+.page-header {
+  padding: 120px 48px 60px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+.page-header .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--gold-muted);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: block;
+}
+.page-header h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+.page-header h1 span { color: var(--gold); }
+.page-header p {
+  color: var(--text-secondary);
+  font-size: 17px;
+  max-width: 600px;
+}
+
+/* ── Container ───────────────────────────────────────────── */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 48px;
+}
+
+/* ── Filter tabs ─────────────────────────────────────────── */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 24px;
+}
+
+.filter-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-btn:hover { border-color: var(--gold-muted); color: var(--gold); }
+.filter-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(184,160,88,0.06); }
+
+/* ── Entry ───────────────────────────────────────────────── */
+.entry {
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+  transition: border-color 0.2s;
+}
+.entry:hover { border-color: var(--gold-muted); }
+
+.entry-header {
+  background: var(--surface);
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.entry-product {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+.entry-version {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+}
+
+.entry-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+.entry-body {
+  padding: 20px 24px;
+}
+
+/* ── Change items ────────────────────────────────────────── */
+.change-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.change-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.change-list li:last-child { border-bottom: none; }
+
+/* ── Badges ──────────────────────────────────────────────── */
+.badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.badge-new      { background: rgba(184,160,88,0.15); color: var(--gold); border: 1px solid rgba(184,160,88,0.3); }
+.badge-fix      { background: rgba(100,160,100,0.12); color: #7dbf7d; border: 1px solid rgba(100,160,100,0.3); }
+.badge-security { background: rgba(200,80,80,0.12); color: #e07070; border: 1px solid rgba(200,80,80,0.3); }
+.badge-breaking { background: rgba(200,100,40,0.12); color: #e09050; border: 1px solid rgba(200,100,40,0.3); }
+.badge-soon     { background: rgba(120,120,180,0.12); color: #9090d0; border: 1px solid rgba(120,120,180,0.3); }
+.badge-website  { background: rgba(80,160,200,0.12); color: #70b0d0; border: 1px solid rgba(80,160,200,0.3); }
+
+/* ── Hidden entries (filtered out) ──────────────────────── */
+.entry.hidden { display: none; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .page-header { padding: 100px 24px 48px; }
+  .container   { padding: 40px 24px; }
+  .entry-date  { margin-left: 0; width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="assets/logo.jpg" class="nav-logo-img" alt="JC Labs R&D">
+    <span class="nav-name">JC Laboratories</span>
+  </a>
+  <a href="index.html" class="nav-back">&larr; Back to Home</a>
+</nav>
+
+<div class="page-header">
+  <span class="page-header-bg" aria-hidden="true">ℵ</span>
+  <span class="label">// release notes</span>
+  <h1>Updates &amp; <span>Changelog</span></h1>
+  <p>Everything that ships, fixes, and changes across all JC Laboratories products. Most recent first.</p>
+</div>
+
+<div class="container">
+
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterEntries('all', this)">All</button>
+    <button class="filter-btn" onclick="filterEntries('aleph-vault', this)">Aleph Vault</button>
+    <button class="filter-btn" onclick="filterEntries('cipherport', this)">CipherPort</button>
+    <button class="filter-btn" onclick="filterEntries('cryptaverse', this)">Cryptaverse</button>
+    <button class="filter-btn" onclick="filterEntries('gaffer', this)">Gaffer</button>
+    <button class="filter-btn" onclick="filterEntries('egaf', this)">EGAF</button>
+    <button class="filter-btn" onclick="filterEntries('website', this)">Website</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HOW TO ADD A NEW ENTRY:
+       Copy one .entry block below, paste it at the top of
+       this section, update the data-product, version, date,
+       badges, and change descriptions. That's it.
+
+       data-product options:
+       aleph-vault · cipherport · cryptaverse · gaffer · egaf · website
+  ════════════════════════════════════════════════════════ -->
+
+  <!-- ENTRY: Website 3/23/2026 -->
+  <div class="entry" data-product="website">
+    <div class="entry-header">
+      <span class="entry-product">jclabs.tech</span>
+      <span class="entry-version">Update</span>
+      <span class="entry-date">3/23/2026</span>
+    </div>
+    <div class="entry-body">
+      <ul class="change-list">
+        <li><span class="badge badge-new">New</span> Updates &amp; Changelog page added — tracks all changes across JC Laboratories products going forward</li>
+        <li><span class="badge badge-new">New</span> CipherPort branding — community page renamed and rebranded as CipherPort, gateway to Cryptaverse</li>
+        <li><span class="badge badge-new">New</span> Cryptaverse announced — privacy-first cryptographic safe harbor, coming soon</li>
+        <li><span class="badge badge-new">New</span> Cryptaverse product card added to homepage</li>
+        <li><span class="badge badge-new">New</span> Updates link added to site navigation and footer</li>
+        <li><span class="badge badge-fix">Fix</span> Family tier now includes cloud backup — updated across all tier tables and legal pages</li>
+        <li><span class="badge badge-fix">Fix</span> Privacy Policy and Terms of Service updated — CipherPort branding, accurate cloud backup tier language</li>
+        <li><span class="badge badge-security">Security</span> Firestore security rules updated — size limits enforced server-side on CipherPort directory and dead drop</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ENTRY: CipherPort 3/23/2026 -->
+  <div class="entry" data-product="cipherport">
+    <div class="entry-header">
+      <span class="entry-product">CipherPort</span>
+      <span class="entry-version">Update</span>
+      <span class="entry-date">3/23/2026</span>
+    </div>
+    <div class="entry-body">
+      <ul class="change-list">
+        <li><span class="badge badge-new">New</span> Rebranded from JC Labs Community to CipherPort</li>
+        <li><span class="badge badge-new">New</span> Cryptaverse teaser added to page — coming soon banner and info box</li>
+        <li><span class="badge badge-fix">Fix</span> Copy key button fixed — now works correctly with all Aleph key formats</li>
+        <li><span class="badge badge-fix">Fix</span> Clipboard fallback added for browsers that block navigator.clipboard</li>
+        <li><span class="badge badge-security">Security</span> Server-side size limits enforced — max 10,000 chars per dead drop message, 500 chars per public key, 30 chars per username, 160 chars per bio</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ENTRY: Cryptaverse 3/23/2026 -->
+  <div class="entry" data-product="cryptaverse">
+    <div class="entry-header">
+      <span class="entry-product">Cryptaverse</span>
+      <span class="entry-version">Announced</span>
+      <span class="entry-date">3/23/2026</span>
+    </div>
+    <div class="entry-body">
+      <ul class="change-list">
+        <li><span class="badge badge-soon">Soon</span> Encrypted profiles — your profile is ciphertext to everyone except approved contacts</li>
+        <li><span class="badge badge-soon">Soon</span> Two key pair identity model — identity key (public) + encryption key (contacts only)</li>
+        <li><span class="badge badge-soon">Soon</span> Contact request system — access keys exchanged cryptographically on approval</li>
+        <li><span class="badge badge-soon">Soon</span> Cryptographic groups — communities that exist only if you hold the key</li>
+        <li><span class="badge badge-soon">Soon</span> Aleph Vault integration — app as hardware key store for Cryptaverse</li>
+        <li><span class="badge badge-soon">Soon</span> Profile and group content encrypted client-side before reaching servers — we store only ciphertext we cannot decrypt</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-brand">
+    <img src="assets/logo.jpg" class="logo-img" alt="JC Labs R&D">
+    <span class="name">JC Laboratories</span>
+    <p>Independent security tools by JC Laboratories.<br>JC Labs R&amp;D &nbsp;&middot;&nbsp; jclabs.tech</p>
+    <p style="margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);">
+      <a href="/cdn-cgi/l/email-protection#52313d3c263331261238313e3330217c2637313a"><span class="__cf_email__" data-cfemail="b3d0dcddc7d2d0c7f3d9d0dfd2d1c09dc7d6d0db">[email&#160;protected]</span></a>
+    </p>
+  </div>
+  <div class="footer-links">
+    <h4>Products</h4>
+    <ul>
+      <li><a href="download.html">Aleph Vault</a></li>
+      <li><a href="https://ai.jclabs.tech">Gaffer (EGAF)</a></li>
+      <li><a href="community.html">CipherPort</a></li>
+      <li><a href="https://github.com/JCLaboratories" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </div>
+  <div class="footer-links">
+    <h4>Legal</h4>
+    <ul>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Service</a></li>
+      <li><a href="security.html">Security Policy</a></li>
+      <li><a href="/cdn-cgi/l/email-protection#b3d0dcddc7d2d0c7f3d9d0dfd2d1c09dc7d6d0db">Contact</a></li>
+      <li><a href="/cdn-cgi/l/email-protection#9eedfbfdebecf7eae7def4fdf2fffcedb0eafbfdf6"><span class="__cf_email__" data-cfemail="99eafcfaecebf0ede0d9f3faf5f8fbeab7edfcfaf1">[email&#160;protected]</span></a></li>
+      <li><a href="/cdn-cgi/l/email-protection#d9bdb4bab899b3bab5b8bbaaf7adbcbab1"><span class="__cf_email__" data-cfemail="b6d2dbd5d7f6dcd5dad7d4c598c2d3d5de">[email&#160;protected]</span></a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 JC Laboratories &nbsp;&middot;&nbsp; CC BY-NC 4.0</span>
+    <span style="font-style:italic;font-family:'EB Garamond',serif;font-size:13px;color:var(--gold-muted);">By security professionals, for security professionals.</span>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/
