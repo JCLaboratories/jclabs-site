@@ -20,14 +20,14 @@
 
 <div class="doc-container">
   <div class="doc-title">Terms of Service</div>
-  <div class="doc-meta">Effective March 17, 2026 &nbsp;·&nbsp; JC Laboratories / jclabs.tech</div>
+  <div class="doc-meta">Effective March 23, 2026 &nbsp;·&nbsp; JC Laboratories / jclabs.tech</div>
 
   <div class="highlight">
-    By using any JC Laboratories product or service, you agree to these terms. Please read carefully — particularly sections on vault password recovery, vault export and import, the dead drop board, the Enterprise Recovery Program, and EGAF licensing.
+    By using any JC Laboratories product or service, you agree to these terms. Please read carefully — particularly sections on vault password recovery, vault export and import, CipherPort, the Enterprise Recovery Program, and EGAF licensing.
   </div>
 
   <h2>1. Acceptance of Terms</h2>
-  <p>These Terms of Service govern your use of all JC Laboratories products and services, including Aleph Vault, the Entropy-Gated AI Framework (EGAF), Gaffer, the JC Labs Community (public key directory and dead drop board), and jclabs.tech. By accessing or using our Services, you agree to be bound by these Terms.</p>
+  <p>These Terms of Service govern your use of all JC Laboratories products and services, including Aleph Vault, the Entropy-Gated AI Framework (EGAF), Gaffer, CipherPort (public key directory and dead drop board), Cryptaverse, and jclabs.tech. By accessing or using our Services, you agree to be bound by these Terms.</p>
 
   <h2>2. About JC Laboratories</h2>
   <p>JC Laboratories (jclabs.tech) is an independent technology company founded by Justin Czap. Our research and development division, JC Labs R&D, develops security-focused software and the Entropy-Gated AI Framework.</p>
@@ -37,23 +37,26 @@
   <p><strong>Aleph Vault</strong> is an offline-first encrypted vault application for Android providing secure local storage of notes, passwords, cryptographic key pairs, API keys, and encrypted messaging via the MessageCrypt system.</p>
   <p><strong>EGAF (Entropy-Gated AI Framework)</strong> is a structured AI governance and orchestration protocol developed by JC Labs R&D. It defines a three-part composition system (OIL_CONTRACT, INVOKER, E_T) for governed, reproducible, and auditable AI task execution, operating as a Layer 3 governance protocol.</p>
   <p><strong>Gaffer</strong> is the flagship AI assistant built on EGAF, providing governed AI interactions via web interface (ai.jclabs.tech) and API.</p>
-  <p><strong>JC Labs Community</strong> is a public key directory and encrypted dead drop message board at jclabs.tech/community.</p>
+  <p><strong>CipherPort</strong> is a public key directory and encrypted dead drop message board at jclabs.tech/community. It is the gateway to Cryptaverse — a privacy-first cryptographic safe harbor where identity is a key, communities are cryptographic safe rooms, and nobody, not even JC Laboratories, can read what happens inside.</p>
+  <p><strong>Cryptaverse</strong> is the forthcoming privacy-first cryptographic social platform built on zero-knowledge architecture. All Cryptaverse content is encrypted client-side before reaching our servers. Access is enforced by mathematics, not policy.</p>
 
   <h2>4. Subscription Tiers — Aleph Vault</h2>
   <table class="tier-table">
     <tr><th>Tier</th><th>Price</th><th>Key Features</th></tr>
     <tr><td>Free</td><td>$0/mo</td><td>5 repo items, 1 key pair/month, no export, no recovery, community read access</td></tr>
     <tr><td>Individual</td><td>$3/mo</td><td>Unlimited items, 1 key pair/month, vault export/import, community directory listing</td></tr>
-    <tr><td>Family</td><td>$5/mo</td><td>Unlimited items, unlimited key pairs, vault export/import, community listing</td></tr>
+    <tr><td>Family</td><td>$5/mo</td><td>Unlimited items, unlimited key pairs, vault export/import, encrypted cloud backup, community listing</td></tr>
     <tr><td>Small Business</td><td>$25/mo</td><td>Unlimited key pairs, vault export/import, encrypted cloud backup, optional recovery add-on</td></tr>
     <tr><td>Medium Business</td><td>$50/mo</td><td>Unlimited key pairs, vault export/import, encrypted cloud backup, optional recovery add-on</td></tr>
     <tr><td>Enterprise / VIP</td><td>Custom</td><td>Unlimited keys, cloud backup, recovery included, SLA, dedicated support</td></tr>
   </table>
   <p>JC Laboratories reserves the right to update pricing with 30 days notice to existing subscribers.</p>
 
-  <h2>5. Vault Password — Standard Tiers</h2>
+  <h2>5. Account Password vs Vault Password</h2>
+  <p>Aleph Vault uses two separate passwords with different properties:</p>
+  <p><strong>Account password</strong> — used to sign in to your JC Laboratories account. This can be reset via email through standard Firebase Authentication. JC Laboratories manages this through Firebase and can facilitate a reset.</p>
   <div class="warning">
-    <strong>Free, Individual, and Family Tiers — No Recovery:</strong> Aleph Vault uses zero-knowledge encryption. Your vault password derives your encryption key locally on your device. JC Laboratories does not store, transmit, or have access to your vault password or its derived key. If you forget your vault password on these tiers, your encrypted vault data cannot be recovered by anyone — including JC Laboratories. There is no reset, no recovery code, and no backdoor.
+    <strong>Vault password — No Recovery on Standard Tiers:</strong> Your vault password derives your encryption key locally on your device. JC Laboratories does not store, transmit, or have access to your vault password or its derived key. If you forget your vault password on Free, Individual, or Family tiers, your encrypted vault data cannot be recovered by anyone — including JC Laboratories. There is no reset, no recovery code, and no backdoor. This is intentional.
   </div>
   <p>You acknowledge and accept this limitation by using standard tiers. We strongly recommend exporting your vault regularly and storing the backup securely.</p>
 
@@ -64,22 +67,22 @@
   </div>
   <p>Exported files are saved to your device's Downloads/AlephVault/ folder. You are solely responsible for the security of exported vault files after export.</p>
 
-  <h2>7. Cloud Backup — Business and Enterprise Tiers</h2>
-  <p>Business and Enterprise tier subscribers may enable automatic encrypted cloud backup. Vault data is encrypted on-device before upload. JC Laboratories stores only the encrypted blob and cannot decrypt it. Encrypted blobs are retained while the subscription is active and deleted 30 days after cancellation.</p>
+  <h2>7. Cloud Backup — Family, Business, and Enterprise Tiers</h2>
+  <p>Family, Business, and Enterprise tier subscribers may enable automatic encrypted cloud backup. Vault data is encrypted on-device before upload. JC Laboratories stores only the encrypted blob and cannot decrypt it. On Free and Individual tiers, vault data never leaves your device. Encrypted blobs are retained while the subscription is active and deleted 30 days after cancellation.</p>
 
-  <h2>8. JC Labs Community — Public Key Directory</h2>
+  <h2>8. CipherPort — Public Key Directory</h2>
   <div class="warning">
     <strong>Account required.</strong> A jclabs.tech account is required to create or maintain a directory listing. Anonymous accounts using only an email address are permitted — no real name is required.
   </div>
   <p>By submitting a directory listing you agree that your listing does not impersonate any real person or organization, your username and bio do not contain illegal content, slurs, threats, or harassment, the public key you list is your own, and JC Laboratories may remove your listing at any time for violation of these Terms.</p>
 
-  <h2>9. JC Labs Community — Dead Drop Board</h2>
-  <p>The dead drop board is an anonymous encrypted message relay. No account is required to post.</p>
+  <h2>9. CipherPort — Dead Drop Board</h2>
+  <p>The CipherPort dead drop board is an anonymous encrypted message relay. No account is required to post.</p>
   <div class="highlight">
     JC Laboratories operates the dead drop board as a blind courier. All messages posted to the board must be encrypted ciphertext. We cannot read posted messages. We are not responsible for the content of encrypted messages we cannot decrypt.
   </div>
   <p><strong>Message expiry:</strong> Free and anonymous users: up to 7 days. Paid tier account holders: up to 30 days. Messages are automatically and permanently deleted at expiry.</p>
-  <p><strong>Law enforcement:</strong> We will comply with legally valid requests. However, we can only provide the encrypted ciphertext — we maintain no logs of poster IP addresses or identities.</p>
+  <p><strong>Law enforcement:</strong> We will comply with legally valid requests. However, we can only provide the encrypted ciphertext — we do not log or store poster IP addresses or identities in our application database. Note that infrastructure providers such as Cloudflare may retain standard network-level logs per their own privacy policies.</p>
 
   <h2>10. Enterprise Recovery Program</h2>
   <p>The Enterprise Recovery Program is an optional, paid feature on Business and Enterprise/VIP tiers, governed by a separate Enterprise Recovery Agreement.</p>
@@ -101,7 +104,7 @@
     <li><strong>Non-commercial use:</strong> Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>. You may use, share, and adapt EGAF for non-commercial purposes with attribution to JC Laboratories.</li>
     <li><strong>Commercial use:</strong> Requires a separate written commercial license from JC Laboratories. Contact <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>.</li>
   </ul>
-  <p>Gaffer, Aleph Vault, and all associated JC Laboratories software, branding, and assets are proprietary. All rights reserved.</p>
+  <p>Gaffer, Aleph Vault, CipherPort, Cryptaverse, and all associated JC Laboratories software, branding, and assets are proprietary. All rights reserved.</p>
 
   <h2>12. AI-Generated Content — Gaffer</h2>
   <p>AI-generated content from Gaffer is provided for informational purposes only and does not constitute professional advice of any kind. You use AI-generated content at your own risk.</p>
@@ -175,8 +178,9 @@
     <ul>
       <li><a href="download.html">Aleph Vault</a></li>
       <li><a href="https://ai.jclabs.tech">Gaffer (EGAF)</a></li>
-      <li><a href="community.html">Community</a></li>
+      <li><a href="community.html">CipherPort</a></li>
       <li><a href="https://egaf.jclabs.tech/" target="_blank" rel="noopener">EGAF Framework</a></li>
+      <li><a href="updates.html">Updates &amp; Changelog</a></li>
     </ul>
   </div>
   <div class="footer-links">
