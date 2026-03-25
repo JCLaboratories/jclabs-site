@@ -20,47 +20,22 @@
 
 <div class="doc-container">
   <div class="doc-title">Privacy Policy</div>
-  <div class="doc-meta">Effective March 25, 2026 &nbsp;·&nbsp; JC Laboratories / jclabs.tech</div>
+  <div class="doc-meta">Effective March 23, 2026 &nbsp;·&nbsp; JC Laboratories / jclabs.tech</div>
 
   <div class="highlight">
-    JC Laboratories is built on a simple principle: your data belongs to you. We collect the minimum information required to operate our services, and we design our systems so encrypted content remains unreadable to us.
+    JC Laboratories is built on a simple principle: your data belongs to you. We collect the absolute minimum required to operate our services — and we cannot access your vault contents under any circumstances.
   </div>
 
   <h2>Who We Are</h2>
-  <p>JC Laboratories (jclabs.tech) is an independent technology company founded by Justin Czap. We develop security-focused software tools including Aleph Vault, CipherPort, Cryptaverse, the EGAF Framework, and Gaffer.</p>
-  <p>Our research and development division, JC Labs R&amp;D, develops the Entropy-Gated AI Framework (EGAF) and related products. Our mission is to put real security tools in the hands of real people, without compromise.</p>
-
-  <h2>Content vs Metadata — What We Can and Cannot See</h2>
-  <p>JC Laboratories is designed so that we cannot read your encrypted content.</p>
-
-  <p><strong>What we cannot access:</strong></p>
-  <ul>
-    <li>Vault contents such as notes, passwords, API keys, and private attachments</li>
-    <li>Private cryptographic keys stored in your vault</li>
-    <li>Encrypted message and attachment contents</li>
-    <li>Encrypted group content protected client-side</li>
-    <li>Cloud backup contents once encrypted on your device</li>
-  </ul>
-
-  <p><strong>What we do process and store as service metadata:</strong></p>
-  <ul>
-    <li>Account information such as email address, account status, and subscription tier</li>
-    <li>Public profile or listing information that you choose to publish</li>
-    <li>Public keys or public key material needed for discovery or routing, where applicable</li>
-    <li>Message routing information such as recipient identifiers, timestamps, and expiry settings</li>
-    <li>Encrypted message blobs and encrypted backup blobs as unreadable ciphertext</li>
-    <li>Operational data such as request counts, abuse-prevention signals, billing state, and backup metadata</li>
-  </ul>
-
-  <p>We do not use this data for advertising, profiling, or resale. We use it only to operate, secure, and support the service.</p>
+  <p>JC Laboratories (jclabs.tech) is an independent technology company founded by Justin Czap. We develop security-focused software tools including Aleph Vault, the EGAF Gaffer AI assistant, and CipherPort — a privacy-first public key directory and encrypted messaging board, and gateway to Cryptaverse.</p>
+  <p>Our research and development division, JC Labs R&D, is responsible for the Entropy-Gated AI Framework (EGAF) — a structured AI governance and orchestration framework — and all products built upon it. Our mission is to put real security tools in the hands of real people, without compromise.</p>
 
   <h2>Our Products</h2>
 
   <div class="product-block">
     <div class="product-name">Aleph Vault</div>
-    <p>Aleph Vault is an offline-first encrypted vault application for Android. It provides secure local storage for notes, passwords, cryptographic key pairs, API keys, and encrypted messaging via the MessageCrypt system.</p>
-    <p>All sensitive vault data is encrypted on-device before storage. On Free and Individual tiers, vault data remains on your device unless you choose to export it. On Family, Business, and Enterprise tiers, encrypted cloud backup blobs may be stored by us after being encrypted on your device. We cannot decrypt those blobs.</p>
-    <p><strong>Device model:</strong> Aleph Vault is designed primarily for single-device use. Additional devices are supported through encrypted backup and restore, not real-time multi-device synchronization.</p>
+    <p>An offline-first encrypted vault application for Android. Provides secure local storage of notes, passwords, cryptographic key pairs, API keys, and encrypted messaging via the MessageCrypt system. All sensitive data is encrypted on-device using AES-256-GCM. We cannot read your vault.</p>
+    <p>On Free and Individual tiers, your vault data never leaves your device. Vault export files are encrypted with a user-chosen export password before leaving the device — JC Laboratories never receives or has access to these files. On Family, Business, and Enterprise tiers, encrypted cloud backup blobs may be stored on our servers — encrypted on your device before upload. We cannot decrypt them.</p>
   </div>
 
   <div class="product-block">
@@ -68,8 +43,8 @@
       <img src="assets/egaf-logo.svg" class="egaf-logo" alt="EGAF" onerror="this.style.display='none'">
       <div class="egaf-content">
         <div class="product-name">EGAF — Entropy-Gated AI Framework</div>
-        <p>EGAF is a structured AI governance protocol developed by JC Labs R&amp;D. It defines a governed composition system for auditable AI task execution.</p>
-        <p>EGAF is licensed under CC BY-NC 4.0 for non-commercial use. Commercial use requires written permission from JC Laboratories.</p>
+        <p>A structured AI governance protocol developed by JC Labs R&D. EGAF defines a three-part vial composition system (OIL_CONTRACT, INVOKER, E_T) for governed, auditable AI task execution. It operates as a Layer 3 governance protocol above standard AI API mechanics.</p>
+        <p>EGAF is licensed under CC BY-NC 4.0. Commercial implementations require written permission from JC Laboratories.</p>
       </div>
     </div>
   </div>
@@ -79,19 +54,24 @@
       <img src="assets/egaf-logo.svg" class="egaf-logo" alt="Gaffer" onerror="this.style.display='none'">
       <div class="egaf-content">
         <div class="product-name">Gaffer — EGAF AI Assistant</div>
-        <p>Gaffer is the flagship AI assistant built on EGAF. It provides governed AI interactions through a web interface and API.</p>
-        <p>Messages sent through Gaffer may be processed by third-party AI providers such as Anthropic, Groq, and OpenAI, subject to their own privacy policies. JC Laboratories may retain limited operational metadata necessary for rate limiting, abuse prevention, and service reliability, but we do not market Gaffer as an end-to-end encrypted or zero-knowledge product.</p>
+        <p>The flagship AI assistant built on the Entropy-Gated AI Framework. Gaffer provides governed AI interactions via web interface (ai.jclabs.tech) and API.</p>
+        <p>Messages sent through Gaffer are processed by third-party AI providers (Anthropic, Groq, OpenAI) subject to their own privacy policies. We do not store conversation logs on our servers. Each session is stateless.</p>
         <p>Third-party providers: <a href="https://anthropic.com/privacy">Anthropic</a>, <a href="https://groq.com/privacy">Groq</a>, <a href="https://openai.com/privacy">OpenAI</a>.</p>
       </div>
     </div>
   </div>
 
   <div class="product-block">
-    <div class="product-name">CipherPort and Cryptaverse</div>
-    <p>CipherPort is the community gateway of JC Laboratories and the public-facing entry point into Cryptaverse.</p>
-    <p>Cryptaverse is a privacy-first cryptographic social platform in which content is encrypted client-side before reaching our servers. We cannot read encrypted content. We do, however, process limited metadata needed to authenticate users, route messages, enforce quotas, and operate the platform.</p>
-    <p>CipherPort may include public-facing features such as public listings, public billboards, public group boards, and encrypted relay features. Any information you choose to make public through those features is not private.</p>
-    <p><strong>Encrypted relay features:</strong> For dead-drop or relay-style messaging, JC Laboratories operates as a blind courier. We transport encrypted ciphertext and cannot read its contents, but we may process minimal routing metadata such as recipient identifiers, timestamps, and expiry.</p>
+    <div class="product-name">CipherPort — Public Key Directory &amp; Dead Drop Board</div>
+    <p>CipherPort is the community gateway of JC Laboratories, accessible at jclabs.tech/community. It is the gateway to Cryptaverse — a privacy-first cryptographic safe harbor where identity is a key and privacy is enforced by mathematics, not policy.</p>
+    <p><strong>Public Key Directory</strong> — A jclabs.tech account is required to create a directory listing. Accounts may be pseudonymous — no real name required, only an email address.</p>
+    <p><strong>Dead Drop Board</strong> — An anonymous encrypted message relay. No account required to post. All content must be encrypted ciphertext before posting. JC Laboratories operates as a blind courier — we cannot read posted messages.</p>
+    <p><strong>What we store for CipherPort features:</strong></p>
+    <ul>
+      <li>Directory listings: username, public key block, optional bio (account-linked)</li>
+      <li>Dead drop messages: recipient identifier, sender identifier (optional), encrypted ciphertext, expiry timestamp</li>
+      <li>We do not store IP addresses, device identifiers, or any metadata beyond what is listed above</li>
+    </ul>
   </div>
 
   <h2>What We Collect — By Product and Tier</h2>
@@ -102,122 +82,105 @@
       <tr><th>Tier</th><th>Data Collected</th><th>Backup / Recovery</th></tr>
       <tr>
         <td>Free</td>
-        <td>Email address, subscription tier, usage limits, reset dates, repo item count, attachment count</td>
-        <td>None — vault data remains on device unless you choose local export where available</td>
+        <td>Email address, subscription tier, key pair counts, reset dates, repo item count, attachment count</td>
+        <td>None — vault data stays on device only</td>
       </tr>
       <tr>
         <td>Individual</td>
-        <td>Email address, subscription tier, usage limits, reset dates, repo item count, attachment count</td>
-        <td>Self-managed encrypted export/import only</td>
+        <td>Email, subscription tier, key pair counts, reset dates, repo item count, attachment count</td>
+        <td>Self-managed encrypted file export/import only — vault data stays on device</td>
       </tr>
       <tr>
         <td>Family</td>
-        <td>Email address, subscription tier, usage limits, reset dates, repo item count, attachment count, encrypted backup blob, backup metadata</td>
-        <td>Self-managed encrypted export/import plus encrypted cloud backup</td>
+        <td>Email, subscription tier, key pair counts, reset dates, repo item count, attachment count, encrypted cloud backup blob, backup metadata</td>
+        <td>Self-managed export/import + encrypted cloud backup</td>
       </tr>
       <tr>
         <td>Small / Medium Business</td>
-        <td>Email address, subscription tier, usage limits, reset dates, repo item count, attachment count, encrypted backup blob, backup metadata, optional recovery enrollment records</td>
-        <td>Encrypted cloud backup plus optional recovery add-on</td>
+        <td>Email, subscription tier, key pair counts, reset dates, repo item count, attachment count, encrypted cloud backup blob, backup metadata, optional recovery blob</td>
+        <td>Encrypted cloud backup + optional recovery add-on</td>
       </tr>
       <tr>
         <td>Enterprise / VIP</td>
-        <td>Email address, subscription tier, usage limits, reset dates, repo item count, attachment count, encrypted backup blob, backup metadata, recovery enrollment records, identity verification records where required for enrolled recovery</td>
-        <td>Encrypted cloud backup plus enrolled recovery services</td>
+        <td>Email, subscription tier, key pair counts, reset dates, repo item count, attachment count, encrypted cloud backup blob, backup metadata, recovery blob, identity verification records</td>
+        <td>Cloud backup + recovery included + SLA</td>
       </tr>
     </table>
-    <p>For all tiers, we do not collect, store, or have access to vault plaintext, private keys, note contents, message plaintext, passwords stored in your vault, or API keys stored in your vault.</p>
+    <p>For all tiers, we do <strong>not</strong> collect, store, or have access to vault contents, private keys, messages, notes, passwords, or API keys. All vault data is encrypted on your device before any storage or transmission. On Family, Business, and Enterprise tiers, encrypted blobs are stored on our servers — we cannot decrypt them.</p>
   </div>
 
   <div class="product-block">
     <div class="product-name">Gaffer — Data Collected</div>
     <ul>
-      <li><strong>Prompt and response content</strong> may be transmitted to third-party AI providers to generate outputs</li>
-      <li><strong>Operational metadata</strong> such as timestamps, request counts, plan limits, and abuse-prevention signals may be processed by JC Laboratories</li>
+      <li><strong>Conversation content</strong> — processed by third-party AI providers in real time, not stored by JC Laboratories</li>
+      <li><strong>Usage metadata</strong> — session timestamps and request counts for rate limiting only</li>
     </ul>
-  </div>
-
-  <div class="product-block">
-    <div class="product-name">CipherPort / Cryptaverse — Data Collected</div>
-    <ul>
-      <li>Account email and account status for authenticated features</li>
-      <li>Public listings or public board content that you choose to publish</li>
-      <li>Public keys or public key references where required for discovery or routing</li>
-      <li>Encrypted message ciphertext, recipient identifiers, timestamps, and expiry data for relay functions</li>
-      <li>Abuse-prevention, rate-limit, and moderation-related operational records</li>
-    </ul>
-  </div>
-
-  <h2>Vault Password, Account Password, and Recovery</h2>
-  <p>Your account password and vault password are separate.</p>
-  <p><strong>Account password:</strong> used to access your JC Laboratories account. This may be reset through our authentication provider using standard account recovery procedures.</p>
-  <p><strong>Vault password:</strong> used locally on your device to derive encryption keys that protect private vault material at rest. JC Laboratories does not store or know your vault password.</p>
-  <div class="warning">
-    On standard tiers, if you forget your vault password and do not have a valid backup or export, your vault contents may be permanently unrecoverable. This is by design.
   </div>
 
   <h2>Enterprise Recovery Program</h2>
   <div class="warning">
-    <strong>Opt-in only.</strong> Enterprise Recovery is not enabled by default. It applies only to users who explicitly enroll under a separate agreement or service arrangement.
+    <strong>Opt-in only.</strong> Available on Business and Enterprise/VIP tiers. Enrollment requires explicit opt-in and a signed Enterprise Recovery Agreement.
   </div>
   <ul>
-    <li>Recovery services require explicit enrollment</li>
-    <li>Recovery may require identity verification such as government-issued ID, video call, or other agreed method</li>
-    <li>Recovery events may be logged for audit and abuse prevention</li>
-    <li>Opting out ends participation and associated retained recovery records are deleted according to our retention schedule and legal obligations</li>
+    <li>An encrypted recovery blob is generated and stored using Shamir's Secret Sharing across geographically separated secure locations</li>
+    <li>JC Laboratories cannot access your vault without your participation in the verified recovery process</li>
+    <li>Recovery requires identity verification — government-issued ID, video call, or other agreed method</li>
+    <li>Each recovery key is single-use and rotated immediately after use</li>
+    <li>Full audit logs of all recovery events are maintained and available to you on request</li>
+    <li>You may opt out at any time — recovery blob deleted within 30 days of opt-out</li>
   </ul>
+
+  <h2>CipherPort Dead Drop Board — Blind Courier Policy</h2>
+  <div class="highlight">
+    JC Laboratories operates the CipherPort dead drop board as a blind courier. We transport encrypted ciphertext between users and cannot read its contents. We are not responsible for the content of messages posted to the board. All messages auto-delete at expiry.
+  </div>
+  <p>Law enforcement requests for dead drop message content will be complied with to the extent legally required. However, because all messages are encrypted, we can only provide the encrypted ciphertext — which is unreadable without the recipient's private key, which never leaves their device.</p>
 
   <h2>How We Use Your Information</h2>
   <ul>
-    <li>To create and manage accounts</li>
-    <li>To authenticate users and enforce plan features and limits</li>
-    <li>To operate encrypted relay, public board, and community features</li>
-    <li>To provide billing, support, backup, and recovery services where applicable</li>
-    <li>To maintain service security, rate limiting, fraud prevention, and abuse prevention</li>
-    <li>To comply with legal obligations</li>
+    <li>To create and manage your account</li>
+    <li>To enforce subscription tier features and limits</li>
+    <li>To operate CipherPort and the community directory</li>
+    <li>To provide Enterprise Recovery services where enrolled</li>
+    <li>To communicate service updates (opt-in only)</li>
+    <li>To maintain service security and prevent abuse</li>
   </ul>
-  <p>We do not sell your data. We do not use your data for advertising. We do not disclose your data except as required to operate the services you use, to process payments, to use necessary infrastructure providers, or as required by law.</p>
+  <p>We do not sell your data. We do not use your data for advertising. We do not share your data with third parties except as required to operate the services described above or as required by law.</p>
 
   <h2>Data Storage and Security</h2>
-  <p>We use third-party infrastructure providers to operate our services, which may include Google Firebase and Cloudflare services depending on the product and feature involved. Account authentication, encrypted message transport, encrypted backups, public community features, and related metadata may be processed or stored through those providers as part of operating the platform.</p>
-  <p>Encrypted content is intended to remain unreadable to us. Public content and operational metadata are not encrypted in the same way and may be visible to us as necessary to operate the service.</p>
+  <p>Account data is stored in Firebase (Google Cloud) with industry-standard security controls. Dead drop messages are stored in Firebase Firestore with TTL-based auto-deletion. Family, Business, and Enterprise tier encrypted cloud backup blobs are stored in Firebase Firestore — encrypted on device before upload. Enterprise recovery blobs use cryptographic key splitting (Shamir's Secret Sharing) across geographically separated storage.</p>
 
   <h2>Data Retention</h2>
   <ul>
-    <li>Account data — retained until account deletion, subject to legal and billing retention requirements</li>
-    <li>Encrypted relay messages — retained until delivery, acknowledgement, or expiry, depending on product behavior</li>
-    <li>Public listings and public board content — retained until removed by you, removed for policy reasons, or account deletion</li>
-    <li>Encrypted backup blobs — retained while enabled and for a limited period after cancellation or opt-out</li>
-    <li>Recovery enrollment and audit records — retained while enrolled and for a limited period after termination, subject to legal and contractual obligations</li>
+    <li>Account data — retained until account deletion</li>
+    <li>Dead drop messages — auto-deleted at sender-chosen expiry (1 hour to 30 days)</li>
+    <li>Community directory listings — retained until user removes them or account deletion</li>
+    <li>Cloud backup blobs — retained while subscription is active, deleted 30 days after cancellation</li>
+    <li>Enterprise recovery blobs — retained for enrollment duration plus 30 days after opt-out</li>
   </ul>
+  <p>Request deletion at any time: <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a></p>
 
   <h2>Your Rights</h2>
   <ul>
-    <li>Request a copy of account data we hold about you</li>
-    <li>Request deletion of your account and associated data, subject to legal and operational exceptions</li>
-    <li>Remove public listings or public content you control, where product features allow</li>
+    <li>Request a copy of data we hold about you</li>
+    <li>Request deletion of your account and associated data</li>
+    <li>Remove your listing from the community directory at any time</li>
+    <li>Opt out of the Enterprise Recovery Program</li>
+    <li>Request a full audit log of any recovery events</li>
     <li>Opt out of non-essential communications</li>
-    <li>For enrolled recovery users, request available audit history related to recovery events</li>
   </ul>
 
   <h2>Children</h2>
-  <p>Our services are not directed to children. You must be at least 18 years old to create an account or use our services unless a different age is expressly permitted by applicable law and specifically authorized by us in writing. If we learn that an underage person has created an account in violation of this policy, we may suspend or delete that account.</p>
-
-  <h2>International Users</h2>
-  <p>If you access our services from outside the United States, you understand that your data may be processed in the United States or other jurisdictions where our providers operate.</p>
+  <p>Our services are not directed at children under 13, and we do not knowingly collect personal information from children under 13. The Family subscription tier is designed for adults managing privacy tools for their household — it is not a children's product. If you believe a child under 13 has created an account, contact <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a> and we will delete the account promptly.</p>
 
   <h2>Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. Material changes will be communicated through the app, website, or email where appropriate. Continued use of the services after changes take effect constitutes acceptance of the revised policy.</p>
+  <p>Material changes will be communicated via the app, website, or email. Continued use after changes constitutes acceptance.</p>
 
   <h2>Contact</h2>
-  <p>
-    General: <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a><br>
-    Security: <a href="mailto:security@jclabs.tech">security@jclabs.tech</a><br>
-    Website: <a href="https://jclabs.tech">jclabs.tech</a>
-  </p>
+  <p><a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a> &nbsp;·&nbsp; jclabs.tech</p>
 
   <div class="divider"></div>
-  <p style="text-align:center;color:var(--text-muted);font-size:14px;">&copy; 2026 JC Laboratories &nbsp;·&nbsp; All rights reserved</p>
+  <p style="text-align:center;color:var(--text-muted);font-size:14px;">&copy; 2026 JC Laboratories &nbsp;·&nbsp; CC BY-NC 4.0</p>
 </div>
 
 <footer>
@@ -251,7 +214,7 @@
     </ul>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2026 JC Laboratories &nbsp;&middot;&nbsp; All rights reserved</span>
+    <span>&copy; 2026 JC Laboratories &nbsp;&middot;&nbsp; CC BY-NC 4.0</span>
     <span style="font-style:italic;font-family:'EB Garamond',serif;font-size:13px;color:var(--gold-muted);">By security professionals, for security professionals.</span>
   </div>
 </footer>
