@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Download Aleph Vault — JC Laboratories</title>
+<title>Aleph Vault — JC Laboratories</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/download.css">
@@ -17,9 +17,29 @@
     aspect-ratio: 9 / 16;
     box-shadow: 0 0 20px rgba(184, 160, 88, 0.1);
   }
+
   .preview-video-container iframe {
     width: 100%;
     height: 100%;
+  }
+
+  .status-note-box {
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    background: var(--surface);
+    padding: 20px 24px;
+    margin-bottom: 48px;
+  }
+
+  .status-note-box p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .status-note-box strong {
+    color: var(--text);
   }
 </style>
 </head>
@@ -35,9 +55,9 @@
 
 <div class="page-header">
   <span class="page-header-bg" aria-hidden="true">ℵ</span>
-  <span class="label">// free beta download</span>
+  <span class="label">// architectural upgrade in progress</span>
   <h1>Aleph <span>Vault</span></h1>
-  <p>Offline-first encrypted vault for Android. Free to download and use. No Play Store required.</p>
+  <p>Aleph Vault is undergoing an architectural upgrade as the next stage of the system is brought online.</p>
 </div>
 
 <div class="container">
@@ -54,127 +74,97 @@
 
   <div class="download-card">
     <div class="download-info">
-      <span class="version">● BETA · v1.0.0 · Android 8.0+</span>
-      <h2>Aleph Vault APK</h2>
-      <p>The full app — free tier unlocked out of the box. Create your encrypted vault, generate key pairs, send encrypted messages, store passwords and notes.</p>
+      <span class="version">● STATUS · ARCHITECTURAL UPGRADE</span>
+      <h2>Aleph Vault</h2>
+      <p>
+        Aleph Vault remains an active JC Laboratories system. Public APK distribution is not active while authentication, identity, encrypted delivery, storage, and recovery layers are upgraded into their next architectural form.
+      </p>
       <div class="download-meta">
-        <span>📦 Android 8.0+</span>
+        <span>📦 Android</span>
         <span>🔐 AES-256-GCM</span>
         <span>🔑 X25519 + Ed25519</span>
         <span>🏢 JC Laboratories 2026</span>
       </div>
     </div>
     <div>
-      <a href="https://assets.jclabs.tech/aleph-vault-beta.apk"
-         class="btn-download"
-         onclick="setTimeout(function(){ window.location='thankyou.html'; }, 1500)">
-        Download APK
-        <small>aleph-vault-beta.apk</small>
+      <a href="index.html" class="btn-download">
+        Distribution Inactive
+        <small>availability will be announced</small>
       </a>
     </div>
   </div>
 
-  <div class="warning-box">
-    <strong>Beta software.</strong> Aleph Vault is in active development. Export your vault regularly using Settings → Backup → Export Vault. Report bugs to <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>. Your feedback directly shapes the product.
+  <div class="status-note-box">
+    <p>
+      <strong>Status:</strong> Aleph Vault is being advanced through an architectural upgrade.
+      Public distribution will resume when the next stage of the system is ready.
+    </p>
   </div>
 
-  <div class="section-title">How to Install</div>
+  <div class="section-title">What Aleph Vault Includes</div>
+
+  <div class="features-grid">
+    <div class="feature-item">
+      <h4>Encrypted Vault</h4>
+      <p>Store notes, credentials, and sensitive data inside a local encrypted vault.</p>
+    </div>
+
+    <div class="feature-item">
+      <h4>MessageCrypt</h4>
+      <p>Encrypted messaging built around X25519, AES-256-GCM, and Ed25519 signatures.</p>
+    </div>
+
+    <div class="feature-item">
+      <h4>Encrypted Notes</h4>
+      <p>Markdown and plain text notes stored inside the vault and exportable when needed.</p>
+    </div>
+
+    <div class="feature-item">
+      <h4>Password Database</h4>
+      <p>Encrypted label/value storage for credentials and other structured secrets.</p>
+    </div>
+
+    <div class="feature-item">
+      <h4>Key Pair Management</h4>
+      <p>Create and manage cryptographic key pairs for encryption, signing, and identity functions.</p>
+    </div>
+
+    <div class="feature-item">
+      <h4>Password Generation</h4>
+      <p>Cryptographically secure password generation with configurable character sets and length.</p>
+    </div>
+  </div>
+
+  <div class="section-title">Current Position</div>
 
   <div class="steps">
     <div class="step">
       <div class="step-num">1</div>
       <div class="step-content">
-        <h3>Download the APK</h3>
-        <p>Tap the Download button above on your Android device, or transfer the file from your computer via USB or cloud storage.</p>
+        <h3>Architectural Upgrade</h3>
+        <p>The next stage of Aleph Vault is being brought online through upgrades to core system layers.</p>
       </div>
     </div>
+
     <div class="step">
       <div class="step-num">2</div>
       <div class="step-content">
-        <h3>Allow Unknown Sources</h3>
-        <p>Go to <code>Settings → Security → Install Unknown Apps</code>. Select your browser or file manager and enable <code>Allow from this source</code>.</p>
+        <h3>Distribution Status</h3>
+        <p>Public APK distribution is not active during this upgrade phase.</p>
       </div>
     </div>
+
     <div class="step">
       <div class="step-num">3</div>
       <div class="step-content">
-        <h3>Open the APK File</h3>
-        <p>Tap the downloaded file in your notifications or file manager. Android will show an install prompt. Tap <code>Install</code>.</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">4</div>
-      <div class="step-content">
-        <h3>Create Your Account &amp; Vault</h3>
-        <p>Open Aleph Vault. Create a free account with your email. Then create your vault password — <strong>write it down somewhere safe</strong>. It cannot be recovered if lost.</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">5</div>
-      <div class="step-content">
-        <h3>You're Secured</h3>
-        <p>Your vault is created. A key pair is generated automatically. You can start storing notes, passwords, and sending encrypted messages immediately.</p>
+        <h3>Availability</h3>
+        <p>Public availability will be announced by JC Laboratories when the upgraded system is ready.</p>
       </div>
     </div>
   </div>
-
-  <div class="section-title">What's in the Free Tier</div>
-
-  <div class="features-grid">
-    <div class="feature-item">
-      <h4>MessageCrypt</h4>
-      <p>Exchange encrypted messages with anyone who has Aleph. X25519 ECDH + AES-256-GCM + Ed25519 signatures.</p>
-    </div>
-    <div class="feature-item">
-      <h4>Encrypted Notes</h4>
-      <p>Markdown and plain text notes stored in your encrypted vault. Export as .md or .txt.</p>
-    </div>
-    <div class="feature-item">
-      <h4>Password Database</h4>
-      <p>Encrypted label/value store for credentials. Hidden by default, copy on tap.</p>
-    </div>
-    <div class="feature-item">
-      <h4>Key Pair Management</h4>
-      <p>Generate X25519 + Ed25519 key pairs. Share your public key. Add contacts as Friend Keys.</p>
-    </div>
-    <div class="feature-item">
-      <h4>Password Generator</h4>
-      <p>Cryptographically secure password generation with configurable character sets and length.</p>
-    </div>
-    <div class="feature-item">
-      <h4>Share Intent</h4>
-      <p>Share encrypted ciphertext directly from WhatsApp, Signal, SMS, or any messaging app into Aleph for decryption.</p>
-    </div>
-  </div>
-
-  <div class="section-title">Upgrade for More</div>
-
-  <table class="tier-mini">
-    <tr>
-      <th>Feature</th><th>Free</th><th>Individual $3</th><th>Family $5</th><th>Business $25+</th>
-    </tr>
-    <tr><td>Repo items</td><td>5</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr>
-    <tr><td>Key pairs</td><td>1/month</td><td>1/month</td><td>Unlimited</td><td>Unlimited</td></tr>
-    <tr class="highlight-row">
-      <td>Vault export/import</td>
-      <td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td>
-    </tr>
-    <tr>
-      <td>Cloud backup</td>
-      <td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td>
-    </tr>
-    <tr>
-      <td>Community directory</td>
-      <td class="no">Read only</td><td class="yes">✓ List yourself</td><td class="yes">✓ List yourself</td><td class="yes">✓ List yourself</td>
-    </tr>
-    <tr>
-      <td>Recovery</td>
-      <td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">Add-on</td>
-    </tr>
-  </table>
 
   <p class="beta-note">
-    To upgrade during beta: <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a> &nbsp;&middot;&nbsp; Google Play subscriptions coming soon.
+    Contact: <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>
   </p>
 
 </div>
@@ -183,7 +173,7 @@
   <div class="footer-brand">
     <img src="assets/logo.jpg" class="logo-img" alt="JC Labs R&D">
     <span class="name">JC Laboratories</span>
-    <p>Independent security tools by JC Laboratories.<br>JC Labs R&amp;D &nbsp;&middot;&nbsp; jclabs.tech</p>
+    <p>Independent security systems by JC Laboratories.<br>JC Labs R&amp;D &nbsp;&middot;&nbsp; jclabs.tech</p>
     <p style="margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);">
       <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>
     </p>
@@ -193,7 +183,7 @@
     <ul>
       <li><a href="download.html">Aleph Vault</a></li>
       <li><a href="https://ai.jclabs.tech">Gaffer (EGAF)</a></li>
-      <li><a href="community.html">Community</a></li>
+      <li><a href="community.html">CipherPort</a></li>
       <li><a href="https://egaf.jclabs.tech/" target="_blank" rel="noopener">EGAF Framework</a></li>
     </ul>
   </div>
