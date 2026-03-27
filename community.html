@@ -3,10 +3,204 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CipherPort — JC Laboratories</title>
+<title>CipherPort — Coming Soon</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/community.css">
+<style>
+  .coming-shell {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 24px 80px;
+  }
+
+  .coming-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 50% 20%, rgba(184,160,88,0.10), transparent 32%),
+      linear-gradient(to bottom, rgba(255,255,255,0.015), transparent 35%);
+    pointer-events: none;
+  }
+
+  .coming-sea {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.9;
+  }
+
+  .coming-card {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 860px;
+    text-align: center;
+    padding: 56px 36px 44px;
+    border: 1px solid var(--border);
+    background: rgba(10, 10, 10, 0.72);
+    box-shadow: 0 18px 48px rgba(0,0,0,0.28);
+    backdrop-filter: blur(6px);
+  }
+
+  .coming-label {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2.6px;
+    text-transform: uppercase;
+    color: var(--gold-muted);
+    margin-bottom: 18px;
+  }
+
+  .coming-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(38px, 7vw, 76px);
+    line-height: 1.02;
+    color: var(--text);
+    margin: 0;
+  }
+
+  .coming-title span {
+    color: var(--gold);
+  }
+
+  .coming-sub {
+    max-width: 680px;
+    margin: 22px auto 0;
+    font-size: 20px;
+    line-height: 1.75;
+    color: var(--text-secondary);
+  }
+
+  .coming-note {
+    margin-top: 26px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--gold-muted);
+  }
+
+  .coming-actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 34px;
+  }
+
+  .coming-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 20px;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: transparent;
+    transition: 0.2s ease;
+  }
+
+  .coming-btn:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .coming-btn.primary {
+    background: var(--gold);
+    color: #111;
+    border-color: var(--gold);
+    font-weight: 600;
+  }
+
+  .coming-btn.primary:hover {
+    color: #111;
+    filter: brightness(1.05);
+  }
+
+  .ship {
+    position: absolute;
+    color: rgba(184,160,88,0.34);
+    z-index: 1;
+  }
+
+  .ship svg {
+    display: block;
+  }
+
+  .ship-1 {
+    left: 8%;
+    bottom: 18%;
+    transform: scale(0.8);
+  }
+
+  .ship-2 {
+    right: 10%;
+    bottom: 26%;
+    transform: scale(1);
+  }
+
+  .ship-3 {
+    left: 20%;
+    top: 18%;
+    transform: scale(0.6);
+    opacity: 0.6;
+  }
+
+  .ship-4 {
+    right: 18%;
+    top: 16%;
+    transform: scale(0.7);
+    opacity: 0.55;
+  }
+
+  .sea-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 12%;
+    height: 120px;
+    z-index: 0;
+    opacity: 0.32;
+  }
+
+  .coming-footer {
+    margin-top: 26px;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+
+  @media (max-width: 720px) {
+    .coming-card {
+      padding: 42px 20px 34px;
+    }
+
+    .coming-sub {
+      font-size: 17px;
+    }
+
+    .ship-1,
+    .ship-2 {
+      transform: scale(0.62);
+    }
+
+    .ship-3,
+    .ship-4 {
+      display: none;
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -18,170 +212,84 @@
   <a href="index.html" class="nav-back">&larr; Back to Home</a>
 </nav>
 
-<div class="page-header">
-  <span class="label">// cipherport · gateway to cryptaverse</span>
-  <h1>Cipher<span>Port</span></h1>
-  <p>Public key directory and encrypted dead drop board. Find Aleph users by cryptographic identity. Post encrypted messages anonymously. We are a blind courier — we cannot read what we carry.</p>
-  <p style="margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold-muted);letter-spacing:2px;">CRYPTAVERSE — ENCRYPTED PROFILES &amp; CRYPTOGRAPHIC GROUPS — COMING SOON</p>
-</div>
+<div class="coming-shell">
 
-<div class="container">
+  <svg class="sea-line" viewBox="0 0 1440 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 120 Q80 95 160 120 T320 120 T480 120 T640 120 T800 120 T960 120 T1120 120 T1280 120 T1440 120"
+          fill="none" stroke="#b8a058" stroke-width="2"/>
+    <path d="M0 150 Q70 132 140 150 T280 150 T420 150 T560 150 T700 150 T840 150 T980 150 T1120 150 T1260 150 T1440 150"
+          fill="none" stroke="#b8a058" stroke-width="1.5"/>
+  </svg>
 
-  <!-- Auth bar -->
-  <div class="auth-bar">
-    <div id="auth-section">
-      <span class="auth-label">Sign in with your Aleph account to add a directory listing:</span>
-      <input type="email" id="auth-email" class="auth-input" placeholder="Email">
-      <input type="password" id="auth-pass" class="auth-input" placeholder="Password">
-      <button class="btn-auth" onclick="signIn()">Sign In</button>
-      <span id="auth-error"></span>
-    </div>
-    <div id="user-section">
-      <span class="auth-label">Signed in as:</span>
-      <span id="user-email" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);"></span>
-      <button class="btn-signout" onclick="signOutUser()">Sign Out</button>
-    </div>
+  <div class="ship ship-1">
+    <svg width="120" height="120" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#b8a058" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M70 140 L110 165 L150 140" stroke-width="7"/>
+        <path d="M80 125 L140 125" stroke-width="6"/>
+        <path d="M110 65 L110 125" stroke-width="6"/>
+        <path d="M110 65 L145 95 L110 115" stroke-width="6"/>
+        <path d="M110 75 L80 105 L110 115" stroke-width="5"/>
+        <path d="M110 165 L110 180" stroke-width="4"/>
+      </g>
+    </svg>
   </div>
 
-  <!-- Live boards -->
-  <div class="two-col">
-    <div>
-      <div class="panel">
-        <div class="panel-header">
-          <h2>🔑 Public Key Directory</h2>
-          <span class="count">Aleph Users</span>
-        </div>
-        <div class="panel-body" id="directory-list">
-          <div class="loading">Loading...</div>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="panel">
-        <div class="panel-header">
-          <h2>📬 Dead Drop Board</h2>
-          <span class="count">Encrypted Messages</span>
-        </div>
-        <div class="panel-body" id="deadrop-list">
-          <div class="loading">Loading...</div>
-        </div>
-      </div>
-    </div>
+  <div class="ship ship-2">
+    <svg width="140" height="140" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#b8a058" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M70 140 L110 165 L150 140" stroke-width="7"/>
+        <path d="M80 125 L140 125" stroke-width="6"/>
+        <path d="M110 65 L110 125" stroke-width="6"/>
+        <path d="M110 65 L145 95 L110 115" stroke-width="6"/>
+        <path d="M110 75 L80 105 L110 115" stroke-width="5"/>
+        <path d="M110 165 L110 180" stroke-width="4"/>
+      </g>
+    </svg>
   </div>
 
-  <!-- Add Listing Form (shown when signed in) -->
-  <div id="listing-form" style="display:none;">
-    <div class="form-panel">
-      <div class="form-panel-header">
-        <h3>Add Your Directory Listing</h3>
-        <p>Share your public key so others can find you and send encrypted messages.</p>
-      </div>
-      <div class="form-body">
-        <div class="form-row">
-          <label>Username</label>
-          <input type="text" id="listing-username" placeholder="How others will find you">
-        </div>
-        <div class="form-row">
-          <label>Public Key Block</label>
-          <textarea id="listing-key" placeholder="Paste your Aleph public key block here&#10;&#10;Get it from: Aleph Vault → Key Management → tap your key → Copy Public Key"></textarea>
-        </div>
-        <div class="form-row">
-          <label>Bio (optional)</label>
-          <input type="text" id="listing-bio" placeholder="Brief description — e.g. Security researcher, PGP enthusiast">
-        </div>
-        <button class="btn-submit" onclick="submitListing()">Add Listing</button>
-        <div class="form-error" id="listing-error"></div>
-        <div class="form-success" id="listing-success"></div>
-      </div>
-    </div>
+  <div class="ship ship-3">
+    <svg width="100" height="100" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#b8a058" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M70 140 L110 165 L150 140" stroke-width="7"/>
+        <path d="M80 125 L140 125" stroke-width="6"/>
+        <path d="M110 65 L110 125" stroke-width="6"/>
+        <path d="M110 65 L145 95 L110 115" stroke-width="6"/>
+      </g>
+    </svg>
   </div>
 
-  <!-- Dead Drop Post Form (always visible) -->
-  <div class="form-panel">
-    <div class="form-panel-header">
-      <h3>📬 Post to Dead Drop Board</h3>
-      <p>No account required. Paste encrypted ciphertext only — encrypt your message in Aleph Vault first.</p>
-    </div>
-    <div class="form-body">
-
-      <div class="warning-box">
-        <strong>Encrypted ciphertext only.</strong> Do not post plaintext, personal information, or unencrypted content. Encrypt your message in Aleph Vault → MessageCrypt → Encrypt, then paste the result here. JC Laboratories cannot read posted messages.
-      </div>
-
-      <div class="form-row">
-        <label>To (username or key fingerprint)</label>
-        <input type="text" id="drop-to" placeholder="Recipient username or key fingerprint">
-      </div>
-      <div class="form-row">
-        <label>From (optional — leave blank to be anonymous)</label>
-        <input type="text" id="drop-from" placeholder="Your username (optional)">
-      </div>
-      <div class="form-row">
-        <label>Encrypted Ciphertext</label>
-        <textarea id="drop-message" style="min-height:140px;" placeholder="Paste the encrypted message from Aleph Vault here...&#10;&#10;It should look like a block of encoded text, not readable language."></textarea>
-      </div>
-      <div class="form-row">
-        <label>Message Expires In</label>
-        <select id="drop-expiry">
-          <option value="1">1 hour</option>
-          <option value="6">6 hours</option>
-          <option value="24" selected>24 hours</option>
-          <option value="72">3 days</option>
-          <option value="168">7 days</option>
-        </select>
-      </div>
-      <button class="btn-submit" onclick="postDeadDrop()">Post Message</button>
-      <div class="form-error" id="drop-error"></div>
-      <div class="form-success" id="drop-success"></div>
-    </div>
+  <div class="ship ship-4">
+    <svg width="105" height="105" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#b8a058" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M70 140 L110 165 L150 140" stroke-width="7"/>
+        <path d="M80 125 L140 125" stroke-width="6"/>
+        <path d="M110 65 L110 125" stroke-width="6"/>
+        <path d="M110 65 L145 95 L110 115" stroke-width="6"/>
+      </g>
+    </svg>
   </div>
 
-  <div class="info-box">
-    <strong>How this works:</strong> Use Aleph Vault to encrypt a message with your contact's public key. Copy the ciphertext. Post it here addressed to their username. They check the board, copy the ciphertext, and decrypt it in Aleph Vault. You are the only one who can send it. They are the only one who can read it.
-  </div>
-
-  <div class="info-box" style="border-left-color:var(--gold-muted);margin-top:0;">
-    <strong>Coming soon — Cryptaverse:</strong> Encrypted profiles, cryptographic groups, and a privacy-first safe harbor where identity is a key and privacy is enforced by mathematics, not policy. CipherPort is the gateway. <a href="updates.html" style="color:var(--gold);">Follow updates &rarr;</a>
-  </div>
-
-</div>
-
-<footer>
-  <div class="footer-brand">
-    <img src="assets/logo.jpg" class="logo-img" alt="JC Labs R&D">
-    <span class="name">JC Laboratories</span>
-    <p>Independent security tools by JC Laboratories.<br>JC Labs R&amp;D &nbsp;&middot;&nbsp; jclabs.tech</p>
-    <p style="margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);">
-      <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>
+  <div class="coming-card">
+    <span class="coming-label">// cipherport</span>
+    <h1 class="coming-title">Coming <span>Soon</span></h1>
+    <p class="coming-sub">
+      The public surface of Cryptaverse is approaching the harbor.
     </p>
-  </div>
-  <div class="footer-links">
-    <h4>Products</h4>
-    <ul>
-      <li><a href="download.html">Aleph Vault</a></li>
-      <li><a href="https://ai.jclabs.tech">Gaffer (EGAF)</a></li>
-      <li><a href="community.html">CipherPort</a></li>
-      <li><a href="https://egaf.jclabs.tech/" target="_blank" rel="noopener">EGAF Framework</a></li>
-    </ul>
-  </div>
-  <div class="footer-links">
-    <h4>Legal</h4>
-    <ul>
-      <li><a href="privacy.html">Privacy Policy</a></li>
-      <li><a href="terms.html">Terms of Service</a></li>
-      <li><a href="security.html">Security Policy</a></li>
-      <li><a href="mailto:contact@jclabs.tech">Contact</a></li>
-      <li><a href="mailto:security@jclabs.tech">security@jclabs.tech</a></li>
-      <li><a href="mailto:dmca@jclabs.tech">dmca@jclabs.tech</a></li>
-    </ul>
-  </div>
-  <div class="footer-bottom">
-    <span>&copy; 2026 JC Laboratories &nbsp;&middot;&nbsp; CC BY-NC 4.0</span>
-    <span style="font-style:italic;font-family:'EB Garamond',serif;font-size:13px;color:var(--gold-muted);">By security professionals, for security professionals.</span>
-  </div>
-</footer>
+    <div class="coming-note">
+      billboard highway · public groups · dead drop board
+    </div>
 
-<script src="js/nav.js"></script>
-<script type="module" src="js/community.js"></script>
+    <div class="coming-actions">
+      <a href="updates.html" class="coming-btn primary">Follow Updates</a>
+      <a href="index.html" class="coming-btn">Back Home</a>
+    </div>
+
+    <div class="coming-footer">
+      JC Laboratories · Independent security systems
+    </div>
+  </div>
+
+</div>
+
 </body>
 </html>
