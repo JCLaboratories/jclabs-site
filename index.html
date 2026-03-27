@@ -1,16 +1,35 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JC Laboratories — Security Tools for Professionals</title>
+<title>JC Laboratories - Security Tools for Professionals</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/index.css">
+<style>
+  .product-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 14px;
+    border-radius: 14px;
+    background: rgba(184, 160, 88, 0.06);
+    border: 1px solid rgba(184, 160, 88, 0.18);
+  }
+
+  .product-mark img {
+    width: 28px;
+    height: 28px;
+    display: block;
+  }
+</style>
 </head>
 <body>
 
-<!-- Nav -->
 <nav>
   <a href="/" class="nav-logo">
     <img src="assets/logo.jpg" class="nav-logo-img" alt="JC Labs R&D">
@@ -18,48 +37,46 @@
   </a>
   <ul class="nav-links">
     <li><a href="#products">Products</a></li>
-    <li><a href="#tiers">Pricing</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="community.html">CipherPort</a></li>
     <li><a href="updates.html">Updates</a></li>
     <li><a href="download.html">Download</a></li>
-    <li><a href="download.html" class="nav-cta">Get Aleph</a></li>
+    <li><a href="download.html" class="nav-cta">Aleph Vault Status</a></li>
   </ul>
   <div class="nav-hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </div>
 </nav>
 
-<!-- Hero -->
 <div class="hero">
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
   <div class="hero-tag">JC Labs R&D &nbsp;·&nbsp; jclabs.tech &nbsp;·&nbsp; Est. 2026</div>
   <img src="assets/logo.jpg" class="hero-logo" alt="JC Laboratories">
   <h1 class="hero-title">JC Laboratories</h1>
-  <div class="hero-sub">Security Tools · AI Governance · Privacy First</div>
+  <div class="hero-sub">Independent Security Systems · AI Governance · Privacy First</div>
   <p class="hero-motto">By <em>security professionals</em>, for security professionals.<br>Your privacy is in your hands.</p>
   <div class="hero-actions">
-    <a href="download.html" class="btn-primary">Download Aleph Vault</a>
+    <a href="download.html" class="btn-primary">View Aleph Vault Status</a>
     <a href="#products" class="btn-secondary">Explore Products</a>
   </div>
 </div>
 
-<!-- Products -->
 <div class="section-wrapper">
 <section id="products">
   <div class="section-label">// our products</div>
-  <h2 class="section-title">Built for people who<br><span>don't compromise</span></h2>
-  <p class="section-body">Every tool we build starts with the same question: what does a security professional actually need? Then we build that — without telemetry, without ads, without backdoors.</p>
+  <h2 class="section-title">Built for people who<br><span>do not compromise</span></h2>
+  <p class="section-body">Every system we build starts with the same question: what does a security professional actually need? Then we build that without telemetry, without ads, and without pretending unfinished systems are finished.</p>
 
   <div class="products-grid">
 
     <div class="product-card">
       <span class="product-icon">&#8501;</span>
-      <span class="product-badge badge-live">&#9679; BETA &#8212; FREE DOWNLOAD</span>
+      <span class="product-badge badge-soon">&#9675; CONTROLLED DISTRIBUTION</span>
       <div class="product-name">Aleph Vault</div>
       <span class="product-tag">Offline Cryptographic Vault &middot; Android</span>
-      <p class="product-desc">Encrypted notes, passwords, key pairs, and messages. X25519 + Ed25519 cryptography. AES-256-GCM vault. Your private keys never leave your device &#8212; not even to us.</p>
-      <a href="download.html" class="product-link">Download APK &rarr;</a>
+      <p class="product-desc">Aleph Vault remains an active JC Laboratories system. Public distribution is intentionally limited while authentication, identity, encrypted delivery, storage, and recovery layers advance to the next stage.</p>
+      <a href="download.html" class="product-link">View status &rarr;</a>
     </div>
 
     <div class="product-card">
@@ -67,25 +84,29 @@
       <span class="product-badge badge-live">&#9679; LIVE</span>
       <div class="product-name">Gaffer</div>
       <span class="product-tag">EGAF AI Assistant &middot; Web</span>
-      <p class="product-desc">AI assistance governed by the Entropy-Gated AI Framework &#8212; a Layer 3 governance protocol ensuring structured, reproducible, auditable AI task execution. Not just another chatbot.</p>
-      <a href="https://ai.jclabs.tech" class="product-link">ai.jclabs.tech &rarr;</a>
+      <p class="product-desc">AI assistance governed by the Entropy-Gated AI Framework. Structured, reproducible, auditable task execution instead of free-floating prompt chaos.</p>
+      <a href="https://ai.jclabs.tech/" class="product-link">ai.jclabs.tech &rarr;</a>
     </div>
 
     <div class="product-card">
-      <span class="product-icon">&#128273;</span>
-      <span class="product-badge badge-live">&#9679; LIVE</span>
+      <div class="product-mark">
+        <img src="assets/cryptaverse-symbol.svg" alt="CipherPort">
+      </div>
+      <span class="product-badge badge-live">&#9679; PUBLIC GATEWAY</span>
       <div class="product-name">CipherPort</div>
-      <span class="product-tag">Public Key Directory &middot; Dead Drop Board &middot; Gateway to Cryptaverse</span>
-      <p class="product-desc">Find other Aleph users by cryptographic identity. Post encrypted messages anonymously. A blind courier &#8212; we route ciphertext we cannot read. Gateway to Cryptaverse.</p>
+      <span class="product-tag">Public Gateway &middot; Dead Drop Board &middot; Outer Surface</span>
+      <p class="product-desc">CipherPort is the public gateway into Cryptaverse. It is a controlled public surface, not a public identity directory and not a public key directory.</p>
       <a href="community.html" class="product-link">Open CipherPort &rarr;</a>
     </div>
 
     <div class="product-card">
-      <span class="product-icon">&#128274;</span>
-      <span class="product-badge badge-soon">&#9675; COMING SOON</span>
+      <div class="product-mark">
+        <img src="assets/cryptaverse-symbol.svg" alt="Cryptaverse">
+      </div>
+      <span class="product-badge badge-soon">&#9675; IN ACTIVE CONSTRUCTION</span>
       <div class="product-name">Cryptaverse</div>
-      <span class="product-tag">Cryptographic Safe Harbor &middot; Privacy-First Community</span>
-      <p class="product-desc">A safe harbor where identity is a key, communities are cryptographic safe rooms, and nobody &#8212; not even us &#8212; can read what happens inside. The metaverse nobody asked for. This is the one everyone needs.</p>
+      <span class="product-tag">Privacy-First Cryptographic Platform</span>
+      <p class="product-desc">Cryptaverse is advancing in layers. Identity is a key. Content is encrypted. Access expands as each architectural layer becomes operational.</p>
       <a href="updates.html" class="product-link">Follow updates &rarr;</a>
     </div>
 
@@ -95,159 +116,140 @@
       <div class="product-name">EGAF Framework</div>
       <span class="product-tag">Entropy-Gated AI Framework &middot; Open Source</span>
       <p class="product-desc">An open AI governance protocol defining the OIL_CONTRACT, INVOKER, and E_T vial system. Free for non-commercial use with attribution. Commercial licensing available.</p>
-      <a href="https://egaf.jclabs.tech" class="product-link" target="_blank" rel="noopener">GitHub &rarr;</a>
+      <a href="https://egaf.jclabs.tech/" class="product-link" target="_blank" rel="noopener">Framework site &rarr;</a>
     </div>
 
   </div>
 </section>
 </div>
 
-<!-- Security Principles -->
 <div class="section-wrapper surface">
 <section>
-  <div class="section-label">// security model</div>
-  <h2 class="section-title">What <span>we cannot do</span><br>is a feature</h2>
-  <p class="section-body">Our security model is defined by what we deliberately chose not to build.</p>
+  <div class="section-label">// what we put in our systems</div>
+  <h2 class="section-title">Independent <span>security systems</span><br>built with real components</h2>
+  <p class="section-body">
+    JC Laboratories builds independent security systems across encrypted storage, cryptographic platforms, public gateway layers, and governed AI.
+    The products are different. The standard is the same: defined architecture, standard primitives, and controlled execution.
+  </p>
 
   <div class="security-grid">
+
     <div class="security-item">
-      <h4>Zero Knowledge Vault</h4>
-      <p>Your vault password derives your encryption key locally. It never leaves your device. We cannot read your vault under any circumstances.</p>
+      <h4>Cryptographic Identity</h4>
+      <p>Cryptaverse is built around a two-anchor-key identity model using Ed25519 for signatures and X25519 for encryption and key exchange.</p>
     </div>
+
     <div class="security-item">
-      <h4>No Vault Recovery &#8212; By Design</h4>
-      <p>Your account password can be reset via email. Your vault password cannot. It derives your encryption key locally &#8212; we never have it. Forget your vault password on standard tiers and your vault data is gone. That guarantee is what makes everything else possible.</p>
+      <h4>MessageCrypt Stack</h4>
+      <p>Encrypted messaging is built around ephemeral X25519, HKDF-derived symmetric keys, AES-256-GCM content encryption, and Ed25519 authenticity.</p>
     </div>
+
     <div class="security-item">
-      <h4>Blind Courier</h4>
-      <p>Dead drop messages are encrypted before they reach our servers. We route ciphertext we cannot decrypt. We are not responsible for content we cannot see.</p>
+      <h4>Password Hardening</h4>
+      <p>Argon2id is the target password KDF for vault and Safety Deposit Box protection, with memory-hard derivation designed for stronger offline resistance.</p>
     </div>
+
     <div class="security-item">
-      <h4>No Tracking</h4>
-      <p>Aleph Vault collects no analytics, no crash reports, and no behavioral tracking. We store only what is necessary to operate your account and enforce tier limits.</p>
+      <h4>Public Gateway Layer</h4>
+      <p>CipherPort is the public gateway surface of Cryptaverse, built around boards, controlled entry points, and gateway functions rather than the full private system.</p>
     </div>
+
     <div class="security-item">
-      <h4>X25519 + Ed25519</h4>
-      <p>MessageCrypt uses elliptic curve Diffie-Hellman key exchange with Ed25519 digital signatures. Every message is authenticated and encrypted.</p>
+      <h4>EGAF Governance Model</h4>
+      <p>The Entropy-Gated AI Framework is built around OIL_CONTRACT, INVOKER, and E_T for governed, structured, and auditable AI task execution.</p>
     </div>
+
     <div class="security-item">
-      <h4>Open Crypto Primitives</h4>
-      <p>AES-256-GCM, HKDF, PBKDF2. Industry-standard algorithms &#8212; no proprietary cryptography, no security through obscurity.</p>
+      <h4>Gaffer Runtime</h4>
+      <p>Gaffer is the flagship assistant built on EGAF, delivered as a governed AI interaction system instead of an unconstrained chatbot layer.</p>
     </div>
+
+    <div class="security-item">
+      <h4>Application Stack</h4>
+      <p>Across the portfolio, the stack includes Flutter and Dart on the client side, Cloudflare services for platform infrastructure, and Railway for Gaffer runtime delivery.</p>
+    </div>
+
+    <div class="security-item">
+      <h4>Platform Direction</h4>
+      <p>The portfolio combines encrypted vault software, a cryptographic platform architecture, a public gateway layer, and an AI governance framework under one company.</p>
+    </div>
+
   </div>
 </section>
 </div>
 
-<!-- Tiers -->
 <div class="section-wrapper">
-<section id="tiers">
-  <div class="section-label">// pricing</div>
-  <h2 class="section-title">Start free.<br><span>Upgrade when you need more.</span></h2>
-  <p class="section-body">Free tier is fully functional forever. Paid tiers add backup, more keys, and cloud features. No credit card required to start.</p>
+<section id="portfolio">
+  <div class="section-label">// current portfolio</div>
+  <h2 class="section-title">Products, frameworks,<br><span>and active builds</span></h2>
+  <p class="section-body">
+    Some JC Laboratories systems are available now. Others are published frameworks. Others are active builds progressing toward broader operational form.
+  </p>
 
   <div class="tiers-grid">
+
     <div class="tier-card">
-      <div class="tier-name">Free</div>
-      <div class="tier-price">$0<span>/mo</span></div>
+      <div class="tier-name">Available Now</div>
+      <div class="tier-price">Current<span> surface</span></div>
       <ul class="tier-features">
-        <li><span class="feat-yes">&#10003;</span> 5 repo items</li>
-        <li><span class="feat-yes">&#10003;</span> 1 key pair/month</li>
-        <li><span class="feat-yes">&#10003;</span> MessageCrypt</li>
-        <li><span class="feat-yes">&#10003;</span> Community read</li>
-        <li><span class="feat-no">&#8212;</span> No export</li>
-        <li><span class="feat-no">&#8212;</span> No cloud backup</li>
-        <li><span class="feat-no">&#8212;</span> No recovery</li>
+        <li><span class="feat-yes">&#10003;</span> Gaffer</li>
+        <li><span class="feat-yes">&#10003;</span> EGAF Framework</li>
+        <li><span class="feat-yes">&#10003;</span> CipherPort gateway</li>
+        <li><span class="feat-yes">&#10003;</span> Company site</li>
       </ul>
     </div>
+
     <div class="tier-card featured">
-      <div class="tier-name">Individual</div>
-      <div class="tier-price">$3<span>/mo</span></div>
+      <div class="tier-name">Active Build</div>
+      <div class="tier-price">In<span> progress</span></div>
       <ul class="tier-features">
-        <li><span class="feat-yes">&#10003;</span> Unlimited items</li>
-        <li><span class="feat-yes">&#10003;</span> 1 key pair/month</li>
-        <li><span class="feat-yes">&#10003;</span> Vault export/import</li>
-        <li><span class="feat-yes">&#10003;</span> Directory listing</li>
-        <li><span class="feat-yes">&#10003;</span> 30-day dead drops</li>
-        <li><span class="feat-no">&#8212;</span> No cloud backup</li>
-        <li><span class="feat-no">&#8212;</span> No recovery</li>
+        <li><span class="feat-yes">&#10003;</span> Aleph Vault next-stage rollout</li>
+        <li><span class="feat-yes">&#10003;</span> Cryptaverse core systems</li>
+        <li><span class="feat-yes">&#10003;</span> Identity and transport layers</li>
+        <li><span class="feat-yes">&#10003;</span> Storage and recovery progression</li>
       </ul>
     </div>
+
     <div class="tier-card">
-      <div class="tier-name">Family</div>
-      <div class="tier-price">$5<span>/mo</span></div>
+      <div class="tier-name">Company Focus</div>
+      <div class="tier-price">Independent<span> systems</span></div>
       <ul class="tier-features">
-        <li><span class="feat-yes">&#10003;</span> Unlimited items</li>
-        <li><span class="feat-yes">&#10003;</span> Unlimited key pairs</li>
-        <li><span class="feat-yes">&#10003;</span> Vault export/import</li>
-        <li><span class="feat-yes">&#10003;</span> Directory listing</li>
-        <li><span class="feat-yes">&#10003;</span> 30-day dead drops</li>
-        <li><span class="feat-yes">&#10003;</span> Cloud backup</li>
-        <li><span class="feat-no">&#8212;</span> No recovery</li>
+        <li><span class="feat-yes">&#10003;</span> Cryptographic products</li>
+        <li><span class="feat-yes">&#10003;</span> Privacy infrastructure</li>
+        <li><span class="feat-yes">&#10003;</span> Governed AI systems</li>
+        <li><span class="feat-yes">&#10003;</span> Architecture-first development</li>
       </ul>
     </div>
-    <div class="tier-card">
-      <div class="tier-name">Business</div>
-      <div class="tier-price">$25<span>/mo</span></div>
-      <ul class="tier-features">
-        <li><span class="feat-yes">&#10003;</span> Unlimited items</li>
-        <li><span class="feat-yes">&#10003;</span> Unlimited key pairs</li>
-        <li><span class="feat-yes">&#10003;</span> Cloud backup</li>
-        <li><span class="feat-yes">&#10003;</span> Export/import</li>
-        <li><span class="feat-yes">&#10003;</span> Recovery add-on</li>
-        <li><span class="feat-yes">&#10003;</span> Priority support</li>
-      </ul>
-    </div>
-    <div class="tier-card">
-      <div class="tier-name">Enterprise</div>
-      <div class="tier-price" style="font-size:18px;padding-top:4px;">Custom</div>
-      <ul class="tier-features">
-        <li><span class="feat-yes">&#10003;</span> Unlimited everything</li>
-        <li><span class="feat-yes">&#10003;</span> Cloud backup</li>
-        <li><span class="feat-yes">&#10003;</span> Recovery included</li>
-        <li><span class="feat-yes">&#10003;</span> SLA guarantee</li>
-        <li><span class="feat-yes">&#10003;</span> Dedicated support</li>
-        <li><span class="feat-yes">&#10003;</span> Custom contract</li>
-      </ul>
-    </div>
+
   </div>
 
-  <p style="margin-top:24px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-muted);">
-    During beta: contact <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a> to upgrade. Google Play subscriptions coming soon.
+  <p class="portfolio-note">
+    Product availability and active build status vary by system. See individual product pages for current status.
   </p>
 </section>
 </div>
 
-<!-- CTA -->
-<div class="cta-section">
-  <span class="cta-bg-glyph">&#8501;</span>
-  <h2>Your vault.<br>Your keys.<br>Your data.</h2>
-  <p>Download Aleph Vault free. No Play Store required.<br>Sideload the APK and start securing your data today.</p>
-  <div class="cta-actions">
-    <a href="download.html" class="btn-primary">Download Free APK</a>
-    <a href="community.html" class="btn-secondary">Open CipherPort</a>
-  </div>
-</div>
-
-<!-- Footer -->
 <footer>
   <div class="footer-brand">
     <img src="assets/logo.jpg" class="logo-img" alt="JC Labs R&D">
     <span class="name">JC Laboratories</span>
-    <p>Independent security tools by JC Laboratories.<br>JC Labs R&amp;D &nbsp;&middot;&nbsp; jclabs.tech</p>
+    <p>Independent security systems by JC Laboratories.<br>JC Labs R&amp;D &nbsp;&middot;&nbsp; jclabs.tech</p>
     <p style="margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);">
       <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>
     </p>
   </div>
+
   <div class="footer-links">
     <h4>Products</h4>
     <ul>
       <li><a href="download.html">Aleph Vault</a></li>
-      <li><a href="https://ai.jclabs.tech">Gaffer (EGAF)</a></li>
+      <li><a href="https://ai.jclabs.tech/">Gaffer (EGAF)</a></li>
       <li><a href="community.html">CipherPort</a></li>
       <li><a href="https://egaf.jclabs.tech/" target="_blank" rel="noopener">EGAF Framework</a></li>
       <li><a href="updates.html">Updates &amp; Changelog</a></li>
     </ul>
   </div>
+
   <div class="footer-links">
     <h4>Legal</h4>
     <ul>
@@ -259,6 +261,7 @@
       <li><a href="mailto:dmca@jclabs.tech">dmca@jclabs.tech</a></li>
     </ul>
   </div>
+
   <div class="footer-bottom">
     <span>&copy; 2026 JC Laboratories &nbsp;&middot;&nbsp; CC BY-NC 4.0</span>
     <span style="font-style:italic;font-family:'EB Garamond',serif;font-size:13px;color:var(--gold-muted);">By security professionals, for security professionals.</span>
