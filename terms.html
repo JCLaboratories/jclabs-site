@@ -37,8 +37,8 @@
   <p><strong>Aleph Vault</strong> is an offline-first encrypted vault application for Android providing secure local storage of notes, passwords, cryptographic key pairs, API keys, and encrypted messaging via the MessageCrypt system.</p>
   <p><strong>EGAF (Entropy-Gated AI Framework)</strong> is a structured AI governance and orchestration protocol developed by JC Labs R&D. It defines a three-part composition system (OIL_CONTRACT, INVOKER, E_T) for governed, reproducible, and auditable AI task execution, operating as a Layer 3 governance protocol.</p>
   <p><strong>Gaffer</strong> is the flagship AI assistant built on EGAF, providing governed AI interactions via web interface (ai.jclabs.tech) and API.</p>
-  <p><strong>CipherPort</strong> is a public key directory and encrypted dead drop message board at jclabs.tech/community. It is the gateway to Cryptaverse — a privacy-first cryptographic safe harbor where identity is a key, communities are cryptographic safe rooms, and nobody, not even JC Laboratories, can read what happens inside.</p>
-  <p><strong>Cryptaverse</strong> is the forthcoming privacy-first cryptographic social platform built on zero-knowledge architecture. All Cryptaverse content is encrypted client-side before reaching our servers. Access is enforced by mathematics, not policy.</p>
+  <p><strong>CipherPort</strong> is a public key directory and encrypted dead drop message board at jclabs.tech/community. It is the gateway to Cryptaverse — a privacy-first cryptographic safe harbor where identity is a key, communities are cryptographic safe rooms, and JC Laboratories cannot access encrypted vault contents in readable form and does not possess user private keys.</p>
+  <p><strong>Cryptaverse</strong> is the forthcoming privacy-first cryptographic social platform. All Cryptaverse content is encrypted client-side before reaching our servers. Access to encrypted content is enforced by cryptographic keys held on user devices — not by policy alone.</p>
 
   <h2>4. Subscription Tiers — Aleph Vault</h2>
   <table class="tier-table">
@@ -54,7 +54,7 @@
 
   <h2>5. Account Password vs Vault Password</h2>
   <p>Aleph Vault uses two separate passwords with different properties:</p>
-  <p><strong>Account password</strong> — used to sign in to your JC Laboratories account. This can be reset via email through standard Firebase Authentication. JC Laboratories manages this through Firebase and can facilitate a reset.</p>
+  <p><strong>Account password</strong> — used to sign in to your JC Laboratories account. Authentication is handled by a Cloudflare Worker-based system. Password resets are handled through this system using email-delivered, time-limited reset tokens. Your email address is processed for authentication and reset purposes but is not stored as plaintext in our database. We store a keyed cryptographic representation (HMAC-SHA256) for account lookup. This representation cannot be reversed to recover the original email from the stored value.</p>
   <div class="warning">
     <strong>Vault password — No Recovery on Standard Tiers:</strong> Your vault password derives your encryption key locally on your device. JC Laboratories does not store, transmit, or have access to your vault password or its derived key. If you forget your vault password on Free, Individual, or Family tiers, your encrypted vault data cannot be recovered by anyone — including JC Laboratories. There is no reset, no recovery code, and no backdoor. This is intentional.
   </div>
@@ -68,7 +68,7 @@
   <p>Exported files are saved to your device's Downloads/AlephVault/ folder. You are solely responsible for the security of exported vault files after export.</p>
 
   <h2>7. Cloud Backup — Family, Business, and Enterprise Tiers</h2>
-  <p>Family, Business, and Enterprise tier subscribers may enable automatic encrypted cloud backup. Vault data is encrypted on-device before upload. JC Laboratories stores only the encrypted blob and cannot decrypt it. On Free and Individual tiers, vault data never leaves your device. Encrypted blobs are retained while the subscription is active and deleted 30 days after cancellation.</p>
+  <p>Family, Business, and Enterprise tier subscribers may enable automatic encrypted cloud backup. Vault data is encrypted on-device before upload using AES-256-GCM. JC Laboratories stores only the encrypted ciphertext blob on Cloudflare R2 and cannot decrypt it. On Free and Individual tiers, vault data never leaves your device. Encrypted blobs are retained while the subscription is active and deleted 30 days after cancellation. We store only encrypted ciphertext — never readable vault content.</p>
 
   <h2>8. CipherPort — Public Key Directory</h2>
   <div class="warning">
@@ -79,10 +79,10 @@
   <h2>9. CipherPort — Dead Drop Board</h2>
   <p>The CipherPort dead drop board is an anonymous encrypted message relay. No account is required to post.</p>
   <div class="highlight">
-    JC Laboratories operates the dead drop board as a blind courier. All messages posted to the board must be encrypted ciphertext. We cannot read posted messages. We are not responsible for the content of encrypted messages we cannot decrypt.
+    JC Laboratories operates the dead drop board as a blind courier. Encrypted message content is stored temporarily as ciphertext for delivery and automatically deleted at expiry. It may be deleted sooner after successful delivery. We do not store or have access to this content in readable form. All messages posted must be encrypted ciphertext. We are not responsible for the content of encrypted messages we cannot decrypt.
   </div>
   <p><strong>Message expiry:</strong> Free and anonymous users: up to 7 days. Paid tier account holders: up to 30 days. Messages are automatically and permanently deleted at expiry.</p>
-  <p><strong>Law enforcement:</strong> We will comply with legally valid requests. However, we can only provide the encrypted ciphertext — we do not log or store poster IP addresses or identities in our application database. Note that infrastructure providers such as Cloudflare may retain standard network-level logs per their own privacy policies.</p>
+  <p><strong>Law enforcement:</strong> We will comply with legally valid requests. However, we can only provide the encrypted ciphertext and minimal routing metadata stored in our application database — we do not log or store poster IP addresses in our application database. Network-level logs may be retained by infrastructure providers such as Cloudflare under their own policies.</p>
 
   <h2>10. Enterprise Recovery Program</h2>
   <p>The Enterprise Recovery Program is an optional, paid feature on Business and Enterprise/VIP tiers, governed by a separate Enterprise Recovery Agreement.</p>
@@ -149,13 +149,13 @@
 
   <h2>23. DMCA — Copyright</h2>
   <p>If you believe content on our services infringes your copyright, contact our designated DMCA agent:</p>
-  <p><strong>Agent:</strong> Justin Czap &nbsp;·&nbsp; <strong>Email:</strong> <a href="mailto:dmca@jclabs.tech">dmca@jclabs.tech</a> &nbsp;·&nbsp; <strong>Address:</strong> JC Laboratories, Michigan, United States</p>
+  <p><strong>Agent:</strong> Justin Czap &nbsp;·&nbsp; <strong>Email:</strong> <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a> &nbsp;·&nbsp; <strong>Address:</strong> JC Laboratories, Michigan, United States</p>
 
   <h2>24. Contact</h2>
   <p>
     General &amp; Enterprise: <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a><br>
     Security: <a href="mailto:security@jclabs.tech">security@jclabs.tech</a><br>
-    DMCA: <a href="mailto:dmca@jclabs.tech">dmca@jclabs.tech</a><br>
+    DMCA: <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a><br>
     Website: <a href="https://jclabs.tech">jclabs.tech</a><br>
     GitHub: <a href="https://github.com/JCLaboratories" target="_blank" rel="noopener">github.com/JCLaboratories</a>
   </p>
@@ -189,14 +189,7 @@
       <li><a href="privacy.html">Privacy Policy</a></li>
       <li><a href="terms.html">Terms of Service</a></li>
       <li><a href="security.html">Security Policy</a></li>
-      <li><a href="mailto:contact@jclabs.tech">Contact</a></li>
-      <li><a href="mailto:security@jclabs.tech">security@jclabs.tech</a></li>
-      <li><a href="mailto:dmca@jclabs.tech">dmca@jclabs.tech</a></li>
     </ul>
-  </div>
-  <div class="footer-bottom">
-    <span>&copy; 2026 JC Laboratories &nbsp;&middot;&nbsp; CC BY-NC 4.0</span>
-    <span style="font-style:italic;font-family:'EB Garamond',serif;font-size:13px;color:var(--gold-muted);">By security professionals, for security professionals.</span>
   </div>
 </footer>
 
