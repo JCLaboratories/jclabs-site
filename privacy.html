@@ -23,7 +23,7 @@
   <div class="doc-meta">Effective March 23, 2026 &nbsp;·&nbsp; JC Laboratories / jclabs.tech</div>
 
   <div class="highlight">
-    JC Laboratories is built on a simple principle: your data belongs to you. We collect the absolute minimum required to operate our services — and we cannot access your vault contents under any circumstances.
+    JC Laboratories is built on a simple principle: your data belongs to you. We collect only the information required to operate, secure, and support our services — and we cannot access your encrypted vault contents or private keys under any circumstances, as they are never transmitted in readable form to our servers.
   </div>
 
   <h2>Who We Are</h2>
@@ -34,7 +34,7 @@
 
   <div class="product-block">
     <div class="product-name">Aleph Vault</div>
-    <p>An offline-first encrypted vault application for Android. Provides secure local storage of notes, passwords, cryptographic key pairs, API keys, and encrypted messaging via the MessageCrypt system. All sensitive data is encrypted on-device using AES-256-GCM. We cannot read your vault.</p>
+    <p>An offline-first encrypted vault application for Android. Provides secure local storage of notes, passwords, cryptographic key pairs, API keys, and encrypted messaging via the MessageCrypt system. All sensitive data is encrypted on-device using AES-256-GCM. We cannot read your vault contents.</p>
     <p>On Free and Individual tiers, your vault data never leaves your device. Vault export files are encrypted with a user-chosen export password before leaving the device — JC Laboratories never receives or has access to these files. On Family, Business, and Enterprise tiers, encrypted cloud backup blobs may be stored on our servers — encrypted on your device before upload. We cannot decrypt them.</p>
   </div>
 
@@ -55,7 +55,7 @@
       <div class="egaf-content">
         <div class="product-name">Gaffer — EGAF AI Assistant</div>
         <p>The flagship AI assistant built on the Entropy-Gated AI Framework. Gaffer provides governed AI interactions via web interface (ai.jclabs.tech) and API.</p>
-        <p>Messages sent through Gaffer are processed by third-party AI providers (Anthropic, Groq, OpenAI) subject to their own privacy policies. We do not store conversation logs on our servers. Each session is stateless.</p>
+        <p>Messages sent through Gaffer are processed by third-party AI providers (Anthropic, Groq, OpenAI) subject to their own privacy policies and retention practices. We do not store conversation logs on our servers. Each session is processed without persistent storage by JC Laboratories.</p>
         <p>Third-party providers: <a href="https://anthropic.com/privacy">Anthropic</a>, <a href="https://groq.com/privacy">Groq</a>, <a href="https://openai.com/privacy">OpenAI</a>.</p>
       </div>
     </div>
@@ -70,7 +70,7 @@
     <ul>
       <li>Directory listings: username, public key block, optional bio (account-linked)</li>
       <li>Dead drop messages: recipient identifier, sender identifier (optional), encrypted ciphertext, expiry timestamp</li>
-      <li>We do not store IP addresses, device identifiers, or any metadata beyond what is listed above</li>
+      <li>We do not store poster IP addresses in our application database. Network-level logs may be retained by infrastructure providers such as Cloudflare under their own policies.</li>
     </ul>
   </div>
 
@@ -78,35 +78,36 @@
 
   <div class="product-block">
     <div class="product-name">Aleph Vault — Data by Tier</div>
+    <p>Account authentication uses a Cloudflare Worker-based system. Your email address is used for account creation and password reset only. It is not stored as plaintext in our database. Instead, we store a keyed cryptographic representation (HMAC-SHA256) for account lookup. This representation cannot be reversed to recover the original email from the stored value.</p>
     <table class="tier-table">
       <tr><th>Tier</th><th>Data Collected</th><th>Backup / Recovery</th></tr>
       <tr>
         <td>Free</td>
-        <td>Email address, subscription tier, key pair counts, reset dates, repo item count, attachment count</td>
+        <td>Email (processed for account creation and reset, not stored as plaintext), account tier, key pair counts, reset dates, repo item count, attachment count</td>
         <td>None — vault data stays on device only</td>
       </tr>
       <tr>
         <td>Individual</td>
-        <td>Email, subscription tier, key pair counts, reset dates, repo item count, attachment count</td>
+        <td>Same as Free</td>
         <td>Self-managed encrypted file export/import only — vault data stays on device</td>
       </tr>
       <tr>
         <td>Family</td>
-        <td>Email, subscription tier, key pair counts, reset dates, repo item count, attachment count, encrypted cloud backup blob, backup metadata</td>
+        <td>Same as Free, plus encrypted cloud backup blob and backup metadata</td>
         <td>Self-managed export/import + encrypted cloud backup</td>
       </tr>
       <tr>
         <td>Small / Medium Business</td>
-        <td>Email, subscription tier, key pair counts, reset dates, repo item count, attachment count, encrypted cloud backup blob, backup metadata, optional recovery blob</td>
+        <td>Same as Family, plus optional recovery blob</td>
         <td>Encrypted cloud backup + optional recovery add-on</td>
       </tr>
       <tr>
         <td>Enterprise / VIP</td>
-        <td>Email, subscription tier, key pair counts, reset dates, repo item count, attachment count, encrypted cloud backup blob, backup metadata, recovery blob, identity verification records</td>
+        <td>Same as Business, plus identity verification records</td>
         <td>Cloud backup + recovery included + SLA</td>
       </tr>
     </table>
-    <p>For all tiers, we do <strong>not</strong> collect, store, or have access to vault contents, private keys, messages, notes, passwords, or API keys. All vault data is encrypted on your device before any storage or transmission. On Family, Business, and Enterprise tiers, encrypted blobs are stored on our servers — we cannot decrypt them.</p>
+    <p>For all tiers, we do <strong>not</strong> collect or store vault contents, private keys, messages, notes, passwords, or API keys in readable form. All vault data is encrypted on your device before any storage or transmission. On Family, Business, and Enterprise tiers, encrypted blobs are stored on our servers for the duration of your subscription and cannot be decrypted by JC Laboratories. Protected vault and relay content is stored only as encrypted data and never in readable form.</p>
   </div>
 
   <div class="product-block">
@@ -132,7 +133,7 @@
 
   <h2>CipherPort Dead Drop Board — Blind Courier Policy</h2>
   <div class="highlight">
-    JC Laboratories operates the CipherPort dead drop board as a blind courier. We transport encrypted ciphertext between users and cannot read its contents. We are not responsible for the content of messages posted to the board. All messages auto-delete at expiry.
+    JC Laboratories operates the CipherPort dead drop board as a blind courier. Encrypted message content is stored temporarily as ciphertext for delivery and automatically deleted at expiry. It may be deleted sooner after successful delivery. We do not store or have access to this content in readable form. We are not responsible for the content of encrypted messages we cannot decrypt.
   </div>
   <p>Law enforcement requests for dead drop message content will be complied with to the extent legally required. However, because all messages are encrypted, we can only provide the encrypted ciphertext — which is unreadable without the recipient's private key, which never leaves their device.</p>
 
@@ -143,12 +144,13 @@
     <li>To operate CipherPort and the community directory</li>
     <li>To provide Enterprise Recovery services where enrolled</li>
     <li>To communicate service updates (opt-in only)</li>
-    <li>To maintain service security and prevent abuse</li>
+    <li>To maintain service security and prevent abuse (including rate limiting by IP address — not stored beyond the rate-limit window)</li>
   </ul>
   <p>We do not sell your data. We do not use your data for advertising. We do not share your data with third parties except as required to operate the services described above or as required by law.</p>
 
   <h2>Data Storage and Security</h2>
-  <p>Account data is stored in Firebase (Google Cloud) with industry-standard security controls. Dead drop messages are stored in Firebase Firestore with TTL-based auto-deletion. Family, Business, and Enterprise tier encrypted cloud backup blobs are stored in Firebase Firestore — encrypted on device before upload. Enterprise recovery blobs use cryptographic key splitting (Shamir's Secret Sharing) across geographically separated storage.</p>
+  <p>Account authentication data is stored in Cloudflare D1 (edge SQL database) and Cloudflare KV (edge key-value store). This infrastructure is operated by Cloudflare, Inc. under their privacy and security policies. Dead drop messages and encrypted relay content are stored with TTL-based auto-deletion. Family, Business, and Enterprise tier encrypted cloud backup blobs are stored on Cloudflare R2 — encrypted on device before upload. Enterprise recovery blobs use cryptographic key splitting (Shamir's Secret Sharing) across geographically separated storage.</p>
+  <p>Private keys are generated on your device and stored in your device's secure hardware enclave (Android Keystore). They are never transmitted to or stored on our servers.</p>
 
   <h2>Data Retention</h2>
   <ul>
@@ -157,6 +159,8 @@
     <li>Community directory listings — retained until user removes them or account deletion</li>
     <li>Cloud backup blobs — retained while subscription is active, deleted 30 days after cancellation</li>
     <li>Enterprise recovery blobs — retained for enrollment duration plus 30 days after opt-out</li>
+    <li>Rate-limiting counters — auto-expire within 15 minutes to 24 hours depending on endpoint</li>
+    <li>Session tokens — expire within 7 days or immediately on logout</li>
   </ul>
   <p>Request deletion at any time: <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a></p>
 
@@ -208,14 +212,7 @@
       <li><a href="privacy.html">Privacy Policy</a></li>
       <li><a href="terms.html">Terms of Service</a></li>
       <li><a href="security.html">Security Policy</a></li>
-      <li><a href="mailto:contact@jclabs.tech">Contact</a></li>
-      <li><a href="mailto:security@jclabs.tech">security@jclabs.tech</a></li>
-      <li><a href="mailto:dmca@jclabs.tech">dmca@jclabs.tech</a></li>
     </ul>
-  </div>
-  <div class="footer-bottom">
-    <span>&copy; 2026 JC Laboratories &nbsp;&middot;&nbsp; CC BY-NC 4.0</span>
-    <span style="font-style:italic;font-family:'EB Garamond',serif;font-size:13px;color:var(--gold-muted);">By security professionals, for security professionals.</span>
   </div>
 </footer>
 
