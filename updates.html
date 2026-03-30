@@ -200,6 +200,30 @@
        aleph-vault · cipherport · cryptaverse · gaffer · egaf · website
   ════════════════════════════════════════════════════════ -->
 
+  <!-- ENTRY: Cryptaverse / Aleph Vault 3/30/2026 -->
+  <div class="entry" data-product="cryptaverse">
+    <div class="entry-header">
+      <span class="entry-product">Cryptaverse / Aleph Vault</span>
+      <span class="entry-version">Phase 1</span>
+      <span class="entry-date">3/30/2026</span>
+    </div>
+    <div class="entry-body">
+      <ul class="change-list">
+        <li><span class="badge badge-new">New</span> Phase 1 authentication system completed and deployed on new edge-based backend infrastructure</li>
+        <li><span class="badge badge-security">Security</span> Account identity handling redesigned — non-reversible identifiers now replace direct email storage in the application database</li>
+        <li><span class="badge badge-security">Security</span> Session lifecycle hardened — rotation, revocation, rate limiting, and lockout protections implemented</li>
+        <li><span class="badge badge-fix">Fix</span> Aleph Vault fully migrated off Firebase Auth and integrated with the new authentication system</li>
+        <li><span class="badge badge-fix">Fix</span> Session persistence verified across restart and state transitions</li>
+        <li><span class="badge badge-fix">Fix</span> Production routing tightened and public endpoint exposure reduced</li>
+        <li><span class="badge badge-fix">Fix</span> Privacy Policy and Terms of Service updated to reflect the current data model and infrastructure</li>
+        <li><span class="badge badge-fix">Fix</span> General usability improvements shipped across vault interaction and input handling</li>
+        <li><span class="badge badge-fix">Fix</span> Per-item password-to-open controls added as an opt-in access gate inside the encrypted vault</li>
+        <li><span class="badge badge-fix">Fix</span> Item password handling upgraded to salted PBKDF2 verification with clearer user-facing language</li>
+        <li><span class="badge badge-soon">Soon</span> Phase 2 begins — identity bootstrapping, anchor key alignment, and Cryptaverse identity layer</li>
+      </ul>
+    </div>
+  </div>
+
   <!-- ENTRY: Website 3/23/2026 -->
   <div class="entry" data-product="website">
     <div class="entry-header">
@@ -210,13 +234,13 @@
     <div class="entry-body">
       <ul class="change-list">
         <li><span class="badge badge-new">New</span> Updates &amp; Changelog page added — tracks all changes across JC Laboratories products going forward</li>
-        <li><span class="badge badge-new">New</span> CipherPort branding — community page renamed and rebranded as CipherPort, gateway to Cryptaverse</li>
+        <li><span class="badge badge-new">New</span> CipherPort branding established — community page renamed and repositioned as the gateway to Cryptaverse</li>
         <li><span class="badge badge-new">New</span> Cryptaverse announced — privacy-first cryptographic safe harbor, coming soon</li>
         <li><span class="badge badge-new">New</span> Cryptaverse product card added to homepage</li>
         <li><span class="badge badge-new">New</span> Updates link added to site navigation and footer</li>
         <li><span class="badge badge-fix">Fix</span> Family tier now includes cloud backup — updated across all tier tables and legal pages</li>
-        <li><span class="badge badge-fix">Fix</span> Privacy Policy and Terms of Service updated — CipherPort branding, accurate cloud backup tier language</li>
-        <li><span class="badge badge-security">Security</span> Firestore security rules updated — size limits enforced server-side on CipherPort directory and dead drop</li>
+        <li><span class="badge badge-fix">Fix</span> Privacy Policy and Terms of Service updated — CipherPort branding and tier language aligned</li>
+        <li><span class="badge badge-security">Security</span> Platform-level size limits enforced for CipherPort directory and dead drop inputs</li>
       </ul>
     </div>
   </div>
@@ -231,10 +255,10 @@
     <div class="entry-body">
       <ul class="change-list">
         <li><span class="badge badge-new">New</span> Rebranded from JC Labs Community to CipherPort</li>
-        <li><span class="badge badge-new">New</span> Cryptaverse teaser added to page — coming soon banner and info box</li>
+        <li><span class="badge badge-new">New</span> Cryptaverse teaser added to page — gateway messaging and upcoming platform positioning</li>
         <li><span class="badge badge-fix">Fix</span> Copy key button fixed — now works correctly with all Aleph key formats</li>
         <li><span class="badge badge-fix">Fix</span> Clipboard fallback added for browsers that block navigator.clipboard</li>
-        <li><span class="badge badge-security">Security</span> Server-side size limits enforced — max 10,000 chars per dead drop message, 500 chars per public key, 30 chars per username, 160 chars per bio</li>
+        <li><span class="badge badge-security">Security</span> Strict size and input constraints enforced across public-facing fields</li>
       </ul>
     </div>
   </div>
@@ -248,12 +272,12 @@
     </div>
     <div class="entry-body">
       <ul class="change-list">
-        <li><span class="badge badge-soon">Soon</span> Encrypted profiles — your profile is ciphertext to everyone except approved contacts</li>
-        <li><span class="badge badge-soon">Soon</span> Two key pair identity model — identity key (public) + encryption key (contacts only)</li>
-        <li><span class="badge badge-soon">Soon</span> Contact request system — access keys exchanged cryptographically on approval</li>
+        <li><span class="badge badge-soon">Soon</span> Encrypted profiles — visible only to approved contacts</li>
+        <li><span class="badge badge-soon">Soon</span> Dual-key identity model — separation of identity and encryption layers</li>
+        <li><span class="badge badge-soon">Soon</span> Contact request system — access granted cryptographically on approval</li>
         <li><span class="badge badge-soon">Soon</span> Cryptographic groups — communities that exist only if you hold the key</li>
-        <li><span class="badge badge-soon">Soon</span> Aleph Vault integration — app as hardware key store for Cryptaverse</li>
-        <li><span class="badge badge-soon">Soon</span> Profile and group content encrypted client-side before reaching servers — we store only ciphertext we cannot decrypt</li>
+        <li><span class="badge badge-soon">Soon</span> Aleph Vault integration — device as secure key store for Cryptaverse</li>
+        <li><span class="badge badge-soon">Soon</span> Profile and group content encrypted client-side before reaching servers — infrastructure stores ciphertext only</li>
       </ul>
     </div>
   </div>
@@ -266,7 +290,7 @@
     <span class="name">JC Laboratories</span>
     <p>Independent security tools by JC Laboratories.<br>JC Labs R&amp;D &nbsp;&middot;&nbsp; jclabs.tech</p>
     <p style="margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);">
-      <a href="/cdn-cgi/l/email-protection#52313d3c263331261238313e3330217c2637313a"><span class="__cf_email__" data-cfemail="b3d0dcddc7d2d0c7f3d9d0dfd2d1c09dc7d6d0db">[email&#160;protected]</span></a>
+      <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>
     </p>
   </div>
   <div class="footer-links">
@@ -284,9 +308,9 @@
       <li><a href="privacy.html">Privacy Policy</a></li>
       <li><a href="terms.html">Terms of Service</a></li>
       <li><a href="security.html">Security Policy</a></li>
-      <li><a href="/cdn-cgi/l/email-protection#b3d0dcddc7d2d0c7f3d9d0dfd2d1c09dc7d6d0db">Contact</a></li>
-      <li><a href="/cdn-cgi/l/email-protection#9eedfbfdebecf7eae7def4fdf2fffcedb0eafbfdf6"><span class="__cf_email__" data-cfemail="99eafcfaecebf0ede0d9f3faf5f8fbeab7edfcfaf1">[email&#160;protected]</span></a></li>
-      <li><a href="/cdn-cgi/l/email-protection#d9bdb4bab899b3bab5b8bbaaf7adbcbab1"><span class="__cf_email__" data-cfemail="b6d2dbd5d7f6dcd5dad7d4c598c2d3d5de">[email&#160;protected]</span></a></li>
+      <li><a href="mailto:contact@jclabs.tech">Contact</a></li>
+      <li><a href="mailto:security@jclabs.tech">security@jclabs.tech</a></li>
+      <li><a href="mailto:dmca@jclabs.tech">dmca@jclabs.tech</a></li>
     </ul>
   </div>
   <div class="footer-bottom">
@@ -309,5 +333,6 @@ function filterEntries(product, btn) {
   });
 }
 </script>
+
 </body>
 </html>
