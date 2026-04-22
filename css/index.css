@@ -1,8 +1,9 @@
 /* ============================================================
-   index.css — Homepage styles
+   index.css — Homepage 
    ============================================================ */
 
-/* ── Hero ──────────────────────────────────────────────────── */
+
+/* ── Hero ─────────────────────────────────────────────────── */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -104,7 +105,8 @@
   animation: fadeUp 0.8s 0.9s forwards;
 }
 
-/* ── Section layout ────────────────────────────────────────── */
+
+/* ── Section layout ───────────────────────────────────────── */
 .section-wrapper {
   border-top: 1px solid var(--border);
 }
@@ -147,7 +149,8 @@ section {
   margin-bottom: 60px;
 }
 
-/* ── Products grid ─────────────────────────────────────────── */
+
+/* ── Products grid ───────────────────────────────────────── */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -177,8 +180,13 @@ section {
   transform-origin: left;
 }
 
-.product-card:hover { background: var(--surface-high); }
-.product-card:hover::before { transform: scaleX(1); }
+.product-card:hover {
+  background: var(--surface-high);
+}
+
+.product-card:hover::before {
+  transform: scaleX(1);
+}
 
 .product-icon {
   font-size: 40px;
@@ -193,6 +201,25 @@ section {
   height: 48px;
   object-fit: contain;
   margin-bottom: 20px;
+  display: block;
+}
+
+/* 🔥 FIXED: moved from inline HTML */
+.product-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  background: rgba(184,160,88,0.06);
+  border: 1px solid rgba(184,160,88,0.18);
+}
+
+.product-mark img {
+  width: 28px;
+  height: 28px;
   display: block;
 }
 
@@ -234,7 +261,9 @@ section {
   margin-top: auto;
 }
 
-.product-link:hover { gap: 14px; text-decoration: none; }
+.product-link:hover {
+  gap: 14px;
+}
 
 .product-badge {
   display: inline-block;
@@ -245,13 +274,13 @@ section {
   border: 1px solid var(--gold-muted);
   color: var(--gold-muted);
   margin-bottom: 16px;
-  align-self: flex-start;
 }
 
-.badge-live  { border-color: var(--green-dark); color: var(--green); }
-.badge-soon  { border-color: var(--gold-muted); color: var(--gold-muted); }
+.badge-live { border-color: var(--green-dark); color: var(--green); }
+.badge-soon { border-color: var(--gold-muted); color: var(--gold-muted); }
 
-/* ── Security grid ─────────────────────────────────────────── */
+
+/* ── Security grid ───────────────────────────────────────── */
 .security-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -287,7 +316,8 @@ section {
   line-height: 1.6;
 }
 
-/* ── Tiers grid ────────────────────────────────────────────── */
+
+/* ── Tiers grid ─────────────────────────────────────────── */
 .tiers-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -328,7 +358,11 @@ section {
   color: var(--text-muted);
 }
 
-.tier-features { list-style: none; font-size: 13px; color: var(--text-secondary); }
+.tier-features {
+  list-style: none;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
 
 .tier-features li {
   padding: 5px 0;
@@ -340,57 +374,25 @@ section {
 
 .tier-features li:last-child { border-bottom: none; }
 
-.feat-yes { color: var(--green);      font-size: 11px; }
+.feat-yes { color: var(--green); font-size: 11px; }
 .feat-no  { color: var(--text-muted); font-size: 11px; }
 
-/* ── CTA section ───────────────────────────────────────────── */
-.cta-section {
-  text-align: center;
-  padding: 120px 48px;
-  position: relative;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  background: var(--surface);
-  margin: 80px 0 0;
-}
 
-.cta-bg-glyph {
-  position: absolute;
-  font-size: 400px;
-  color: rgba(184,160,88,0.02);
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  font-family: 'EB Garamond', serif;
-  user-select: none;
-}
-
-.cta-section h2 {
-  font-family: 'Cinzel', serif;
-  font-size: clamp(28px, 5vw, 52px);
-  color: var(--text);
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.cta-section p {
-  color: var(--text-secondary);
-  font-size: 18px;
-  margin-bottom: 48px;
-  position: relative;
-}
-
-.cta-actions {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-}
-
-/* ── Responsive ────────────────────────────────────────────── */
+/* ── Responsive ─────────────────────────────────────────── */
 @media (max-width: 768px) {
-  section { padding: 60px 24px; }
-  .hero   { padding: 100px 24px 60px; }
-  .cta-section { padding: 80px 24px; }
+  section {
+    padding: 80px 24px;
+  }
+
+  .hero {
+    padding: 100px 20px 60px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .security-grid {
+    grid-template-columns: 1fr;
+  }
 }
