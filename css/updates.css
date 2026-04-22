@@ -1,0 +1,155 @@
+/* ── Page header ─────────────────────────────────────────── */
+.page-header {
+  padding: 120px 48px 60px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+.page-header .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--gold-muted);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: block;
+}
+.page-header h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+.page-header h1 span { color: var(--gold); }
+.page-header p {
+  color: var(--text-secondary);
+  font-size: 17px;
+  max-width: 600px;
+}
+
+/* ── Container ───────────────────────────────────────────── */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 48px;
+}
+
+/* ── Filter tabs ─────────────────────────────────────────── */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 24px;
+}
+
+.filter-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-btn:hover { border-color: var(--gold-muted); color: var(--gold); }
+.filter-btn.active {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(184,160,88,0.06);
+}
+
+/* ── Entry ───────────────────────────────────────────────── */
+.entry {
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+  transition: border-color 0.2s;
+}
+.entry:hover { border-color: var(--gold-muted); }
+
+.entry-header {
+  background: var(--surface);
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.entry-product {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+.entry-version {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+}
+
+.entry-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+.entry-body {
+  padding: 20px 24px;
+}
+
+/* ── Change items ────────────────────────────────────────── */
+.change-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.change-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.change-list li:last-child { border-bottom: none; }
+
+/* ── Badges ──────────────────────────────────────────────── */
+.badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.badge-new      { background: rgba(184,160,88,0.15); color: var(--gold); border: 1px solid rgba(184,160,88,0.3); }
+.badge-fix      { background: rgba(100,160,100,0.12); color: #7dbf7d; border: 1px solid rgba(100,160,100,0.3); }
+.badge-security { background: rgba(200,80,80,0.12); color: #e07070; border: 1px solid rgba(200,80,80,0.3); }
+.badge-breaking { background: rgba(200,100,40,0.12); color: #e09050; border: 1px solid rgba(200,100,40,0.3); }
+.badge-soon     { background: rgba(120,120,180,0.12); color: #9090d0; border: 1px solid rgba(120,120,180,0.3); }
+.badge-website  { background: rgba(80,160,200,0.12); color: #70b0d0; border: 1px solid rgba(80,160,200,0.3); }
+
+/* ── Hidden entries ──────────────────────────────────────── */
+.entry.hidden { display: none; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .page-header { padding: 100px 24px 48px; }
+  .container   { padding: 40px 24px; }
+  .entry-date  { margin-left: 0; width: 100%; }
+}
