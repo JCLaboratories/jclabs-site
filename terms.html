@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terms of Service — JC Laboratories</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<meta name="description" content="Terms of Service for Cryptaverse and all JC Laboratories LLC products and services.">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/docs.css">
 </head>
@@ -20,148 +21,151 @@
 
 <div class="doc-container">
   <div class="doc-title">Terms of Service</div>
-  <div class="doc-meta">Effective March 30, 2026 &nbsp;·&nbsp; JC Laboratories / jclabs.tech</div>
+  <div class="doc-meta">Effective August 2026 &nbsp;·&nbsp; JC Laboratories LLC / jclabs.tech</div>
 
   <div class="highlight">
-    By using any JC Laboratories product or service, you agree to these terms. Please read carefully — particularly sections on vault password recovery, vault export and import, CipherPort, the Enterprise Recovery Program, and EGAF licensing.
+    By using any JC Laboratories product or service, you agree to these terms. Read sections 4 (Provided As Is), 6 (Vault Password), 7 (Export and Import) and 15 (Subscriptions, Billing and Refunds) closely &mdash; they describe limits that cannot be undone after the fact.
   </div>
 
   <h2>1. Acceptance of Terms</h2>
-  <p>These Terms of Service govern your use of all JC Laboratories products and services, including Aleph Vault, the Entropy-Gated AI Framework (EGAF), Gaffer, CipherPort (public key directory and dead drop board), Cryptaverse, and jclabs.tech. By accessing or using our Services, you agree to be bound by these Terms.</p>
+  <p>These Terms of Service govern your use of all JC Laboratories LLC products and services, including Cryptaverse, the Entropy-Gated AI Framework (EGAF), Abe, and jclabs.tech. By accessing or using our Services, you agree to be bound by these Terms. If you do not agree, do not use the Services.</p>
 
   <h2>2. About JC Laboratories</h2>
-  <p>JC Laboratories (jclabs.tech) is an independent technology company founded by Justin Czap. Our research and development division, JC Labs R&D, develops security-focused software and the Entropy-Gated AI Framework.</p>
-  <p>Our mission: <em>By security professionals, for security professionals. Your privacy in your hands.</em></p>
+  <p>JC Laboratories LLC (jclabs.tech) is an independent technology company founded by Justin Czap and registered in Michigan, United States. Our research and development division, JC Labs R&amp;D, develops security-focused software and the Entropy-Gated AI Framework.</p>
+  <p>Our mission: By security professionals, for security professionals. Your privacy in your hands.</p>
 
   <h2>3. Description of Services</h2>
-  <p><strong>Aleph Vault</strong> is an offline-first encrypted vault application for Android providing secure local storage of notes, passwords, cryptographic key pairs, API keys, and encrypted messaging via the MessageCrypt system.</p>
-  <p><strong>EGAF (Entropy-Gated AI Framework)</strong> is a structured AI governance and orchestration protocol developed by JC Labs R&D. It defines a three-part composition system (OIL_CONTRACT, INVOKER, E_T) for governed, reproducible, and auditable AI task execution, operating as a Layer 3 governance protocol.</p>
-  <p><strong>Gaffer</strong> is the flagship AI assistant built on EGAF, providing governed AI interactions via web interface (ai.jclabs.tech) and API.</p>
-  <p><strong>CipherPort</strong> is a public key directory and encrypted dead drop message board at jclabs.tech/community. It is the gateway to Cryptaverse — a privacy-first cryptographic safe harbor where identity is a key, communities are cryptographic safe rooms, and JC Laboratories cannot access encrypted vault contents in readable form and does not possess user private keys.</p>
-  <p><strong>Cryptaverse</strong> is the forthcoming privacy-first cryptographic social platform. All Cryptaverse content is encrypted client-side before reaching our servers. Access to encrypted content is enforced by cryptographic keys held on user devices — not by policy alone.</p>
+  <p><strong>Cryptaverse</strong> (formerly Aleph Vault) is a privacy-first encrypted application for Android providing local encrypted storage of notes, passwords, cryptographic key pairs and API keys; post-quantum encrypted messaging; encrypted file transfer and storage; and a public publishing surface where you may choose to publish blocks and stacks that anyone can read.</p>
+  <p><strong>EGAF</strong> (Entropy-Gated AI Framework) is an open AI governance protocol developed by JC Labs R&amp;D, defining what an AI assistant is permitted to do before it runs, so that its behaviour is bounded, reproducible and auditable.</p>
+  <p><strong>Abe</strong> (formerly the Gaffer) is our AI assistant, with EGAF governance built into it. Both are currently offline while being rebuilt and are not available.</p>
 
-  <h2>4. Subscription Tiers — Aleph Vault</h2>
-  <table class="tier-table">
-    <tr><th>Tier</th><th>Price</th><th>Key Features</th></tr>
-    <tr><td>Free</td><td>$0/mo</td><td>5 repo items, 1 key pair/month, no export, no recovery, community read access</td></tr>
-    <tr><td>Individual</td><td>$3/mo</td><td>Unlimited items, 1 key pair/month, vault export/import, community directory listing</td></tr>
-    <tr><td>Family</td><td>$5/mo</td><td>Unlimited items, unlimited key pairs, vault export/import, encrypted cloud backup, community listing</td></tr>
-    <tr><td>Small Business</td><td>$25/mo</td><td>Unlimited key pairs, vault export/import, encrypted cloud backup, optional recovery add-on</td></tr>
-    <tr><td>Medium Business</td><td>$50/mo</td><td>Unlimited key pairs, vault export/import, encrypted cloud backup, optional recovery add-on</td></tr>
-    <tr><td>Enterprise / VIP</td><td>Custom</td><td>Unlimited keys, cloud backup, recovery included, SLA, dedicated support</td></tr>
-  </table>
-  <p>JC Laboratories reserves the right to update pricing with 30 days notice to existing subscribers.</p>
-
-  <h2>5. Account Password vs Vault Password</h2>
-  <p>Aleph Vault uses two separate passwords with different properties:</p>
-  <p><strong>Account password</strong> — used to sign in to your JC Laboratories account. Authentication is handled by a Cloudflare Worker-based system. Password resets are handled through this system using email-delivered, time-limited reset tokens. Your email address is processed for authentication and reset purposes but is not stored as plaintext in our database. We store a keyed cryptographic representation (HMAC-SHA256) for account lookup. This representation cannot be reversed to recover the original email from the stored value.</p>
-  <div class="warning">
-    <strong>Vault password — No Recovery on Standard Tiers:</strong> Your vault password derives your encryption key locally on your device. JC Laboratories does not store, transmit, or have access to your vault password or its derived key. If you forget your vault password on Free, Individual, or Family tiers, your encrypted vault data cannot be recovered by anyone — including JC Laboratories. There is no reset, no recovery code, and no backdoor. This is intentional.
-  </div>
-  <p>You acknowledge and accept this limitation by using standard tiers. We strongly recommend exporting your vault regularly and storing the backup securely.</p>
-
-  <h2>6. Vault Export and Import</h2>
-  <p>Available on Individual tier and above. Vault export creates an encrypted backup file protected by a user-chosen export password — separate from and independent of the vault master password. The export password is chosen by you at the time of export and is not stored by JC Laboratories.</p>
-  <div class="warning">
-    <strong>Your export password cannot be recovered.</strong> If you lose your export password, the backup file cannot be decrypted. Store your export password separately from the backup file.
-  </div>
-  <p>Exported files are saved to your device's Downloads/AlephVault/ folder. You are solely responsible for the security of exported vault files after export.</p>
-
-  <h2>7. Cloud Backup — Family, Business, and Enterprise Tiers</h2>
-  <p>Family, Business, and Enterprise tier subscribers may enable automatic encrypted cloud backup. Vault data is encrypted on-device before upload using AES-256-GCM. JC Laboratories stores only the encrypted ciphertext blob on Cloudflare R2 and cannot decrypt it. On Free and Individual tiers, vault data never leaves your device. Encrypted blobs are retained while the subscription is active and deleted 30 days after cancellation. We store only encrypted ciphertext — never readable vault content.</p>
-
-  <h2>8. CipherPort — Public Key Directory</h2>
-  <div class="warning">
-    <strong>Account required.</strong> A jclabs.tech account is required to create or maintain a directory listing. Anonymous accounts using only an email address are permitted — no real name is required.
-  </div>
-  <p>By submitting a directory listing you agree that your listing does not impersonate any real person or organization, your username and bio do not contain illegal content, slurs, threats, or harassment, the public key you list is your own, and JC Laboratories may remove your listing at any time for violation of these Terms.</p>
-
-  <h2>9. CipherPort — Dead Drop Board</h2>
-  <p>The CipherPort dead drop board is an anonymous encrypted message relay. No account is required to post.</p>
-  <div class="highlight">
-    JC Laboratories operates the dead drop board as a blind courier. Encrypted message content is stored temporarily as ciphertext for delivery and automatically deleted at expiry. It may be deleted sooner after successful delivery. We do not store or have access to this content in readable form. All messages posted must be encrypted ciphertext. We are not responsible for the content of encrypted messages we cannot decrypt.
-  </div>
-  <p><strong>Message expiry:</strong> Free and anonymous users: up to 7 days. Paid tier account holders: up to 30 days. Messages are automatically and permanently deleted at expiry.</p>
-  <p><strong>Law enforcement:</strong> We will comply with legally valid requests. However, we can only provide the encrypted ciphertext and minimal routing metadata stored in our application database — we do not log or store poster IP addresses in our application database. Network-level logs may be retained by infrastructure providers such as Cloudflare under their own policies.</p>
-
-  <h2>10. Enterprise Recovery Program</h2>
-  <p>The Enterprise Recovery Program is an optional, paid feature on Business and Enterprise/VIP tiers, governed by a separate Enterprise Recovery Agreement.</p>
+  <h2>4. Provided As Is</h2>
+  <p>Cryptaverse is provided to you <strong>as is</strong>, in its current state, with all faults. You accept it in that condition, in the same way you would accept a vehicle bought privately rather than from a dealer. You are responsible for deciding whether it is fit for what you intend to use it for.</p>
+  <p>In particular, you accept that:</p>
   <ul>
-    <li>Enrollment is explicit and voluntary — opt-in only</li>
-    <li>Recovery requires rigorous identity verification (government ID, video call, or agreed method)</li>
+    <li>The Services may contain defects, and may change, break or behave unexpectedly</li>
+    <li>Features may be altered, suspended or withdrawn at any time</li>
+    <li>Availability is not guaranteed, and no uptime commitment is made outside a written Enterprise SLA</li>
+    <li>No cryptographic implementation can be warranted free of unknown vulnerabilities, and no encryption system provides absolute security</li>
+    <li>Data may be lost, and you are responsible for keeping your own backups</li>
+  </ul>
+  <p>Use of the Services is entirely at your own risk. This section does not limit any right you have under consumer protection law that cannot lawfully be waived.</p>
+
+  <h2>5. Public and Private Content</h2>
+  <p>Cryptaverse separates private content from content you publish. Your vault, private profile screen, messages and files are encrypted on your device and cannot be read by JC Laboratories. Blocks and stacks you publish to the public surface, together with any media attached to them and any public profile you create, are stored unencrypted so they can be served to others.</p>
+  <p>Publishing is always a deliberate action. You are solely responsible for what you choose to publish, and you should assume anything you publish may be copied, indexed or retained by third parties beyond our control. Unpublishing removes content from our servers; it cannot retrieve copies others have already made.</p>
+
+  <h2>6. Account Password and Vault Password</h2>
+  <p><strong>Account password</strong> &mdash; used to sign in to your JC Laboratories account. Password resets are handled by email-delivered, time-limited reset tokens. Your email address is processed for authentication and reset purposes but is not stored as plaintext; we store a keyed cryptographic representation (HMAC-SHA256) for account lookup, which cannot be reversed.</p>
+  <p><strong>Vault password &mdash; no recovery on standard tiers.</strong> Your vault password derives your encryption key locally on your device. JC Laboratories does not store, transmit, or have any access to your vault password or its derived key. If you forget it on Free, Individual or Family tiers, your encrypted vault data cannot be recovered by anyone, including us. There is no reset, no recovery code and no backdoor. This is intentional and is a direct consequence of the security model.</p>
+  <p>You acknowledge and accept this limitation by using standard tiers. Export your vault regularly and store the backup securely.</p>
+
+  <h2>7. Vault Export and Import</h2>
+  <p>Available on Individual tier and above. Export creates an encrypted backup file protected by an export password you choose at the time of export, separate from and independent of your vault password. It is not stored by JC Laboratories.</p>
+  <p><strong>Your export password cannot be recovered.</strong> If you lose it, the backup file cannot be decrypted. Store it separately from the backup file itself. You are solely responsible for the security of exported files once they leave the app.</p>
+
+  <h2>8. Safety Deposit Box &mdash; Cloud Backup</h2>
+  <p>Family, Business and Enterprise subscribers may enable Safety Deposit Box, our encrypted cloud backup. Vault data is encrypted on-device using AES-256-GCM before upload. JC Laboratories stores only the encrypted ciphertext and cannot decrypt it. On Free and Individual tiers, vault data never leaves your device. Encrypted blobs are retained while the subscription is active and deleted 30 days after cancellation.</p>
+
+  <h2>9. Enterprise Recovery Program</h2>
+  <p>An optional, paid feature on Business and Enterprise/VIP tiers, governed by a separate Enterprise Recovery Agreement.</p>
+  <ul>
+    <li>Enrollment is explicit and voluntary &mdash; opt-in only</li>
+    <li>Recovery requires rigorous identity verification (government ID, video call, or another agreed method)</li>
     <li>Recovery keys are single-use and rotated immediately after each use</li>
-    <li>Full audit logs of all recovery events maintained and available on request</li>
-    <li>Response SLA: Enterprise (24 hours), VIP (4 hours) — from completed identity verification</li>
+    <li>Full audit logs of all recovery events are maintained and available on request</li>
+    <li>Response SLA: Enterprise 24 hours, VIP 4 hours, from completed identity verification</li>
     <li>Maximum 3 recovery uses per 12-month period per account</li>
     <li>Misuse of recovery is a material breach and may result in account termination and legal action</li>
   </ul>
-  <p>To enroll: <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a></p>
+  <p>To enrol: <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a></p>
+
+  <h2>10. Subscription Tiers</h2>
+  <table class="tier-table">
+    <thead><tr><th>Tier</th><th>Price</th><th>Key Features</th></tr></thead>
+    <tbody>
+      <tr><td>Free</td><td>$0/mo</td><td>5 repo items, 1 key pair per month, no export, no recovery</td></tr>
+      <tr><td>Individual</td><td>$3/mo</td><td>Unlimited items, 1 key pair per month, vault export/import</td></tr>
+      <tr><td>Family</td><td>$5/mo</td><td>Unlimited items and key pairs, export/import, Safety Deposit Box</td></tr>
+      <tr><td>Small Business</td><td>$25/mo</td><td>Unlimited key pairs, export/import, Safety Deposit Box, optional recovery add-on</td></tr>
+      <tr><td>Medium Business</td><td>$50/mo</td><td>Unlimited key pairs, export/import, Safety Deposit Box, optional recovery add-on</td></tr>
+      <tr><td>Enterprise / VIP</td><td>Custom</td><td>Unlimited keys, Safety Deposit Box, recovery included, SLA, dedicated support</td></tr>
+    </tbody>
+  </table>
+  <p>JC Laboratories reserves the right to update pricing with 30 days notice to existing subscribers.</p>
 
   <h2>11. EGAF Intellectual Property and Licensing</h2>
-  <p>The Entropy-Gated AI Framework (EGAF), including all vial specifications, the OIL_CONTRACT system, INVOKER protocol, and E_T task definition format, is intellectual property of JC Laboratories / JC Labs R&D, developed and maintained by Justin Czap.</p>
+  <p>The Entropy-Gated AI Framework (EGAF), including its specifications, protocol definitions and task formats, is intellectual property of JC Laboratories LLC / JC Labs R&amp;D, developed and maintained by Justin Czap.</p>
   <p>EGAF is dual-licensed:</p>
   <ul>
-    <li><strong>Non-commercial use:</strong> Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>. You may use, share, and adapt EGAF for non-commercial purposes with attribution to JC Laboratories.</li>
-    <li><strong>Commercial use:</strong> Requires a separate written commercial license from JC Laboratories. Contact <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>.</li>
+    <li><strong>Non-commercial use</strong> &mdash; licensed under CC BY-NC 4.0. You may use, share and adapt EGAF for non-commercial purposes with attribution to JC Laboratories.</li>
+    <li><strong>Commercial use</strong> &mdash; requires a separate written commercial license. Contact <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>.</li>
   </ul>
-  <p>Gaffer, Aleph Vault, CipherPort, Cryptaverse, and all associated JC Laboratories software, branding, and assets are proprietary. All rights reserved.</p>
+  <p>Abe, Cryptaverse, and all associated JC Laboratories software, branding and assets are proprietary. All rights reserved.</p>
 
-  <h2>12. AI-Generated Content — Gaffer</h2>
-  <p>AI-generated content from Gaffer is provided for informational purposes only and does not constitute professional advice of any kind. You use AI-generated content at your own risk.</p>
+  <h2>12. AI-Generated Content</h2>
+  <p>AI-generated content from Abe is provided for informational purposes only and does not constitute professional advice of any kind. You use AI-generated content at your own risk.</p>
 
   <h2>13. Acceptable Use</h2>
-  <p>You agree not to use our Services to violate any law, store or distribute illegal content, reverse-engineer our software, abuse or overload our services, impersonate any person, attempt unauthorized access to any account, post unencrypted personal data to the dead drop board, or misuse the Enterprise Recovery Program.</p>
+  <p>You agree not to use our Services to violate any law; to store, publish or distribute illegal content; to reverse-engineer our software; to abuse or overload our services; to impersonate any person or organisation; to attempt unauthorised access to any account; to harass, threaten or target others through published content or comments; or to misuse the Enterprise Recovery Program.</p>
 
-  <h2>14. Subscriptions and Billing</h2>
-  <p>Subscriptions are processed via Stripe. Individual ($3/mo) and Family ($5/mo) tiers are available in-app via Settings &rarr; Upgrade Plan. Business and Enterprise tiers: contact <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>. Cancel anytime via the billing portal at Settings &rarr; Upgrade Plan &rarr; Manage. JC Laboratories does not issue refunds for partial subscription periods except where required by law.</p>
-
-  <h2>15. Content Moderation and Illegal Content</h2>
-  <p><strong>Reporting abuse:</strong> To report illegal content, Terms violations, or abusive listings, contact <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a> with a description and any available identifiers (username, key fingerprint, timestamp).</p>
-  <p><strong>Removal:</strong> JC Laboratories may remove any directory listing or dead drop message that violates these Terms, without notice. Repeated violations will result in account termination.</p>
-  <p><strong>Mandatory reporting:</strong> JC Laboratories will comply with all mandatory reporting obligations under applicable law, including:</p>
+  <h2>14. Content Moderation and Illegal Content</h2>
+  <p><strong>Reporting abuse.</strong> To report illegal content, Terms violations or abusive published content, contact <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a> with a description and any available identifiers (block or stack identifier, key fingerprint, timestamp).</p>
+  <p><strong>Removal.</strong> JC Laboratories may remove any published block, stack, profile or comment that violates these Terms, without notice. Repeated violations will result in account termination.</p>
+  <p><strong>Mandatory reporting.</strong> JC Laboratories will comply with all mandatory reporting obligations under applicable law, including:</p>
   <ul>
     <li><strong>CSAM:</strong> Any apparent child sexual abuse material brought to our attention will be reported to the National Center for Missing &amp; Exploited Children (NCMEC) at cybertipline.org, as required by 18 U.S.C. &sect; 2258A, and to relevant law enforcement.</li>
     <li><strong>Terrorism:</strong> Credible threats or terrorist content will be reported to the FBI at tips.fbi.gov.</li>
     <li><strong>Other illegal content:</strong> As required by applicable law and valid legal process.</li>
   </ul>
-  <p><strong>Section 230:</strong> JC Laboratories claims the protections of 47 U.S.C. &sect; 230 as an interactive computer service provider. We are not the publisher or speaker of user-generated content.</p>
+  <p><strong>Encrypted content.</strong> We cannot read encrypted private content and can provide only ciphertext and routing metadata in response to legal process. Published public content is readable by us and by anyone.</p>
+  <p><strong>Section 230.</strong> JC Laboratories claims the protections of 47 U.S.C. &sect; 230 as an interactive computer service provider. We are not the publisher or speaker of user-generated content.</p>
+
+  <h2>15. Subscriptions, Billing and Refunds</h2>
+  <p>Subscriptions are processed via Stripe, or through the app store you installed from. Individual and Family tiers are available in-app via Settings &rarr; Upgrade Plan. Business and Enterprise tiers: contact <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>. You may cancel at any time; cancellation stops future charges and access continues to the end of the paid period.</p>
+  <p><strong>No refunds.</strong> Consistent with section 4, the Services are sold as is. JC Laboratories does not issue refunds, including for partial subscription periods, for features that do not work as you expected, for periods of downtime, or for data loss. Use the Free tier to evaluate the Services before subscribing.</p>
+  <p>This does not affect refunds required by law, and it does not override the refund policies of any app store or payment processor through which you purchased. Where you bought a subscription through an app store, that store's refund process applies and is handled by them, not by us.</p>
 
   <h2>16. Disclaimer of Warranties</h2>
-  <p>Our Services are provided "as is" and "as available" without warranties of any kind. JC Laboratories makes no warranty that any cryptographic implementation is free from unknown vulnerabilities. No encryption system provides absolute security.</p>
+  <p>To the fullest extent permitted by law, the Services are provided "as is" and "as available", with all faults, and without warranties of any kind, whether express, implied or statutory. JC Laboratories disclaims all implied warranties, including merchantability, fitness for a particular purpose, title and non-infringement.</p>
+  <p>JC Laboratories makes no warranty that the Services will be uninterrupted, secure, error-free, or that any defect will be corrected; that any cryptographic implementation is free from unknown vulnerabilities; or that data will not be lost. No encryption system provides absolute security.</p>
 
   <h2>17. Limitation of Liability</h2>
-  <p>To the fullest extent permitted by law, JC Laboratories and its founder shall not be liable for any indirect, incidental, special, consequential, or punitive damages including loss of data, profits, or goodwill. For Enterprise Recovery claims, total liability shall not exceed fees paid for the recovery program in the preceding 12 months.</p>
+  <p>To the fullest extent permitted by law, JC Laboratories LLC, its founder, members and agents shall not be liable for any indirect, incidental, special, consequential, exemplary or punitive damages, including loss of data, loss of profits, business interruption or loss of goodwill, arising out of or relating to your use of or inability to use the Services, however caused and on any theory of liability.</p>
+  <p>To the fullest extent permitted by law, our total aggregate liability for any claim relating to the Services shall not exceed the greater of the fees you paid to JC Laboratories in the twelve months preceding the claim, or one hundred United States dollars. For Enterprise Recovery claims, total liability shall not exceed fees paid for the recovery program in the preceding twelve months.</p>
+  <p>Some jurisdictions do not allow the exclusion or limitation of certain damages, so parts of this section may not apply to you.</p>
 
   <h2>18. Indemnification</h2>
-  <p>You agree to indemnify and hold harmless JC Laboratories and its founder from claims, damages, or expenses arising from your use of the Services, violation of these Terms, or violation of any third-party rights.</p>
+  <p>You agree to indemnify and hold harmless JC Laboratories LLC and its founder from claims, damages, liabilities and expenses, including reasonable legal fees, arising from your use of the Services, content you publish, your violation of these Terms, or your violation of any third-party rights.</p>
 
-  <h2>19. Termination</h2>
-  <p>JC Laboratories may suspend or terminate your account for violation of these Terms. You may terminate at any time by contacting <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>.</p>
+  <h2>19. Termination and Account Deletion</h2>
+  <p>JC Laboratories may suspend or terminate your account for violation of these Terms.</p>
+  <p>You may delete your account at any time, in the app at Settings &rarr; Delete Account, or on the web at <a href="delete-account.html">jclabs.tech/delete-account.html</a>. Deletion permanently removes your account and all associated server-side data, including published content, engagement, files, and any groups you created. It cannot be reversed. See our <a href="privacy.html">Privacy Policy</a> for the full scope.</p>
 
   <h2>20. Governing Law</h2>
-  <p>These Terms are governed by the laws of the United States. Disputes shall be resolved in the appropriate courts of jurisdiction.</p>
+  <p>These Terms are governed by the laws of the State of Michigan and the United States, without regard to conflict of law principles. Disputes shall be resolved in the appropriate courts of jurisdiction.</p>
 
   <h2>21. Changes to Terms</h2>
   <p>Material changes will be communicated via the app or email with 30 days notice for paid subscribers. Continued use after changes constitutes acceptance.</p>
 
   <h2>22. Security Vulnerability Disclosure</h2>
-  <p>If you discover a security vulnerability in any JC Laboratories product or service, please report it to <a href="mailto:security@jclabs.tech">security@jclabs.tech</a> before public disclosure. We ask that you give us 90 days to investigate and remediate. We will acknowledge your report within 72 hours and not pursue legal action against good-faith researchers.</p>
+  <p>If you discover a security vulnerability in any JC Laboratories product or service, report it to <a href="mailto:security@jclabs.tech">security@jclabs.tech</a> before public disclosure. We ask that you give us 90 days to investigate and remediate. We will acknowledge your report within 72 hours and will not pursue legal action against good-faith researchers. See our <a href="security.html">Security Policy</a>.</p>
 
-  <h2>23. DMCA — Copyright</h2>
+  <h2>23. DMCA &mdash; Copyright</h2>
   <p>If you believe content on our services infringes your copyright, contact our designated DMCA agent:</p>
-  <p><strong>Agent:</strong> Justin Czap &nbsp;·&nbsp; <strong>Email:</strong> <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a> &nbsp;·&nbsp; <strong>Address:</strong> JC Laboratories, Michigan, United States</p>
+  <p>Agent: Justin Czap &nbsp;·&nbsp; Email: <a href="mailto:dmca@jclabs.tech">dmca@jclabs.tech</a> &nbsp;·&nbsp; Address: JC Laboratories LLC, c/o Northwest Registered Agent Service, Inc., 2222 W Grand River Ave Ste A, Okemos, MI 48864</p>
 
   <h2>24. Contact</h2>
-  <p>
-    General &amp; Enterprise: <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a><br>
-    Security: <a href="mailto:security@jclabs.tech">security@jclabs.tech</a><br>
-    DMCA: <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a><br>
-    Website: <a href="https://jclabs.tech">jclabs.tech</a><br>
-    GitHub: <a href="https://github.com/JCLaboratories" target="_blank" rel="noopener">github.com/JCLaboratories</a>
-  </p>
+  <ul>
+    <li>General &amp; Enterprise: <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a></li>
+    <li>Security: <a href="mailto:security@jclabs.tech">security@jclabs.tech</a></li>
+    <li>DMCA: <a href="mailto:dmca@jclabs.tech">dmca@jclabs.tech</a></li>
+    <li>Website: jclabs.tech</li>
+    <li>GitHub: github.com/JCLaboratories</li>
+  </ul>
 
   <div class="divider"></div>
-  <p style="text-align:center;color:var(--text-muted);font-size:14px;">&copy; 2026 JC Laboratories &nbsp;·&nbsp; All rights reserved</p>
+  <p style="text-align:center;color:var(--text-muted);font-size:13px;">&copy; 2026 JC Laboratories LLC &nbsp;·&nbsp; All rights reserved</p>
 </div>
 
 <footer>
@@ -184,11 +188,7 @@
   <div class="footer-links">
     <h4>Products</h4>
     <ul>
-      <li><a href="download.html">Aleph Vault</a></li>
-      <li><a href="/maintenance.html">Gaffer (EGAF)</a></li>
-      <li><a href="community.html">CipherPort</a></li>
-      <li><a href="https://egaf.jclabs.tech/" target="_blank" rel="noopener">EGAF Framework</a></li>
-      <li><a href="updates.html">Updates &amp; Changelog</a></li>
+      <li><a href="download.html">Cryptaverse</a></li>
     </ul>
   </div>
 
@@ -198,7 +198,8 @@
       <li><a href="privacy.html">Privacy Policy</a></li>
       <li><a href="terms.html">Terms of Service</a></li>
       <li><a href="security.html">Security Policy</a></li>
-      <li><a href="mailto:contact@jclabs.tech">Contact</a></li>
+      <li><a href="delete-account.html">Delete Your Account</a></li>
+      <li><a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a></li>
       <li><a href="mailto:security@jclabs.tech">security@jclabs.tech</a></li>
       <li><a href="mailto:dmca@jclabs.tech">dmca@jclabs.tech</a></li>
     </ul>
@@ -211,7 +212,6 @@
     </span>
   </div>
 </footer>
-
 
 </body>
 </html>
