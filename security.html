@@ -27,7 +27,7 @@
   </div>
 
   <h2>1. Responsible Disclosure</h2>
-  <p>If you discover a security vulnerability in any JC Laboratories product or service — including Aleph Vault, Gaffer, the JC Labs Community, or jclabs.tech — we ask that you report it to us privately before public disclosure. This gives us time to investigate and remediate before the vulnerability is exploited.</p>
+  <p>If you discover a security vulnerability in any JC Laboratories product or service — including Cryptaverse, the EGAF Framework, or jclabs.tech — we ask that you report it to us privately before public disclosure. This gives us time to investigate and remediate before the vulnerability is exploited.</p>
   <p>Please send vulnerability reports to: <a href="mailto:security@jclabs.tech">security@jclabs.tech</a></p>
   <p>Include in your report:</p>
   <ul>
@@ -49,7 +49,7 @@
 
   <h2>3. Scope</h2>
   <div class="highlight">
-    <strong>In scope:</strong> Aleph Vault Android app, jclabs.tech website and community features, ai.jclabs.tech (Gaffer), JC Laboratories APIs, and Firebase infrastructure we control.
+    <strong>In scope:</strong> the Cryptaverse Android app, the jclabs.tech website, JC Laboratories APIs at api.jclabs.tech, and the Cloudflare and Firebase infrastructure we control.
   </div>
   <p><strong>Out of scope:</strong></p>
   <ul>
@@ -73,22 +73,28 @@
   </ul>
 
   <h2>5. Cryptography and Known Limitations</h2>
-  <p>JC Laboratories implements the following cryptographic standards in Aleph Vault:</p>
+  <p>JC Laboratories implements the following cryptographic standards in Cryptaverse:</p>
   <ul>
-    <li><strong>AES-256-GCM</strong> — symmetric encryption for vault contents</li>
-    <li><strong>X25519</strong> — ECDH key agreement for MessageCrypt</li>
-    <li><strong>Ed25519</strong> — digital signatures for message integrity</li>
-    <li><strong>PBKDF2-SHA256</strong> (310,000 iterations) — password-based key derivation</li>
-    <li><strong>Shamir's Secret Sharing</strong> — Enterprise Recovery key splitting</li>
+    <li><strong>ML-KEM-768 + X25519</strong> &mdash; hybrid post-quantum key encapsulation for the PQXDH session handshake</li>
+    <li><strong>Double Ratchet</strong> &mdash; per-message key derivation providing forward secrecy and post-compromise recovery</li>
+    <li><strong>AES-256-GCM</strong> &mdash; symmetric encryption for vault contents and message payloads</li>
+    <li><strong>X25519</strong> &mdash; ECDH key agreement</li>
+    <li><strong>Ed25519</strong> &mdash; identity anchor and digital signatures</li>
+    <li><strong>HKDF-SHA256</strong> &mdash; key derivation within the ratchet</li>
+    <li><strong>Argon2id</strong> &mdash; memory-hard password-based key derivation for the vault</li>
+    <li><strong>PBKDF2-SHA256</strong> (600,000 iterations) &mdash; account password verifier</li>
+    <li><strong>HMAC-SHA256</strong> &mdash; keyed email representation for account lookup</li>
+    <li><strong>Shamir's Secret Sharing</strong> &mdash; Enterprise Recovery key splitting</li>
   </ul>
-  <p>We implement these using the <a href="https://pub.dev/packages/cryptography" target="_blank" rel="noopener">Dart cryptography package</a>. We make no warranty that our implementations are free from unknown vulnerabilities. If you discover a cryptographic implementation flaw, please report it under this policy.</p>
+  <p>Content published to the public Blocks surface is deliberately not encrypted, so that it can be served to and read by anyone. Everything else is encrypted on device before it reaches our servers.</p>
+  <p>We implement these using the <a href="https://pub.dev/packages/cryptography" target="_blank" rel="noopener">Dart cryptography package</a> and standard primitives throughout &mdash; we do not roll our own. We make no warranty that our implementations are free from unknown vulnerabilities. If you discover a cryptographic implementation flaw, please report it under this policy.</p>
 
   <h2>6. DMCA Agent</h2>
   <p>For copyright infringement notices under 17 U.S.C. &sect; 512, contact our designated agent:</p>
   <p>
     <strong>Agent:</strong> Justin Czap<br>
     <strong>Email:</strong> <a href="mailto:dmca@jclabs.tech">dmca@jclabs.tech</a><br>
-    <strong>Address:</strong> JC Laboratories, Michigan, United States
+    <strong>Address:</strong> JC Laboratories LLC, c/o Northwest Registered Agent Service, Inc., 2222 W Grand River Ave Ste A, Okemos, MI 48864
   </p>
 
   <h2>7. PGP Verification</h2>
@@ -125,11 +131,7 @@
   <div class="footer-links">
     <h4>Products</h4>
     <ul>
-      <li><a href="download.html">Aleph Vault</a></li>
-      <li><a href="/maintenance.html">Gaffer (EGAF)</a></li>
-      <li><a href="community.html">CipherPort</a></li>
-      <li><a href="https://egaf.jclabs.tech/" target="_blank" rel="noopener">EGAF Framework</a></li>
-      <li><a href="updates.html">Updates &amp; Changelog</a></li>
+      <li><a href="download.html">Cryptaverse</a></li>
     </ul>
   </div>
 
@@ -139,7 +141,8 @@
       <li><a href="privacy.html">Privacy Policy</a></li>
       <li><a href="terms.html">Terms of Service</a></li>
       <li><a href="security.html">Security Policy</a></li>
-      <li><a href="mailto:contact@jclabs.tech">Contact</a></li>
+      <li><a href="delete-account.html">Delete Your Account</a></li>
+      <li><a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a></li>
       <li><a href="mailto:security@jclabs.tech">security@jclabs.tech</a></li>
       <li><a href="mailto:dmca@jclabs.tech">dmca@jclabs.tech</a></li>
     </ul>
