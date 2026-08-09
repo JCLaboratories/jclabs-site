@@ -1,0 +1,234 @@
+/* delete-account.css — layers on main.css + docs.css */
+
+/* ── Step rail ─────────────────────────────────────────────── */
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  list-style: none;
+  margin: 0 0 56px;
+  padding: 0;
+}
+
+.step {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 0 26px;
+  position: relative;
+}
+
+.step + .step { border-left: 1px solid var(--border); }
+
+.step-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  transition: color 0.25s ease;
+}
+
+.step-label {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.25s ease;
+}
+
+.step.is-active .step-num,
+.step.is-active .step-label { color: var(--gold); }
+
+.step.is-done .step-num,
+.step.is-done .step-label { color: var(--gold-dark); }
+
+.step.is-active::after {
+  content: '';
+  position: absolute;
+  left: 26px;
+  right: 26px;
+  bottom: -12px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* ── Lede + notes ──────────────────────────────────────────── */
+.lede {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.note {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  border-left: 1px solid var(--gold-muted);
+  padding-left: 16px;
+  margin: 24px 0 0;
+}
+
+/* ── Scope ledger ──────────────────────────────────────────── */
+.ledger { margin: 4px 0 0; }
+
+.ledger dt {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.ledger dd {
+  margin: 6px 0 16px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.ledger dt:first-child { border-top: none; padding-top: 0; }
+
+@media (min-width: 680px) {
+  .ledger {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    column-gap: 28px;
+  }
+  .ledger dt { grid-column: 1; }
+  .ledger dd {
+    grid-column: 2;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    margin: 0 0 16px;
+  }
+  .ledger dt:first-child + dd { border-top: none; padding-top: 0; }
+}
+
+/* ── Panel ─────────────────────────────────────────────────── */
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 28px;
+  margin: 24px 0 0;
+}
+
+.panel-final { border-color: var(--gold-muted); }
+
+.panel-note {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.panel label {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.panel input[type="email"] {
+  width: 100%;
+  max-width: 380px;
+  padding: 13px 15px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.panel input[type="email"]:focus {
+  outline: none;
+  border-color: var(--gold-dark);
+}
+
+.panel input[type="email"]::placeholder { color: var(--text-muted); }
+
+/* ── Actions ───────────────────────────────────────────────── */
+/* Red is reserved for the irreversible action alone. Everything else
+   on the page stays in the gold/hairline system. */
+.btn-danger,
+.btn-quiet {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 13px 26px;
+  border-radius: 4px;
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-danger {
+  background: var(--red-light);
+  border: 1px solid var(--red-light);
+  color: #fff;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.btn-quiet {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  margin-left: 12px;
+}
+
+.btn-quiet:hover:not(:disabled) {
+  border-color: var(--gold-dark);
+  color: var(--text);
+}
+
+.btn-danger:disabled,
+.btn-quiet:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-danger:focus-visible,
+.btn-quiet:focus-visible,
+.panel input:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* ── Result ────────────────────────────────────────────────── */
+.result {
+  margin-top: 22px;
+  padding: 15px 17px;
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 1.65;
+  background: var(--bg);
+  border-left: 2px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.result.is-ok    { border-left-color: var(--green); color: var(--text); }
+.result.is-error { border-left-color: var(--red-light); color: var(--text); }
+
+/* ── Small screens ─────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .steps { margin-bottom: 44px; }
+  .step  { padding: 0 18px; }
+  .panel { padding: 22px; }
+  .btn-danger, .btn-quiet { width: 100%; margin-left: 0; text-align: center; }
+  .btn-quiet { margin-top: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
