@@ -371,3 +371,54 @@
     grid-template-columns: 60px 1fr;
   }
 }
+
+/* ── Screenshot strip ───────────────────────────────────── */
+.shots {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin: 0 auto 48px;
+}
+
+.shot {
+  margin: 0;
+  flex: 0 1 300px;
+  max-width: 340px;
+}
+
+.shot-frame {
+  border: 1px solid var(--gold-dark);
+  border-radius: 10px;
+  background: #000;
+  overflow: hidden;
+  aspect-ratio: 9 / 19.5;
+  box-shadow: 0 0 24px rgba(184, 160, 88, 0.10);
+}
+
+.shot-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.shot figcaption {
+  margin-top: 12px;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* A single screenshot sits larger and centred; two or more share the row. */
+.shots .shot:only-child { flex: 0 1 340px; }
+
+@media (max-width: 700px) {
+  .shots { gap: 32px; }
+  .shot  { flex: 0 1 260px; }
+}
