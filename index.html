@@ -1,10 +1,10 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JC Laboratories - Security Tools for Professionals</title>
+  <title>JC Laboratories — Cryptaverse and Independent Security Systems</title>
+  <meta name="description" content="JC Laboratories LLC builds Cryptaverse, a post-quantum encrypted vault, messenger and publishing app for Android, plus the Entropy-Gated AI Framework.">
 
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
@@ -28,9 +28,37 @@
       height: 28px;
       display: block;
     }
+
+    .availability {
+      max-width: 720px;
+      margin: 56px auto 0;
+      padding: 22px 26px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 2px solid var(--gold-dark);
+      border-radius: 0 6px 6px 0;
+    }
+
+    .availability h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .availability p {
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin: 0 0 10px;
+    }
+
+    .availability p:last-child { margin-bottom: 0; }
   </style>
 </head>
 <body>
+
   <nav>
     <a href="/" class="nav-logo">
       <img src="assets/logo.png" class="nav-logo-img" alt="JC Labs R&D">
@@ -40,10 +68,8 @@
     <ul class="nav-links">
       <li><a href="#products">Products</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="community.html">CipherPort</a></li>
-      <li><a href="updates.html">Updates</a></li>
       <li><a href="download.html">Download</a></li>
-      <li><a href="download.html" class="nav-cta">Aleph Vault Status</a></li>
+      <li><a href="download.html" class="nav-cta">Get Cryptaverse</a></li>
     </ul>
 
     <div class="nav-hamburger" aria-label="Menu">
@@ -64,7 +90,7 @@
     </p>
 
     <div class="hero-actions">
-      <a href="download.html" class="btn-primary">View Aleph Vault Status</a>
+      <a href="download.html" class="btn-primary">Get Cryptaverse</a>
       <a href="#products" class="btn-secondary">Explore Products</a>
     </div>
   </div>
@@ -81,153 +107,126 @@
       <div class="products-grid">
         <div class="product-card">
           <span class="product-icon">&#8501;</span>
-          <span class="product-badge badge-soon">&#9675; CONTROLLED DISTRIBUTION</span>
-          <div class="product-name">Aleph Vault</div>
-          <span class="product-tag">Offline Cryptographic Vault &middot; Android</span>
-          <p class="product-desc">
-            Aleph Vault remains an active JC Laboratories system. Public distribution is intentionally limited while authentication,
-            identity, encrypted delivery, storage, and recovery layers advance to the next stage.
-          </p>
-          <a href="download.html" class="product-link">View status &rarr;</a>
-        </div>
-
-        <div class="product-card">
-          <img src="assets/egaf-logo.svg" class="product-icon-img" alt="EGAF" onerror="this.style.display='none'">
-          <span class="product-badge badge-soon">&#9675; RETROFITTING</span>
-          <div class="product-name">Gaffer</div>
-          <span class="product-tag">EGAF AI Assistant &middot; Web</span>
-          <p class="product-desc">
-            Gaffer is temporarily offline while runtime and deployment infrastructure are being retrofitted.
-            Interactive AI services will return after maintenance is complete.
-          </p>
-          <a href="/maintenance.html" class="product-link">View maintenance notice &rarr;</a>
-        </div>
-
-        <div class="product-card">
-          <div class="product-mark">
-            <img src="assets/cryptaverse-symbol.svg" alt="CipherPort">
-          </div>
-          <span class="product-badge badge-live">&#9679; PUBLIC GATEWAY</span>
-          <div class="product-name">CipherPort</div>
-          <span class="product-tag">Public Gateway &middot; Dead Drop Board &middot; Outer Surface</span>
-          <p class="product-desc">
-            CipherPort is the public gateway into the Cryptaverse. It is a controlled public surface.
-          </p>
-          <a href="community.html" class="product-link">Open CipherPort &rarr;</a>
-        </div>
-
-        <div class="product-card">
-          <div class="product-mark">
-            <img src="assets/cryptaverse-symbol.svg" alt="Cryptaverse">
-          </div>
-          <span class="product-badge badge-soon">&#9675; IN ACTIVE CONSTRUCTION</span>
+          <span class="product-badge badge-live">&#9679; NEARING RELEASE</span>
           <div class="product-name">Cryptaverse</div>
-          <span class="product-tag">Privacy-First Cryptographic Platform</span>
+          <span class="product-tag">Encrypted Vault &middot; Messenger &middot; Publishing &middot; Android</span>
           <p class="product-desc">
-            Cryptaverse is advancing in layers. Identity is a key. Content is encrypted.
-            Access expands as each architectural layer becomes operational.
+            A private vault, a post-quantum encrypted messenger, and a place to publish what you choose to publish &mdash;
+            in one application. Your keys are generated on your device and stay there. Formerly Aleph Vault.
           </p>
-          <a href="updates.html" class="product-link">Follow updates &rarr;</a>
+          <a href="download.html" class="product-link">Release status &rarr;</a>
         </div>
 
         <div class="product-card">
-          <img src="assets/egaf-logo.svg" class="product-icon-img" alt="EGAF" onerror="this.style.display='none'">
-          <span class="product-badge badge-soon">&#9675; FRAMEWORK &middot; CC BY-NC 4.0</span>
-          <div class="product-name">EGAF Framework</div>
-          <span class="product-tag">Entropy-Gated AI Framework &middot; Open Source</span>
+          <span class="product-mark"><img src="assets/egaf-logo.svg" alt="EGAF"></span>
+          <span class="product-badge badge-soon">&#9675; QUEUED BEHIND CRYPTAVERSE</span>
+          <div class="product-name">Abe</div>
+          <span class="product-tag">Governed AI Assistant &middot; Web &middot; formerly the Gaffer</span>
           <p class="product-desc">
-            An open AI governance protocol defining the OIL_CONTRACT, INVOKER, and E_T vial system.
-            Free for non-commercial use with attribution. Commercial licensing available.
+            An AI assistant with an open governance protocol built into it &mdash; the Entropy-Gated
+            AI Framework &mdash; so what it is permitted to do is defined, auditable, and not left to
+            the model. Named for Abraham Lincoln. Offline while both are rebuilt, and returning
+            after Cryptaverse ships.
           </p>
-          <a href="https://egaf.jclabs.tech/" class="product-link" target="_blank" rel="noopener">Framework site &rarr;</a>
+          <span class="product-link" style="opacity:0.55;cursor:default;">Returning after Cryptaverse</span>
         </div>
       </div>
-    </section>
-  </div>
 
-  <div class="section-wrapper surface">
-    <section>
+      <div class="availability">
+        <h4>Availability</h4>
+        <p>
+          Cryptaverse is released in the United States. We will consider additional
+          markets individually, and only where the operating conditions are compatible
+          with how the product is built &mdash; keys held by users, no mandated access,
+          no weakening of encryption.
+        </p>
+        <p>
+          Where those conditions cannot be met, we do not distribute. That is a product
+          decision, not a commercial one: a version of Cryptaverse built to satisfy them
+          would not be Cryptaverse.
+        </p>
+      </div>
+    </section>
+
+    <section id="security">
       <div class="section-label">// what we put in our systems</div>
-      <h2 class="section-title">Independent <span>security systems</span><br>built with real components</h2>
+      <h2 class="section-title">Independent security systems<br><span>built with real components</span></h2>
       <p class="section-body">
-        JC Laboratories builds independent security systems across encrypted storage, cryptographic platforms, public gateway layers,
-        and governed AI. The products are different. The standard is the same: defined architecture, standard primitives,
-        and controlled execution.
+        JC Laboratories builds independent security systems across encrypted storage, cryptographic platforms,
+        and governed AI. The products are different. The standard is the same: defined architecture,
+        standard primitives, and controlled execution.
       </p>
 
       <div class="security-grid">
         <div class="security-item">
-          <h4>Cryptographic Identity</h4>
-          <p>Cryptaverse is built around a two-anchor-key identity model using Ed25519 for signatures and X25519 for encryption and key exchange.</p>
+          <h4>Post-Quantum Key Exchange</h4>
+          <p>Message sessions are established with a hybrid PQXDH handshake combining ML-KEM-768 with X25519, so a session stays protected even against an adversary storing traffic today to decrypt later.</p>
         </div>
 
         <div class="security-item">
-          <h4>MessageCrypt Stack</h4>
-          <p>Encrypted messaging is built around ephemeral X25519, HKDF-derived symmetric keys, AES-256-GCM content encryption, and Ed25519 authenticity.</p>
+          <h4>Double Ratchet Messaging</h4>
+          <p>Each conversation advances a Double Ratchet with per-message keys, giving forward secrecy and post-compromise recovery. Content is sealed with AES-256-GCM and signed with Ed25519.</p>
+        </div>
+
+        <div class="security-item">
+          <h4>Cryptographic Identity</h4>
+          <p>Identity is an Ed25519 anchor key generated on your device, with X25519 for key exchange. Your fingerprint is derived from that key. We never hold your private keys.</p>
         </div>
 
         <div class="security-item">
           <h4>Password Hardening</h4>
-          <p>Argon2id is the target password KDF for vault and Safety Deposit Box protection, with memory-hard derivation designed for stronger offline resistance.</p>
+          <p>Argon2id protects the vault and Safety Deposit Box, using memory-hard derivation tuned for resistance to offline attack on captured data.</p>
         </div>
 
         <div class="security-item">
-          <h4>Public Gateway Layer</h4>
-          <p>CipherPort is the public gateway surface of Cryptaverse, built around boards, controlled entry points, and gateway functions rather than the full private system.</p>
+          <h4>Private and Public, Separated</h4>
+          <p>Your vault, profile screen, messages and files are encrypted before they leave the device. Blocks and stacks you publish are public by design. Nothing crosses that line without you doing it.</p>
         </div>
 
         <div class="security-item">
-          <h4>EGAF Governance Model</h4>
-          <p>The Entropy-Gated AI Framework is built around OIL_CONTRACT, INVOKER, and E_T for governed, structured, and auditable AI task execution.</p>
-        </div>
-
-        <div class="security-item">
-          <h4>Gaffer Runtime</h4>
-          <p>Gaffer is the flagship assistant built on EGAF, delivered as a governed AI interaction system instead of an unconstrained chatbot layer.</p>
+          <h4>Governed AI</h4>
+          <p>The Entropy-Gated AI Framework defines what an AI assistant is permitted to do before it runs, so behaviour is bounded and auditable rather than left to the model. It returns with Abe.</p>
         </div>
 
         <div class="security-item">
           <h4>Application Stack</h4>
-          <p>Across the portfolio, the stack includes Flutter and Dart on the client side, Cloudflare services for platform infrastructure, and Railway for Gaffer runtime delivery.</p>
+          <p>Flutter and Dart on the client, Cloudflare Workers, D1, KV and R2 for platform infrastructure. Standard primitives, no bespoke cryptography.</p>
         </div>
 
         <div class="security-item">
           <h4>Platform Direction</h4>
-          <p>The portfolio combines encrypted vault software, a cryptographic platform architecture, a public gateway layer, and an AI governance framework under one company.</p>
+          <p>The portfolio combines an encrypted application, a cryptographic platform architecture, and an AI governance framework under one company.</p>
         </div>
       </div>
     </section>
-  </div>
 
-  <div class="section-wrapper">
     <section id="portfolio">
       <div class="section-label">// current portfolio</div>
       <h2 class="section-title">Products, frameworks,<br><span>and active builds</span></h2>
       <p class="section-body">
-        Some JC Laboratories systems are available now. Others are published frameworks.
-        Others are active builds progressing toward broader operational form.
+        Some JC Laboratories systems are published now. Others are active builds
+        progressing toward release.
       </p>
 
       <div class="tiers-grid">
         <div class="tier-card">
-          <div class="tier-name">Available Now</div>
-          <div class="tier-price">Current<span> surface</span></div>
+          <div class="tier-name">Next Up</div>
+          <div class="tier-price">After<span> Cryptaverse</span></div>
           <ul class="tier-features">
-            <li><span class="feat-yes">&#10003;</span> Gaffer</li>
-            <li><span class="feat-yes">&#10003;</span> EGAF Framework</li>
-            <li><span class="feat-yes">&#10003;</span> Company site</li>
+            <li><span class="feat-yes">&#10003;</span> Abe assistant</li>
+            <li><span class="feat-yes">&#10003;</span> EGAF governance framework</li>
           </ul>
         </div>
 
         <div class="tier-card featured">
-          <div class="tier-name">Active Build</div>
-          <div class="tier-price">In<span> progress</span></div>
+          <div class="tier-name">Nearing Release</div>
+          <div class="tier-price">Cryptaverse<span> &mdash; Android</span></div>
           <ul class="tier-features">
-            <li><span class="feat-yes">&#10003;</span> Aleph Vault next-stage rollout</li>
-            <li><span class="feat-yes">&#10003;</span> CipherPort gateway</li>
-            <li><span class="feat-yes">&#10003;</span> Cryptaverse core systems</li>
             <li><span class="feat-yes">&#10003;</span> Identity and transport layers</li>
-            <li><span class="feat-yes">&#10003;</span> Storage and recovery progression</li>
+            <li><span class="feat-yes">&#10003;</span> Post-quantum encrypted messaging</li>
+            <li><span class="feat-yes">&#10003;</span> Encrypted storage and file transfer</li>
+            <li><span class="feat-yes">&#10003;</span> Public blocks and stacks</li>
+            <li><span class="feat-yes">&#10003;</span> Search and discovery</li>
           </ul>
         </div>
 
@@ -243,13 +242,13 @@
         </div>
       </div>
 
-      <p class="portfolio-note">
-        Product availability and active build status vary by system. See individual product pages for current status.
+      <p class="section-body" style="margin-top:32px;">
+        Availability and build status vary by system. See individual product pages for current status.
       </p>
     </section>
   </div>
 
-  <footer>
+<footer>
   <div class="footer-brand">
     <img src="assets/logo.png" class="logo-img" alt="JC Laboratories LLC">
     <span class="name">JC Laboratories LLC</span>
@@ -269,11 +268,7 @@
   <div class="footer-links">
     <h4>Products</h4>
     <ul>
-      <li><a href="download.html">Aleph Vault</a></li>
-      <li><a href="/maintenance.html">Gaffer (EGAF)</a></li>
-      <li><a href="community.html">CipherPort</a></li>
-      <li><a href="https://egaf.jclabs.tech/" target="_blank" rel="noopener">EGAF Framework</a></li>
-      <li><a href="updates.html">Updates &amp; Changelog</a></li>
+      <li><a href="download.html">Cryptaverse</a></li>
     </ul>
   </div>
 
@@ -283,7 +278,8 @@
       <li><a href="privacy.html">Privacy Policy</a></li>
       <li><a href="terms.html">Terms of Service</a></li>
       <li><a href="security.html">Security Policy</a></li>
-      <li><a href="mailto:contact@jclabs.tech">Contact</a></li>
+      <li><a href="delete-account.html">Delete Your Account</a></li>
+      <li><a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a></li>
       <li><a href="mailto:security@jclabs.tech">security@jclabs.tech</a></li>
       <li><a href="mailto:dmca@jclabs.tech">dmca@jclabs.tech</a></li>
     </ul>
@@ -297,6 +293,6 @@
   </div>
 </footer>
 
-  <script src="js/nav.js"></script>
+<script src="js/nav.js"></script>
 </body>
 </html>
