@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Your Account — Cryptaverse — JC Laboratories</title>
+<meta name="description" content="Request permanent deletion of your Cryptaverse account and all associated data held by JC Laboratories LLC.">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/docs.css">
+<link rel="stylesheet" href="css/delete-account.css">
+</head>
+<body>
+
+<header class="doc-header">
+  <span class="logo-mark"><img src="assets/logo.png" alt="JC Labs R&D"></span>
+  <span class="brand-full">JC Laboratories</span>
+  <span class="brand-sub">JC Labs R&amp;D &nbsp;·&nbsp; jclabs.tech</span>
+  <div class="brand-line"></div>
+  <span class="motto">By security professionals, for security professionals. Your privacy in your hands.</span>
+</header>
+
+<div class="doc-container">
+  <div class="doc-title">Delete Your Account</div>
+  <div class="doc-meta">Cryptaverse &nbsp;·&nbsp; JC Laboratories LLC</div>
+
+  <ol class="steps" aria-label="Progress">
+    <li class="step" id="step-1"><span class="step-num">01</span><span class="step-label">Request</span></li>
+    <li class="step" id="step-2"><span class="step-num">02</span><span class="step-label">Confirm</span></li>
+  </ol>
+
+  <section id="request-mode">
+
+    <p class="lede">
+      Deletion permanently removes your Cryptaverse account and everything
+      stored on our servers. It cannot be reversed, by you or by us.
+    </p>
+
+    <h2>Scope of Deletion</h2>
+
+    <dl class="ledger">
+      <dt>Account</dt>
+      <dd>Sign-in credentials, active sessions, subscription and certificate records</dd>
+
+      <dt>Published content</dt>
+      <dd>Public blocks and stacks, together with all media attached to them</dd>
+
+      <dt>Engagement</dt>
+      <dd>Comments, follows and reactions &mdash; both yours, and everything others left on your blocks</dd>
+
+      <dt>Public profile</dt>
+      <dd>Display name, biography and picture, if you published them</dd>
+
+      <dt>Files</dt>
+      <dd>Safety Deposit Box backups, Relay transfers and Drive files, including transfers still in flight</dd>
+
+      <dt>Groups</dt>
+      <dd>Any group you created, removed for every member</dd>
+    </dl>
+
+    <p class="note">
+      Your encrypted vault is held on your own device and is never sent to us,
+      so account deletion does not reach it. Remove the app to clear local data.
+    </p>
+
+    <h2>Request Deletion</h2>
+
+    <p>Enter the email address your account is registered to. We will send a
+       confirmation link to that address. Nothing is deleted until you open
+       that link and confirm.</p>
+
+    <div class="panel">
+      <form id="request-form" novalidate>
+        <label for="email">Registered email address</label>
+        <input type="email" id="email" name="email" autocomplete="email"
+               placeholder="you@example.com" required>
+        <button type="submit" id="request-btn" class="btn-danger">
+          Send confirmation link
+        </button>
+      </form>
+      <div id="request-result" class="result" hidden></div>
+    </div>
+
+    <h2>Other Ways to Delete</h2>
+    <p>
+      You can delete your account inside the app at
+      <strong>Settings &rarr; Delete Account</strong>. If you no longer have
+      access to your registered email, write to
+      <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>. We will ask
+      you to establish ownership of the account before acting on the request.
+    </p>
+  </section>
+
+  <section id="confirm-mode" hidden>
+
+    <p class="lede">
+      This is the final step. Selecting the option below permanently deletes
+      your Cryptaverse account and everything listed under Scope of Deletion.
+    </p>
+
+    <div class="panel panel-final">
+      <p class="panel-note">Confirmation links expire thirty minutes after they are sent.
+         If this one has expired, request a new one.</p>
+      <button type="button" id="confirm-btn" class="btn-danger">
+        Permanently delete my account
+      </button>
+      <button type="button" id="cancel-btn" class="btn-quiet">
+        Cancel &mdash; keep my account
+      </button>
+      <div id="confirm-result" class="result" hidden></div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-brand">
+    <img src="assets/logo.png" class="logo-img" alt="JC Laboratories LLC">
+    <span class="name">JC Laboratories LLC</span>
+    <p>
+      Independent security systems by JC Laboratories LLC.<br>
+      Registered Office<br>
+      c/o Northwest Registered Agent Service, Inc.<br>
+      2222 W Grand River Ave Ste A<br>
+      Okemos, MI 48864<br>
+      jclabs.tech
+    </p>
+    <p style="margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);">
+      <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>
+    </p>
+  </div>
+
+  <div class="footer-links">
+    <h4>Products</h4>
+    <ul>
+      <li><a href="download.html">Cryptaverse</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-links">
+    <h4>Legal</h4>
+    <ul>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Service</a></li>
+      <li><a href="security.html">Security Policy</a></li>
+      <li><a href="delete-account.html">Delete Your Account</a></li>
+      <li><a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a></li>
+      <li><a href="mailto:security@jclabs.tech">security@jclabs.tech</a></li>
+      <li><a href="mailto:dmca@jclabs.tech">dmca@jclabs.tech</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-bottom">
+    <span>&copy; 2026 JC Laboratories LLC &nbsp;&middot;&nbsp; CC BY-NC 4.0</span>
+    <span style="font-style:italic;font-family:'EB Garamond',serif;font-size:13px;color:var(--gold-muted);">
+      By security professionals, for security professionals.
+    </span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  var API   = 'https://api.jclabs.tech';
+  var token = new URLSearchParams(window.location.search).get('token');
+
+  var stepOne = document.getElementById('step-1');
+  var stepTwo = document.getElementById('step-2');
+
+  if (token) {
+    document.getElementById('request-mode').hidden = true;
+    document.getElementById('confirm-mode').hidden = false;
+    stepOne.className = 'step is-done';
+    stepTwo.className = 'step is-active';
+  } else {
+    stepOne.className = 'step is-active';
+    stepTwo.className = 'step';
+  }
+
+  function report(el, message, kind) {
+    el.hidden = false;
+    el.className = 'result is-' + kind;
+    el.textContent = message;
+  }
+
+  var form   = document.getElementById('request-form');
+  var reqBtn = document.getElementById('request-btn');
+  var reqOut = document.getElementById('request-result');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = document.getElementById('email').value.trim();
+    if (!email || email.indexOf('@') === -1) {
+      report(reqOut, 'Enter the email address your account is registered to.', 'error');
+      return;
+    }
+
+    reqBtn.disabled = true;
+    reqBtn.textContent = 'Sending…';
+
+    fetch(API + '/account/delete-request', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ email: email })
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      report(reqOut,
+        data.message ||
+        'If an account exists for that email, a confirmation link has been sent.',
+        'ok');
+      reqBtn.textContent = 'Confirmation link sent';
+    })
+    .catch(function () {
+      report(reqOut,
+        'The server could not be reached. Check your connection and try again, ' +
+        'or write to contact@jclabs.tech.', 'error');
+      reqBtn.disabled = false;
+      reqBtn.textContent = 'Send confirmation link';
+    });
+  });
+
+  var confirmBtn = document.getElementById('confirm-btn');
+  var cancelBtn  = document.getElementById('cancel-btn');
+  var confOut    = document.getElementById('confirm-result');
+
+  confirmBtn.addEventListener('click', function () {
+    confirmBtn.disabled = true;
+    cancelBtn.disabled  = true;
+    confirmBtn.textContent = 'Deleting…';
+
+    fetch(API + '/account/delete-confirm', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ token: token })
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (data.success) {
+        confirmBtn.hidden = true;
+        cancelBtn.hidden  = true;
+        stepTwo.className = 'step is-done';
+        report(confOut,
+          'Your account and all associated data have been permanently deleted. ' +
+          'Nothing further is required from you.', 'ok');
+      } else {
+        report(confOut,
+          (data.error || 'The deletion could not be completed.') +
+          ' This link may have expired. Request a new one from this page.',
+          'error');
+        confirmBtn.disabled = false;
+        cancelBtn.disabled  = false;
+        confirmBtn.textContent = 'Permanently delete my account';
+      }
+    })
+    .catch(function () {
+      report(confOut,
+        'The server could not be reached. Nothing has been deleted. ' +
+        'Try again, or write to contact@jclabs.tech.', 'error');
+      confirmBtn.disabled = false;
+      cancelBtn.disabled  = false;
+      confirmBtn.textContent = 'Permanently delete my account';
+    });
+  });
+
+  cancelBtn.addEventListener('click', function () {
+    window.location.href = 'delete-account.html';
+  });
+})();
+</script>
+
+</body>
+</html>
