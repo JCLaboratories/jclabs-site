@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aleph Vault — JC Laboratories</title>
+<title>Cryptaverse — JC Laboratories</title>
+<meta name="description" content="Cryptaverse: a post-quantum encrypted vault, messenger and publishing app for Android from JC Laboratories LLC. Release status and availability.">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/download.css">
@@ -20,116 +21,121 @@
 
 <div class="page-header">
   <span class="page-header-bg" aria-hidden="true">ℵ</span>
-  <span class="label">// architectural upgrade in progress</span>
-  <h1>Aleph <span>Vault</span></h1>
-  <p>Aleph Vault is undergoing an architectural upgrade as the next stage of the system is brought online.</p>
+  <span class="label">// nearing release</span>
+  <h1>Crypta<span>verse</span></h1>
+  <p>A private vault, a post-quantum encrypted messenger, and a place to publish what you choose to publish. One application, Android.</p>
 </div>
 
 <div class="container">
 
-  <div class="preview-video-container">
-    <iframe
-      src="https://www.youtube.com/embed/ETTrRElhqjw?modestbranding=1&rel=0"
-      title="Aleph Vault Preview"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
+  <div class="shots" id="shots">
+    <figure class="shot">
+      <div class="shot-frame">
+        <img src="assets/screen-vault.jpg" alt="The Cryptaverse vault screen" loading="lazy">
+      </div>
+      <figcaption>The vault &mdash; encrypted on device</figcaption>
+    </figure>
   </div>
 
   <div class="download-card">
     <div class="download-info">
-      <span class="version">● STATUS · ARCHITECTURAL UPGRADE</span>
-      <h2>Aleph Vault</h2>
+      <span class="version">● STATUS · FINAL TESTING</span>
+      <h2>Cryptaverse</h2>
       <p>
-        Aleph Vault remains an active JC Laboratories system. Public APK distribution is not active while authentication, identity, encrypted delivery, storage, and recovery layers are upgraded into their next architectural form.
+        Cryptaverse is in final testing ahead of release on Google Play. The identity,
+        transport, storage and publishing layers are built and running; what remains is
+        hardening and device testing. Formerly Aleph Vault.
       </p>
       <div class="download-meta">
         <span>📦 Android</span>
         <span>🔐 AES-256-GCM</span>
-        <span>🔑 X25519 + Ed25519</span>
-        <span>🏢 JC Laboratories 2026</span>
+        <span>🔑 ML-KEM-768 + X25519</span>
+        <span>✍ Ed25519</span>
+        <span>🇺🇸 United States</span>
       </div>
     </div>
     <div>
-      <a href="index.html" class="btn-download">
-        Distribution Inactive
-        <small>availability will be announced</small>
+      <a href="mailto:contact@jclabs.tech?subject=Cryptaverse%20release%20notification" class="btn-download">
+        Notify Me At Release
+        <small>we will write once, when it ships</small>
       </a>
     </div>
   </div>
 
   <div class="status-note-box">
     <p>
-      <strong>Status:</strong> Aleph Vault is being advanced through an architectural upgrade.
-      Public distribution will resume when the next stage of the system is ready.
+      <strong>Availability:</strong> Cryptaverse is released in the United States. Additional
+      markets are considered individually, and only where the operating conditions are
+      compatible with how the product is built &mdash; keys held by users, no mandated access,
+      no weakening of encryption.
     </p>
   </div>
 
-  <div class="section-title">What Aleph Vault Includes</div>
+  <div class="section-title">What Cryptaverse Includes</div>
 
   <div class="features-grid">
     <div class="feature-item">
       <h4>Encrypted Vault</h4>
-      <p>Store notes, credentials, and sensitive data inside a local encrypted vault.</p>
+      <p>Notes, credentials and sensitive data in a local vault encrypted with AES-256-GCM, unlocked by an Argon2id-derived key that never leaves your device.</p>
     </div>
 
     <div class="feature-item">
-      <h4>MessageCrypt</h4>
-      <p>Encrypted messaging built around X25519, AES-256-GCM, and Ed25519 signatures.</p>
+      <h4>Post-Quantum Messaging</h4>
+      <p>Sessions established with a hybrid ML-KEM-768 and X25519 handshake, then advanced by a Double Ratchet with per-message keys and Ed25519 signatures.</p>
     </div>
 
     <div class="feature-item">
-      <h4>Encrypted Notes</h4>
-      <p>Markdown and plain text notes stored inside the vault and exportable when needed.</p>
+      <h4>Profile Screen</h4>
+      <p>A private page delivered only to the contacts you grant access to, encrypted per recipient. Nobody else can request it or read it.</p>
     </div>
 
     <div class="feature-item">
-      <h4>Password Database</h4>
-      <p>Encrypted label/value storage for credentials and other structured secrets.</p>
+      <h4>Public Blocks &amp; Stacks</h4>
+      <p>Publish individual blocks, or ordered stacks of them, to a public surface others can find and follow. Publishing is always a deliberate act.</p>
+    </div>
+
+    <div class="feature-item">
+      <h4>Encrypted File Transfer</h4>
+      <p>Relay sends files to a contact encrypted end to end. Drive keeps your own files encrypted at rest, and Safety Deposit Box backs the vault up on paid tiers.</p>
     </div>
 
     <div class="feature-item">
       <h4>Key Pair Management</h4>
-      <p>Create and manage cryptographic key pairs for encryption, signing, and identity functions.</p>
-    </div>
-
-    <div class="feature-item">
-      <h4>Password Generation</h4>
-      <p>Cryptographically secure password generation with configurable character sets and length.</p>
+      <p>Create and manage cryptographic key pairs for encryption, signing and identity, alongside secure password generation with configurable rules.</p>
     </div>
   </div>
 
-  <div class="section-title">Current Position</div>
+  <div class="section-title">Where Things Stand</div>
 
   <div class="steps">
     <div class="step">
       <div class="step-num">1</div>
       <div class="step-content">
-        <h3>Architectural Upgrade</h3>
-        <p>The next stage of Aleph Vault is being brought online through upgrades to core system layers.</p>
+        <h3>Built</h3>
+        <p>Identity and transport, encrypted messaging, storage and file transfer, public publishing, and search are implemented and running on device.</p>
       </div>
     </div>
 
     <div class="step">
       <div class="step-num">2</div>
       <div class="step-content">
-        <h3>Distribution Status</h3>
-        <p>Public APK distribution is not active during this upgrade phase.</p>
+        <h3>In Progress</h3>
+        <p>Final hardening and multi-device testing ahead of submission to Google Play.</p>
       </div>
     </div>
 
     <div class="step">
       <div class="step-num">3</div>
       <div class="step-content">
-        <h3>Availability</h3>
-        <p>Public availability will be announced by JC Laboratories when the upgraded system is ready.</p>
+        <h3>Release</h3>
+        <p>Availability will be announced by JC Laboratories. Write to us and we will let you know once, when it ships.</p>
       </div>
     </div>
   </div>
 
   <p class="beta-note">
-    Contact: <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>
+    Contact: <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a> &nbsp;·&nbsp;
+    Security: <a href="mailto:security@jclabs.tech">security@jclabs.tech</a>
   </p>
 
 </div>
@@ -154,11 +160,7 @@
   <div class="footer-links">
     <h4>Products</h4>
     <ul>
-      <li><a href="download.html">Aleph Vault</a></li>
-      <li><a href="/maintenance.html">Gaffer (EGAF)</a></li>
-      <li><a href="community.html">CipherPort</a></li>
-      <li><a href="https://egaf.jclabs.tech/" target="_blank" rel="noopener">EGAF Framework</a></li>
-      <li><a href="updates.html">Updates &amp; Changelog</a></li>
+      <li><a href="download.html">Cryptaverse</a></li>
     </ul>
   </div>
 
@@ -168,7 +170,8 @@
       <li><a href="privacy.html">Privacy Policy</a></li>
       <li><a href="terms.html">Terms of Service</a></li>
       <li><a href="security.html">Security Policy</a></li>
-      <li><a href="mailto:contact@jclabs.tech">Contact</a></li>
+      <li><a href="delete-account.html">Delete Your Account</a></li>
+      <li><a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a></li>
       <li><a href="mailto:security@jclabs.tech">security@jclabs.tech</a></li>
       <li><a href="mailto:dmca@jclabs.tech">dmca@jclabs.tech</a></li>
     </ul>
@@ -182,7 +185,5 @@
   </div>
 </footer>
 
-
-<script src="js/nav.js"></script>
 </body>
 </html>
