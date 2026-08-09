@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — JC Laboratories LLC</title>
+<title>Privacy Policy — JC Laboratories</title>
 <meta name="description" content="How JC Laboratories LLC collects, uses, stores and deletes data across Cryptaverse and its other products.">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
@@ -29,7 +29,7 @@
 
   <h2>Who We Are</h2>
   <p>JC Laboratories LLC (jclabs.tech) is an independent technology company registered in Michigan, United States. We develop security-focused software, including Cryptaverse and the Entropy-Gated AI Framework (EGAF).</p>
-
+  
   <h2>Our Products</h2>
 
   <div class="product-block">
@@ -71,29 +71,19 @@
 
   <h2>Cryptaverse &mdash; Data by Tier</h2>
 
+  <p>We collect the same categories of data on every tier. Tiers differ only in how much you may store and how much you may publish, not in what we hold or what we can read.</p>
+
   <table class="tier-table">
-    <thead><tr><th>Tier</th><th>Data Collected</th><th>Backup / Recovery</th></tr></thead>
+    <thead><tr><th>Tier</th><th>Storage</th><th>Cloud backup</th></tr></thead>
     <tbody>
-      <tr><td>Free</td><td>Account, identity, published content you create, operational counters</td><td>None &mdash; vault data stays on device</td></tr>
-      <tr><td>Individual</td><td>Same as Free</td><td>Self-managed encrypted file export/import</td></tr>
-      <tr><td>Family</td><td>Same as Free, plus Safety Deposit Box backup blobs and their metadata</td><td>Export/import plus encrypted cloud backup</td></tr>
-      <tr><td>Small / Medium Business</td><td>Same as Family, plus optional recovery blob</td><td>Cloud backup plus optional recovery add-on</td></tr>
-      <tr><td>Enterprise / VIP</td><td>Same as Business, plus identity verification records</td><td>Cloud backup, recovery included, SLA</td></tr>
+      <tr><td>Free</td><td>1 GB</td><td>Not available &mdash; vault data never leaves your device</td></tr>
+      <tr><td>Personal</td><td>50 GB</td><td>Safety Deposit Box, encrypted on your device before upload</td></tr>
+      <tr><td>Pro</td><td>250 GB</td><td>Safety Deposit Box, encrypted on your device before upload</td></tr>
     </tbody>
   </table>
 
-  <p>Safety Deposit Box backups are encrypted on your device before upload and cannot be decrypted by JC Laboratories.</p>
+  <p>Safety Deposit Box backups are encrypted on your device before upload and cannot be decrypted by JC Laboratories. Storage is a single shared allowance across backups, Drive files, Relay transfers, published media, profile delivery and undelivered messages.</p>
 
-  <h2>Enterprise Recovery Program</h2>
-  <p>Opt-in only, available on Business and Enterprise/VIP tiers. Enrollment requires explicit opt-in and a signed Enterprise Recovery Agreement.</p>
-  <ul>
-    <li>An encrypted recovery blob is generated and stored using key splitting across geographically separated secure locations</li>
-    <li>JC Laboratories cannot access your vault without your participation in the verified recovery process</li>
-    <li>Recovery requires identity verification &mdash; government-issued ID, video call, or another agreed method</li>
-    <li>Each recovery key is single-use and rotated immediately after use</li>
-    <li>Full audit logs of all recovery events are maintained and available to you on request</li>
-    <li>You may opt out at any time &mdash; the recovery blob is deleted within 30 days of opt-out</li>
-  </ul>
 
   <h2>How We Use Your Information</h2>
   <ul>
@@ -101,7 +91,6 @@
     <li>To deliver encrypted messages, files and profile updates to the people you send them to</li>
     <li>To serve content you have chosen to publish, and to make it findable in search</li>
     <li>To enforce subscription tier features, storage limits and search quotas</li>
-    <li>To provide Enterprise Recovery services where enrolled</li>
     <li>To send push notifications you have enabled</li>
     <li>To communicate service updates (opt-in only)</li>
     <li>To maintain service security and prevent abuse</li>
@@ -122,10 +111,10 @@
     <li><strong>Undelivered messages</strong> &mdash; automatically deleted at expiry</li>
     <li><strong>Relay transfers</strong> &mdash; deleted on acknowledgement of receipt, or at expiry</li>
     <li><strong>Drive files and Safety Deposit Box backups</strong> &mdash; retained while your subscription is active, deleted 30 days after cancellation</li>
-    <li><strong>Enterprise recovery blobs</strong> &mdash; retained for the enrollment duration plus 30 days after opt-out</li>
     <li><strong>Session tokens</strong> &mdash; expire within 7 days, or immediately on sign-out</li>
     <li><strong>Rate-limiting counters</strong> &mdash; expire within 15 minutes to 24 hours depending on the endpoint</li>
   </ul>
+  <p><strong>All of it goes when you delete your account.</strong> Every record we hold in our database and every file we hold in object storage is keyed to your account or your key fingerprint, and deleting your account removes all of it. Nothing is retained for our own purposes afterwards.</p>
 
   <h2>Deleting Your Account</h2>
   <p>You can delete your account and everything we hold for it in two ways:</p>
@@ -137,19 +126,19 @@
   <p>Your encrypted vault is held on your own device and is never sent to us, so account deletion does not reach it. Remove the app to clear local data.</p>
 
   <h2>Your Rights</h2>
+  <p>Most of these are controls in the app, and they are yours to use. You do not need to ask us, and we do not act on your content on your behalf.</p>
   <ul>
-    <li>Request a copy of the data we hold about you</li>
-    <li>Delete your account and all associated data, in the app or on the web</li>
-    <li>Unpublish any block or stack at any time</li>
-    <li>Withdraw a public profile and return to a private identity</li>
-    <li>Opt out of the Enterprise Recovery Program</li>
-    <li>Request a full audit log of any recovery events</li>
-    <li>Opt out of non-essential communications</li>
+    <li><strong>Unpublish</strong> any block or stack at any time, in the app</li>
+    <li><strong>Revoke</strong> a Drive folder link at any time, in the app &mdash; this prevents further redemptions, but does not remove access from anyone who already redeemed it</li>
+    <li><strong>Delete your account</strong> and everything we hold for it, in the app at Settings &rarr; Delete Account or on the web at <a href="delete-account.html">jclabs.tech/delete-account.html</a></li>
+    <li><strong>Request a copy</strong> of the data we hold about you, by writing to us</li>
+    <li><strong>Opt out</strong> of non-essential communications</li>
   </ul>
-  <p>To exercise any of these, use the relevant control in the app, or write to <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>.</p>
+  <p>If you have published a public profile, deleting your account removes it. A way to withdraw a public profile on its own, without deleting your account, is not yet available in the app &mdash; until it is, write to <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a> and we will remove it for you.</p>
+  <p>For anything not handled by a control in the app, write to <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>.</p>
 
   <h2>Children</h2>
-  <p>Our services are not directed at children under 13, and we do not knowingly collect personal information from children under 13. The Family subscription tier is designed for adults managing privacy tools for their household &mdash; it is not a children's product. If you believe a child under 13 has created an account, contact <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a> and we will delete the account promptly.</p>
+  <p>Our services are not directed at children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child under 13 has created an account, contact <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a> and we will delete the account promptly.</p>
 
   <h2>Changes to This Policy</h2>
   <p>Material changes will be communicated via the app, this website, or email. Continued use after changes constitutes acceptance.</p>
