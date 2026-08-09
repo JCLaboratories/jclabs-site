@@ -396,3 +396,50 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ── Product mark + availability panel ──────────────────── */
+.product-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  background: rgba(184, 160, 88, 0.06);
+  border: 1px solid rgba(184, 160, 88, 0.18);
+}
+
+.product-mark img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.availability {
+  max-width: 720px;
+  margin: 56px auto 0;
+  padding: 22px 26px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--gold-dark);
+  border-radius: 0 6px 6px 0;
+}
+
+.availability h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.availability p {
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin: 0 0 10px;
+}
+
+.availability p:last-child { margin-bottom: 0; }
