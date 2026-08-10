@@ -13,7 +13,7 @@
 
 <nav>
   <a href="/" class="nav-logo">
-    <img src="assets/logo.png" class="nav-logo-img" alt="JC Labs R&D">
+    <img src="assets/logo.png" class="nav-logo-img" alt="JC Laboratories LLC">
     <span class="nav-name">JC Laboratories LLC</span>
   </a>
   <a href="index.html" class="nav-back">&larr; Back to Home</a>
@@ -29,46 +29,126 @@
 <div class="container">
 
   <div class="shots" id="shots">
-    <figure class="shot">
+    <figure class="shot" data-shot>
       <div class="shot-frame">
-        <img src="assets/screen-vault.jpg" alt="The Cryptaverse vault screen" loading="lazy">
+        <img src="assets/screen-vault.jpg" alt="The Cryptaverse vault screen" loading="lazy" onerror="this.closest('[data-shot]').remove()">
       </div>
-      <figcaption>The vault &mdash; encrypted on device</figcaption>
+      <figcaption>Your vault &mdash; encrypted on device</figcaption>
+    </figure>
+    <figure class="shot" data-shot>
+      <div class="shot-frame">
+        <img src="assets/PWDB_2.jpg" alt="The Cryptaverse password database" loading="lazy" onerror="this.closest('[data-shot]').remove()">
+      </div>
+      <figcaption>Passwords, stored locally</figcaption>
+    </figure>
+    <figure class="shot" data-shot>
+      <div class="shot-frame">
+        <img src="assets/PWDB_Gen_3.jpg" alt="The Cryptaverse password generator" loading="lazy" onerror="this.closest('[data-shot]').remove()">
+      </div>
+      <figcaption>Generate strong passwords</figcaption>
     </figure>
   </div>
 
-  <div class="download-card">
-    <div class="download-info">
-      <span class="version">● STATUS · FINAL TESTING</span>
-      <h2>Cryptaverse</h2>
-      <p>
-        Cryptaverse is in final testing ahead of release on Google Play. The identity,
-        transport, storage and publishing layers are built and running; what remains is
-        hardening and device testing. Formerly Aleph Vault.
-      </p>
-      <div class="download-meta">
-        <span>📦 Android</span>
-        <span>🔐 AES-256-GCM</span>
-        <span>🔑 ML-KEM-768 + X25519</span>
-        <span>✍ Ed25519</span>
-        <span>🇺🇸 United States</span>
+  <div class="section-title">Locked Behind Your Own Password</div>
+  <p class="shots-lede">Sensitive areas take a second lock of your choosing. There is no reset and no backdoor &mdash; a vault we could open for you is a vault we could be compelled to open for someone else.</p>
+
+  <div class="shots" id="shots-lock">
+    <figure class="shot" data-shot>
+      <div class="shot-frame">
+        <img src="assets/PWDB_PasswordLock_3.jpg" alt="Setting a lock password in Cryptaverse" loading="lazy" onerror="this.closest('[data-shot]').remove()">
       </div>
-    </div>
-    <div>
-      <a href="mailto:contact@jclabs.tech?subject=Cryptaverse%20release%20notification" class="btn-download">
-        Notify Me At Release
-        <small>we will write once, when it ships</small>
-      </a>
-    </div>
+      <figcaption>Set your own lock</figcaption>
+    </figure>
+    <figure class="shot" data-shot>
+      <div class="shot-frame">
+        <img src="assets/Lock-PasswordDB.jpg" alt="The Cryptaverse home screen" loading="lazy" onerror="this.closest('[data-shot]').remove()">
+      </div>
+      <figcaption>Everything in one place</figcaption>
+    </figure>
   </div>
 
-  <div class="status-note-box">
-    <p>
-      <strong>Availability:</strong> Cryptaverse is released in the United States. Additional
-      markets are considered individually, and only where the operating conditions are
-      compatible with how the product is built &mdash; keys held by users, no mandated access,
-      no weakening of encryption.
-    </p>
+  <div class="section-title">Build It Your Way</div>
+  <p class="shots-lede">Every block is yours to shape &mdash; colours, gradients, fonts, corners, alignment, custom fields. Nothing looks like a template because nothing is one.</p>
+
+  <div class="shots" id="shots-build">
+    <figure class="shot" data-shot>
+      <div class="shot-frame">
+        <img src="assets/Page-Builder-Screen.jpg" alt="The Cryptaverse page builder" loading="lazy" onerror="this.closest('[data-shot]').remove()">
+      </div>
+      <figcaption>The screen editor</figcaption>
+    </figure>
+    <figure class="shot" data-shot>
+      <div class="shot-frame">
+        <img src="assets/ProfileStyling_2.jpg" alt="The Cryptaverse block style editor" loading="lazy" onerror="this.closest('[data-shot]').remove()">
+      </div>
+      <figcaption>Style every element</figcaption>
+    </figure>
+    <figure class="shot" data-shot>
+      <div class="shot-frame">
+        <img src="assets/ColorPicker_2.jpg" alt="The Cryptaverse colour picker" loading="lazy" onerror="this.closest('[data-shot]').remove()">
+      </div>
+      <figcaption>Solid or gradient, any colour</figcaption>
+    </figure>
+    <figure class="shot" data-shot>
+      <div class="shot-frame">
+        <img src="assets/CustomFields_2.jpg" alt="Custom bio fields in Cryptaverse" loading="lazy" onerror="this.closest('[data-shot]').remove()">
+      </div>
+      <figcaption>Fields and interests you define</figcaption>
+    </figure>
+  </div>
+
+  <div class="section-title">Private, Or Public &mdash; You Decide</div>
+  <p class="shots-lede">Your profile screen goes only to the contacts you grant access to. Everything else stays private until you deliberately publish it.</p>
+
+  <div class="shots" id="shots-profile">
+    <figure class="shot" data-shot>
+      <div class="shot-frame">
+        <img src="assets/PrivateProfile_2.jpg" alt="A private profile screen in Cryptaverse" loading="lazy" onerror="this.closest('[data-shot]').remove()">
+      </div>
+      <figcaption>A private profile screen</figcaption>
+    </figure>
+    <figure class="shot" data-shot>
+      <div class="shot-frame">
+        <img src="assets/Custom-Profiles.jpg" alt="A custom themed profile in Cryptaverse" loading="lazy" onerror="this.closest('[data-shot]').remove()">
+      </div>
+      <figcaption>Themed entirely by you</figcaption>
+    </figure>
+    <figure class="shot" data-shot>
+      <div class="shot-frame">
+        <img src="assets/PublicOptions_2.jpg" alt="Publishing and engagement controls in Cryptaverse" loading="lazy" onerror="this.closest('[data-shot]').remove()">
+      </div>
+      <figcaption>You control every permission</figcaption>
+    </figure>
+  </div>
+
+  <div class="section-title">Publish Blocks, Or Whole Stacks</div>
+  <p class="shots-lede">Publish an individual block, or gather several into a stack. Both are found through search, and both are yours to unpublish at any time.</p>
+
+  <div class="shots" id="shots-public">
+    <figure class="shot" data-shot>
+      <div class="shot-frame">
+        <img src="assets/Stack-Of-Blocks.jpg" alt="A published stack of blocks in Cryptaverse" loading="lazy" onerror="this.closest('[data-shot]').remove()">
+      </div>
+      <figcaption>A published stack</figcaption>
+    </figure>
+    <figure class="shot" data-shot>
+      <div class="shot-frame">
+        <img src="assets/Link-Individual-And-Stacks-Together.jpg" alt="Browsing blocks and stacks in Cryptaverse" loading="lazy" onerror="this.closest('[data-shot]').remove()">
+      </div>
+      <figcaption>Blocks and stacks, linked</figcaption>
+    </figure>
+    <figure class="shot" data-shot>
+      <div class="shot-frame">
+        <img src="assets/PublicBlocks_2.jpg" alt="Adding a public block in Cryptaverse" loading="lazy" onerror="this.closest('[data-shot]').remove()">
+      </div>
+      <figcaption>Your plan, your limits</figcaption>
+    </figure>
+    <figure class="shot" data-shot>
+      <div class="shot-frame">
+        <img src="assets/Make-Public-What-You-Want.jpg" alt="The Cryptaverse search screen" loading="lazy" onerror="this.closest('[data-shot]').remove()">
+      </div>
+      <figcaption>Found through search</figcaption>
+    </figure>
   </div>
 
   <div class="section-title">What Cryptaverse Includes</div>
