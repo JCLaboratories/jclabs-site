@@ -12,7 +12,7 @@
 <body>
 
 <header class="doc-header">
-  <span class="logo-mark"><img src="assets/logo.png" alt="JC Labs R&D"></span>
+  <span class="logo-mark"><img src="assets/logo.png" alt="JC Laboratories LLC"></span>
   <span class="brand-full">JC Laboratories LLC</span>
   <div class="brand-line"></div>
 </header>
@@ -33,7 +33,10 @@
   <p>We build tools that keep your data in your hands rather than ours. We do not sell user data. We do not show advertising. We do not build advertising profiles. That applies on every tier, including the free one &mdash; privacy is not a feature we charge for.</p>
 
   <h2>3. Description of Services</h2>
-  <p><strong>Cryptaverse</strong> (formerly Aleph Vault) is an encrypted application for Android providing local encrypted storage of notes, passwords and other sensitive data; post-quantum encrypted messaging; encrypted file transfer and storage; and a public publishing surface where you may choose to publish blocks and stacks that anyone can read.</p>
+  <p><strong>Cryptaverse</strong> (formerly Aleph Vault) is an encrypted application for Android. Most of it is private, and a small part of it is public only if you choose to make it so.</p>
+  <p><em>Private.</em> An encrypted vault for notes, passwords and other sensitive data. Post-quantum encrypted messaging. A profile screen delivered only to the contacts you grant access to, encrypted for each of them individually. Private groups. Posts. Encrypted file transfer, encrypted file storage, and encrypted backup. None of this is readable by JC Laboratories.</p>
+  <p><em>Shared.</em> Folders you choose to share by link. The files stay encrypted; redeeming a link performs a key exchange that gives that person the folder key.</p>
+  <p><em>Public.</em> Blocks and stacks you deliberately publish, a public profile if you create one, and the listing details of a group you make public. This is the only content stored unencrypted, and none of it exists unless you publish it.</p>
   <p><strong>EGAF</strong> (Entropy-Gated AI Framework) is an open AI governance protocol, defining what an AI assistant is permitted to do before it runs, so that its behaviour is bounded, reproducible and auditable.</p>
   <p><strong>Abe</strong> (formerly the Gaffer) is our AI assistant, with EGAF governance built into it. Both are currently offline until Cryptaverse ships.</p>
 
@@ -70,7 +73,14 @@
   <p><strong>Your export password cannot be recovered.</strong> If you lose it, the backup file cannot be decrypted. Store it separately from the backup file itself. You are solely responsible for the security of exported files once they leave the app.</p>
 
   <h2>8. Safety Deposit Box &mdash; Cloud Backup</h2>
-  <p>Personal and Pro subscribers may enable Safety Deposit Box, our encrypted cloud backup. Vault data is encrypted on your device using AES-256-GCM before upload. JC Laboratories stores only the encrypted ciphertext and cannot decrypt it. On the Free tier, vault data never leaves your device. Encrypted backups count against your storage allowance, are retained while the subscription is active, and are deleted 30 days after cancellation.</p>
+  <p>Safety Deposit Box is our encrypted cloud backup, and it is available on every tier including Free. Vault data is encrypted on your device before upload. JC Laboratories stores only the encrypted ciphertext and cannot decrypt it.</p>
+  <p>Backups count against your storage allowance, so how much you can back up follows your tier rather than the feature being withheld. We do not put the ability to protect your data behind a payment &mdash; losing a device should not mean losing everything because you were on the free tier.</p>
+  <p>If you cancel a paid subscription, your allowance returns to the Free tier level and a <strong>30 day grace period</strong> begins, counted from the end of the period you last paid for, so cancelling early never costs you time. Nothing is touched during those 30 days: everything stays readable and downloadable, and the app shows how much is over the Free allowance and how long remains.</p>
+  <p>After 30 days, storage is reduced to the Free allowance. Your Safety Deposit Box backup is removed first &mdash; it is a backup, so the original is still on your device and can be re-uploaded &mdash; then Drive files starting with the oldest, and only until you are back within the allowance. <strong>Published blocks and stacks are never removed by this process.</strong></p>
+  <p>Backups count against your storage allowance, so how much you can back up follows your tier rather than the feature being withheld. We do not gate the ability to protect your data behind a payment &mdash; losing a device should not mean losing everything because you were on the free tier.</p>
+  <p>If you cancel a paid subscription, your allowance returns to the Free tier level and a <strong>30 day grace period</strong> begins, counted from the end of the period you last paid for. Cancelling early therefore never costs you time.</p>
+  <p>Nothing is touched during those 30 days. Everything you have stored stays readable and downloadable so you can export it or reduce it at your own pace, and the app shows you how much is over the Free allowance and how long remains.</p>
+  <p>After 30 days, storage is reduced to the Free allowance. We remove your Safety Deposit Box backup first &mdash; it is a backup, so the original is still on your device and can be re-uploaded &mdash; then Drive files starting with the oldest, and only until you are back within the allowance. <strong>Published blocks and stacks are never removed by this process.</strong></p>
 
   <h2>9. Subscription Tiers</h2>
   <table class="tier-table">
@@ -78,7 +88,7 @@
     <tbody>
       <tr><td>Free</td><td>$0</td><td>1 GB</td><td>3</td><td>25</td></tr>
       <tr><td>Personal</td><td>$3 / month</td><td>50 GB</td><td>15</td><td>150</td></tr>
-      <tr><td>Pro</td><td>$10 / month</td><td>250 GB</td><td>50</td><td>500</td></tr>
+      <tr><td>Pro</td><td>$10 / month</td><td>100 GB</td><td>50</td><td>500</td></tr>
     </tbody>
   </table>
   <p><strong>Storage</strong> is a single shared allowance across everything you store with us: Safety Deposit Box backups, Drive files, Relay transfers in flight, media attached to published blocks, profile delivery, and undelivered messages. It is not a separate quota per feature.</p>
@@ -87,14 +97,12 @@
   <p>Every tier includes encrypted messaging, encrypted file transfer, the private profile screen, vault export and import, and one identity key pair per vault. Larger allowances are available on request: <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>.</p>
   <p>JC Laboratories reserves the right to update pricing with 30 days notice to existing subscribers.</p>
 
-  <h2>10. EGAF Intellectual Property and Licensing</h2>
-  <p>The Entropy-Gated AI Framework (EGAF), including its specifications, protocol definitions and task formats, is intellectual property of JC Laboratories LLC / JC Labs R&amp;D.</p>
-  <p>EGAF is dual-licensed:</p>
-  <ul>
-    <li><strong>Non-commercial use</strong> &mdash; licensed under CC BY-NC 4.0. You may use, share and adapt EGAF for non-commercial purposes with attribution to JC Laboratories.</li>
-    <li><strong>Commercial use</strong> &mdash; requires a separate written commercial license. Contact <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>.</li>
-  </ul>
-  <p>Abe, Cryptaverse, and all associated JC Laboratories software, branding and assets are proprietary. All rights reserved.</p>
+  <h2>10. Intellectual Property</h2>
+  <p><strong>Ours.</strong> Cryptaverse, Abe, the Entropy-Gated AI Framework, and all JC Laboratories software, branding, documentation and assets are the property of JC Laboratories LLC. All rights reserved. Using the Services does not transfer any ownership to you, and you may not copy, redistribute, reverse-engineer or create derivative works from our software except where that right cannot lawfully be excluded.</p>
+
+  <p><strong>Yours.</strong> We claim no ownership of anything you store, publish or send through Cryptaverse. It is your content and it stays your content. Publishing a block or stack grants us only the narrow permission needed to store it and serve it to people who ask for it &mdash; nothing broader, no right to reuse it elsewhere, and it ends the moment you unpublish it or delete your account. We will never use your content to train anything, license it to anyone, or sell it.</p>
+
+  <p><strong>EGAF.</strong> Separately licensed for non-commercial use under CC BY-NC 4.0 with attribution to JC Laboratories LLC. Commercial use requires a written licence &mdash; <a href="mailto:contact@jclabs.tech">contact@jclabs.tech</a>. EGAF is not currently published; this licence applies when it is.</p>
 
   <h2>11. AI-Generated Content</h2>
   <p>AI-generated content from Abe is provided for informational purposes only and does not constitute professional advice of any kind. You use AI-generated content at your own risk.</p>
@@ -104,7 +112,7 @@
   <p>You also agree not to use automated means to consume storage, search or publishing allowances beyond ordinary personal use. Accounts that do so may be suspended.</p>
 
   <h2>13. Subscriptions, Billing and Refunds</h2>
-  <p>Subscriptions are processed via Stripe, or through the app store you installed from. You may cancel at any time; cancellation stops future charges and access continues to the end of the paid period.</p>
+  <p>Subscriptions are processed via Stripe, or through the app store you installed from. We accept cards, and stablecoin payments where available. You may cancel at any time; cancellation stops future charges and access continues to the end of the paid period.</p>
   <p><strong>No refunds.</strong> Consistent with section 4, the Services are sold as is. JC Laboratories does not issue refunds, including for partial subscription periods, for features that do not work as you expected, for periods of downtime, or for data loss. The Free tier exists so you can evaluate the Services before paying for them.</p>
   <p>This does not affect refunds required by law, and it does not override the refund policies of any app store or payment processor through which you purchased. Where you bought a subscription through an app store, that store's refund process applies and is handled by them, not by us.</p>
 
