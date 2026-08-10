@@ -373,10 +373,13 @@
 }
 
 /* ── Screenshot strip ───────────────────────────────────── */
+/* Frames size themselves to their own image and share a common
+   height, so full-length captures and tighter crops can sit in the
+   same row without either being cut off. */
 .shots {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-end;
   flex-wrap: wrap;
   gap: 28px;
   margin: 0 auto 48px;
@@ -384,41 +387,68 @@
 
 .shot {
   margin: 0;
-  flex: 0 1 300px;
-  max-width: 340px;
+  flex: 0 0 auto;
+  max-width: 100%;
+  text-align: center;
 }
 
 .shot-frame {
+  /* inline-block, not block: a block-level frame stretches to the
+     figure's width, and the figure is sized by its WIDEST child --
+     which is the caption whenever the caption is longer than the
+     image. That produced dead space inside the border on exactly the
+     captions long enough to overflow, and on more of them at mobile
+     sizes where the images render narrower. */
+  display: inline-block;
+  vertical-align: top;
   border: 1px solid var(--gold-dark);
   border-radius: 10px;
   background: #000;
   overflow: hidden;
-  aspect-ratio: 9 / 19.5;
+  line-height: 0;
   box-shadow: 0 0 24px rgba(184, 160, 88, 0.10);
 }
 
 .shot-frame img {
-  width: 100%;
-  height: 100%;
   display: block;
-  object-fit: cover;
-  object-position: top center;
+  height: 460px;
+  width: auto;
+  max-width: 100%;
 }
 
 .shot figcaption {
-  margin-top: 12px;
+  /* Capped so a long caption wraps onto two lines instead of forcing
+     the whole figure wider than its image. */
+  max-width: 260px;
+  margin: 12px auto 0;
   text-align: center;
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-muted);
+  line-height: 1.5;
 }
 
-/* A single screenshot sits larger and centred; two or more share the row. */
-.shots .shot:only-child { flex: 0 1 340px; }
+/* A lone screenshot gets more presence than one of a set. */
+.shots .shot:only-child .shot-frame img { height: 560px; }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
+  .shot-frame img { height: 380px; }
+  .shots .shot:only-child .shot-frame img { height: 460px; }
+}
+
+@media (max-width: 560px) {
   .shots { gap: 32px; }
-  .shot  { flex: 0 1 260px; }
+  .shot-frame img,
+  .shots .shot:only-child .shot-frame img { height: 420px; }
+}
+
+/* ── Gallery lede ──────────────────────────────────────── */
+.shots-lede {
+  max-width: 680px;
+  margin: 0 auto 32px;
+  text-align: center;
+  color: var(--text-secondary);
+  line-height: 1.75;
 }
